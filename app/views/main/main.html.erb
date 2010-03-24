@@ -10,18 +10,17 @@
     float:right;
   }
 </style>
-<div>
-  <p>
-    Hello <%= @user.username %>
-  </p>
-</div>
     
 <div id="status_input" class="float_left">
+    <p>
+    Hello <%= @user.username %>
+  </p>
   <textarea id="text" width="500" cols="100" rows="2"></textarea><br/>
   <button type="button" onClick="findName($('textarea#text').val());">Ok</button>
 </div>
 <div id="subscriptions" class="float_left">
   Subscriptions:<br/>
+  <%= @subs.join(", ") %>
   <p/>
   <button type="button" onClick="$('#remote').dialog({ position: ['center','top'] });">Remote Subscribe [+]</button>
 </div>
@@ -66,6 +65,10 @@
   function remoteSub(){
     $.getJSON("/main/subscribe",
       { remotename: $("#remotename").val() },
-      function(json){ alert(json); });
+      function(json){ 
+        alert(json); 
+        $("#remote").dialog("close");
+        window.location.reload();
+       });
   }
 </script>

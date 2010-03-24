@@ -8,7 +8,12 @@ class MainController < ApplicationController
   end
     
   def main
-   
+    @subs = []
+    @user.subscriptions = [] if @user.subscriptions.nil?
+   @user.subscriptions.each do |sub|
+     @subs << "<img src=#{sub[:image]} width=48 height=48>"
+   end
+      
     
   end
   def findname
@@ -23,12 +28,15 @@ class MainController < ApplicationController
     end
     render :text => users.to_json
   end  
+  
   def subscribe
+    Rails.logger.info "called subscribe"
     finger = Redfinger.finger(params[:remotename])
     feed_url = finger.updates_from.first.to_s
-    
+    Rails.logger.info feed_url.nil?
     render :text => "error".to_json if feed_url.nil?
     xml = HTTParty.get(feed_url)
+    Rails.logger.info xml
     hub = FeedTool.is_push?(xml)
     doc = Nokogiri::XML(xml)
     doc.remove_namespaces!
@@ -39,7 +47,12 @@ class MainController < ApplicationController
                                   :"hub.verify" => :sync })
     Rails.logger.info res
     @user.subscriptions = [] if @user.subscriptions.nil?
-    @user.subscriptions << { :hub => hub, :topic => feed_url }
+    match = nil
+    @user.subscriptions.each do |sub|
+      match = 1 if sub[:user] == params[:remotename]
+    end
+        
+    @user.subscriptions << { :hub => hub, :topic => feed_url, :user => params[:remotename], :image => image } if match.nil?
     @user.save
     render :text => "#{hub} #{feed_url} #{image}".to_json
   end  
