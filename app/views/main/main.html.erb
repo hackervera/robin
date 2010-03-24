@@ -1,0 +1,65 @@
+<script src="/javascripts/jquery.js"></script>
+<script src="/javascripts/jquery-ui.js"></script>
+<link rel="stylesheet" href="/stylesheets/ui-lightness/jquery-ui-1.8.custom.css" type="text/css">
+<style>
+  .float_left {
+    float:left;
+    margin-left:10px;
+  }
+  .float_right {
+    float:right;
+  }
+</style>
+<div id="status_input" class="float_left">
+  <textarea id="text" width="500" cols="100" rows="2"></textarea><br/>
+  <button type="button" onClick="findName($('textarea#text').val());">Ok</button>
+</div>
+<div id="subscriptions" class="float_left">
+  Subscriptions:<br/>
+  <p/>
+  <button type="button" onClick="$('#remote').dialog({ position: ['center','top'] });">Remote Subscribe [+]</button>
+</div>
+<div id="msg" style="display:none;"></div>
+<div id="remote" style="display:none;">
+  Enter remote user@hostname:<br/>
+  <input type="text" id="remotename"><br/>
+  <input type="submit" value="Subscribe" onClick="remoteSub();">
+</div>
+
+<script>
+  var user;
+  function findName(text){
+    //console.log(text);
+    //alert(text);
+    if (username = /@(\w+)/.exec(text)){
+      //alert("contains username: "+username[1])
+      user = username[1];
+      $.getJSON("/main/findname",
+        { user: user}, 
+        function(json){ showDialog(json); });
+    }
+    else {
+      //alert("no username detected")
+    }
+  }
+  function showDialog(text){
+    $("#msg").append("The following users match: @"+user+"<p/>")
+    $.each(text, function(index, value){
+      $("#msg").append("<input type='radio' name='user' value="+value+">"+value+"<br/>");
+      
+    });
+    $("#msg").append("<input type=submit onClick='getChecked();'>");
+    $('#msg').dialog({ position: ['left','top']});
+    
+    
+  }
+  function getChecked(){
+    var txt = $("input[name='user']:checked").val();
+    alert(txt);
+  }
+  function remoteSub(){
+    $.getJSON("/main/subscribe",
+      { remotename: $("#remotename").val() },
+      function(json){ alert(json); });
+  }
+</script>

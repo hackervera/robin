@@ -1,0 +1,2 @@
+module SalmonHelper
+end
