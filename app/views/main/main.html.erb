@@ -54,7 +54,8 @@
       
     });
     $("#msg").append("<input type=submit onClick='getChecked(); closeMe();'>");
-    $('#msg').dialog({ position: ['left','top']});
+    $('#msg').dialog({ position: ['left','top'], close: function(event, ui) { $("#msg").text(""); } });
+
     
     
   }
