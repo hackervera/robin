@@ -10,6 +10,12 @@
     float:right;
   }
 </style>
+<div>
+  <p>
+    Hello <%= @user.username %>
+  </p>
+</div>
+    
 <div id="status_input" class="float_left">
   <textarea id="text" width="500" cols="100" rows="2"></textarea><br/>
   <button type="button" onClick="findName($('textarea#text').val());">Ok</button>

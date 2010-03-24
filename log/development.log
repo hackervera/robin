@@ -8403,3 +8403,1422 @@ HUB: http://identi.ca/main/push/hub
 
 <div class="error">Invalid URL passed for hub.callback: '/main/callback'</div>
 Completed in 3161ms (View: 1, DB: 0) | 200 OK [http://localhost/main/subscribe?remotename=tjgillies%40identi.ca]
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" [0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" [0m
+
+
+Processing ApplicationController#main (for 127.0.0.1 at 2010-03-24 04:42:09) [GET]
+
+SyntaxError (/home/tyler/rstatus/app/controllers/main_controller.rb:7: syntax error, unexpected tIDENTIFIER, expecting ')'
+...{user}"' AND host = 'localhost'")
+                              ^
+/home/tyler/rstatus/app/controllers/main_controller.rb:35: syntax error, unexpected tIDENTIFIER, expecting kEND
+    image = doc.xpath("//link[@rel='avatar']").first['href']
+                                          ^
+/home/tyler/rstatus/app/controllers/main_controller.rb:35: syntax error, unexpected tIDENTIFIER, expecting kEND
+    image = doc.xpath("//link[@rel='avatar']").first['href']
+                                                          ^
+/home/tyler/rstatus/app/controllers/main_controller.rb:35: unterminated string meets end of file
+/home/tyler/rstatus/app/controllers/main_controller.rb:35: syntax error, unexpected $end, expecting kEND):
+  
+
+Rendered rescues/_trace (31.7ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 04:42:37) [GET]
+  [4;36;1mUser Load (1.5ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = '' AND host = 'localhost') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO "users" ("created_at", "subscriptions", "updated_at", "picture_url", "username", "profile_url", "foaf_location", "host", "password", "email") VALUES('2010-03-24 11:42:37', NULL, '2010-03-24 11:42:37', NULL, NULL, NULL, NULL, '--- :localhost
+', NULL, NULL)[0m
+Rendering main/main
+Completed in 141ms (View: 28, DB: 2) | 200 OK [http://localhost/main/main]
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 04:42:50) [GET]
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = '' AND host = 'localhost') LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("created_at", "subscriptions", "updated_at", "picture_url", "username", "profile_url", "foaf_location", "host", "password", "email") VALUES('2010-03-24 11:42:50', NULL, '2010-03-24 11:42:50', NULL, NULL, NULL, NULL, '--- :localhost
+', NULL, NULL)[0m
+Rendering main/main
+Completed in 23ms (View: 4, DB: 1) | 200 OK [http://localhost/main/main]
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 04:43:05) [GET]
+  [4;36;1mUser Load (12.1ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = '' AND host = 'localhost') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("created_at", "subscriptions", "updated_at", "picture_url", "username", "profile_url", "foaf_location", "host", "password", "email") VALUES('2010-03-24 11:43:05', NULL, '2010-03-24 11:43:05', NULL, NULL, NULL, NULL, '--- :localhost
+', NULL, NULL)[0m
+Rendering main/main
+Completed in 29ms (View: 1, DB: 12) | 200 OK [http://localhost/main/main]
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 04:43:52) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = '' AND host = 'localhost') LIMIT 1[0m
+Rendering main/main
+
+ActionView::TemplateError (undefined method `username' for nil:NilClass) on line #15 of app/views/main/main.html.erb:
+12: </style>
+13: <div>
+14:   <p>
+15:     <%= @user.username %>
+16:   </p>
+17: </div>
+18:     
+
+    app/views/main/main.html.erb:15
+    app/controllers/main_controller.rb:9:in `get_username'
+
+Rendered rescues/_trace (112.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mUser Destroy (0.3ms)[0m   [0mDELETE FROM "users" WHERE "id" = 5[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;35;1mUser Destroy (0.2ms)[0m   [0mDELETE FROM "users" WHERE "id" = 6[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;35;1mUser Destroy (0.1ms)[0m   [0mDELETE FROM "users" WHERE "id" = 7[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) [0m
+  [4;35;1mUser Destroy (0.2ms)[0m   [0mDELETE FROM "users" WHERE "id" = 8[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mUser Destroy (0.2ms)[0m   [0mDELETE FROM "users" WHERE "id" = 9[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" [0m
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 04:45:06) [GET]
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE (username = '' AND host = 'localhost') LIMIT 1[0m
+Rendering main/main
+
+ActionView::TemplateError (undefined method `username' for nil:NilClass) on line #15 of app/views/main/main.html.erb:
+12: </style>
+13: <div>
+14:   <p>
+15:     <%= @user.username %>
+16:   </p>
+17: </div>
+18:     
+
+    app/views/main/main.html.erb:15
+    app/controllers/main_controller.rb:9:in `get_username'
+
+Rendered rescues/_trace (53.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 04:45:17) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = '' AND host = 'localhost') LIMIT 1[0m
+Filter chain halted as [:get_username] rendered_or_redirected.
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/main/main]
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 04:45:31) [GET]
+  Parameters: {"user"=>"tylergillies"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+Filter chain halted as [:get_username] rendered_or_redirected.
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/main/main?user=tylergillies]
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 04:45:46) [GET]
+  Parameters: {"user"=>"tylergillies"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("created_at", "subscriptions", "updated_at", "picture_url", "username", "profile_url", "foaf_location", "host", "password", "email") VALUES('2010-03-24 11:45:46', NULL, '2010-03-24 11:45:46', NULL, 'tylergillies', NULL, NULL, '--- :localhost
+', NULL, NULL)[0m
+Rendering main/main
+Completed in 19ms (View: 1, DB: 1) | 200 OK [http://localhost/main/main?user=tylergillies]
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 04:46:11) [GET]
+  Parameters: {"user"=>"tylergillies"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("created_at", "subscriptions", "updated_at", "picture_url", "username", "profile_url", "foaf_location", "host", "password", "email") VALUES('2010-03-24 11:46:11', NULL, '2010-03-24 11:46:11', NULL, 'tylergillies', NULL, NULL, '--- :localhost
+', NULL, NULL)[0m
+Rendering main/main
+Completed in 23ms (View: 5, DB: 1) | 200 OK [http://localhost/main/main?user=tylergillies]
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 04:52:42) [GET]
+  Parameters: {"user"=>"tylergillies"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("created_at", "subscriptions", "updated_at", "picture_url", "username", "profile_url", "foaf_location", "host", "password", "email") VALUES('2010-03-24 11:52:42', NULL, '2010-03-24 11:52:42', NULL, 'tylergillies', NULL, NULL, '--- :localhost
+', NULL, NULL)[0m
+Rendering main/main
+Completed in 29ms (View: 1, DB: 1) | 200 OK [http://localhost/main/main?user=tylergillies]
+
+
+Processing MainController#subscribe (for 127.0.0.1 at 2010-03-24 04:52:56) [GET]
+  Parameters: {"remotename"=>"tjgillies@identi.ca"}
+  [4;36;1mUser Load (2.5ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = '' AND host = 'localhost') LIMIT 1[0m
+Filter chain halted as [:get_username] rendered_or_redirected.
+Completed in 6ms (View: 1, DB: 3) | 200 OK [http://localhost/main/subscribe?remotename=tjgillies%40identi.ca]
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 04:53:59) [GET]
+  Parameters: {"user"=>"tylergillies"}
+Rendering main/main
+
+ActionView::TemplateError (undefined method `username' for nil:NilClass) on line #15 of app/views/main/main.html.erb:
+12: </style>
+13: <div>
+14:   <p>
+15:     Hello <%= @user.username %>
+16:   </p>
+17: </div>
+18:     
+
+    app/views/main/main.html.erb:15
+
+Rendered rescues/_trace (48.0ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 04:54:32) [GET]
+  Parameters: {"user"=>"tylergillies"}
+Rendering main/main
+
+ActionView::TemplateError (undefined method `username' for nil:NilClass) on line #15 of app/views/main/main.html.erb:
+12: </style>
+13: <div>
+14:   <p>
+15:     Hello <%= @user.username %>
+16:   </p>
+17: </div>
+18:     
+
+    app/views/main/main.html.erb:15
+
+Rendered rescues/_trace (36.7ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 04:54:48) [GET]
+Rendering main/main
+
+ActionView::TemplateError (undefined method `username' for nil:NilClass) on line #15 of app/views/main/main.html.erb:
+12: </style>
+13: <div>
+14:   <p>
+15:     Hello <%= @user.username %>
+16:   </p>
+17: </div>
+18:     
+
+    app/views/main/main.html.erb:15
+
+Rendered rescues/_trace (40.1ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 04:54:50) [GET]
+Rendering main/main
+
+ActionView::TemplateError (undefined method `username' for nil:NilClass) on line #15 of app/views/main/main.html.erb:
+12: </style>
+13: <div>
+14:   <p>
+15:     Hello <%= @user.username %>
+16:   </p>
+17: </div>
+18:     
+
+    app/views/main/main.html.erb:15
+
+Rendered rescues/_trace (46.0ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 04:55:03) [GET]
+Rendering main/main
+
+ActionView::TemplateError (undefined method `username' for nil:NilClass) on line #15 of app/views/main/main.html.erb:
+12: </style>
+13: <div>
+14:   <p>
+15:     Hello <%= @user.username %>
+16:   </p>
+17: </div>
+18:     
+
+    app/views/main/main.html.erb:15
+
+Rendered rescues/_trace (37.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 04:55:15) [GET]
+Rendering main/main
+
+ActionView::TemplateError (undefined method `username' for nil:NilClass) on line #15 of app/views/main/main.html.erb:
+12: </style>
+13: <div>
+14:   <p>
+15:     Hello <%= @user.username %>
+16:   </p>
+17: </div>
+18:     
+
+    app/views/main/main.html.erb:15
+
+Rendered rescues/_trace (128.3ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 04:55:19) [GET]
+Rendering main/main
+
+ActionView::TemplateError (undefined method `username' for nil:NilClass) on line #15 of app/views/main/main.html.erb:
+12: </style>
+13: <div>
+14:   <p>
+15:     Hello <%= @user.username %>
+16:   </p>
+17: </div>
+18:     
+
+    app/views/main/main.html.erb:15
+
+Rendered rescues/_trace (36.8ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 04:55:21) [GET]
+Rendering main/main
+
+ActionView::TemplateError (undefined method `username' for nil:NilClass) on line #15 of app/views/main/main.html.erb:
+12: </style>
+13: <div>
+14:   <p>
+15:     Hello <%= @user.username %>
+16:   </p>
+17: </div>
+18:     
+
+    app/views/main/main.html.erb:15
+
+Rendered rescues/_trace (245.3ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 04:56:18) [GET]
+Rendering main/main
+
+ActionView::TemplateError (undefined method `username' for nil:NilClass) on line #15 of app/views/main/main.html.erb:
+12: </style>
+13: <div>
+14:   <p>
+15:     Hello <%= @user.username %>
+16:   </p>
+17: </div>
+18:     
+
+    app/views/main/main.html.erb:15
+
+Rendered rescues/_trace (38.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 04:56:21) [GET]
+Rendering main/main
+
+ActionView::TemplateError (undefined method `username' for nil:NilClass) on line #15 of app/views/main/main.html.erb:
+12: </style>
+13: <div>
+14:   <p>
+15:     Hello <%= @user.username %>
+16:   </p>
+17: </div>
+18:     
+
+    app/views/main/main.html.erb:15
+
+Rendered rescues/_trace (117.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 04:56:54) [GET]
+Rendering main/main
+
+ActionView::TemplateError (undefined method `username' for nil:NilClass) on line #15 of app/views/main/main.html.erb:
+12: </style>
+13: <div>
+14:   <p>
+15:     Hello <%= @user.username %>
+16:   </p>
+17: </div>
+18:     
+
+    app/views/main/main.html.erb:15
+
+Rendered rescues/_trace (32.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 04:56:56) [GET]
+Rendering main/main
+
+ActionView::TemplateError (undefined method `username' for nil:NilClass) on line #15 of app/views/main/main.html.erb:
+12: </style>
+13: <div>
+14:   <p>
+15:     Hello <%= @user.username %>
+16:   </p>
+17: </div>
+18:     
+
+    app/views/main/main.html.erb:15
+
+Rendered rescues/_trace (112.5ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 04:56:57) [GET]
+Rendering main/main
+
+ActionView::TemplateError (undefined method `username' for nil:NilClass) on line #15 of app/views/main/main.html.erb:
+12: </style>
+13: <div>
+14:   <p>
+15:     Hello <%= @user.username %>
+16:   </p>
+17: </div>
+18:     
+
+    app/views/main/main.html.erb:15
+
+Rendered rescues/_trace (36.1ms)
+Rendered rescues/_request_and_response (2.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 04:56:58) [GET]
+Rendering main/main
+
+ActionView::TemplateError (undefined method `username' for nil:NilClass) on line #15 of app/views/main/main.html.erb:
+12: </style>
+13: <div>
+14:   <p>
+15:     Hello <%= @user.username %>
+16:   </p>
+17: </div>
+18:     
+
+    app/views/main/main.html.erb:15
+
+Rendered rescues/_trace (168.8ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 04:57:35) [GET]
+Rendering main/main
+
+ActionView::TemplateError (undefined method `username' for nil:NilClass) on line #15 of app/views/main/main.html.erb:
+12: </style>
+13: <div>
+14:   <p>
+15:     Hello <%= @user.username %> <%= @user.nil? %>
+16:   </p>
+17: </div>
+18:     
+
+    app/views/main/main.html.erb:15
+
+Rendered rescues/_trace (35.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 04:57:46) [GET]
+Rendering main/main
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/main/main]
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 04:58:18) [GET]
+Rendering main/main
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/main/main]
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 04:58:20) [GET]
+Rendering main/main
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/main/main]
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 04:58:56) [GET]
+Rendering main/main
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/main/main]
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 04:58:57) [GET]
+Rendering main/main
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/main/main]
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 05:00:14) [GET]
+Rendering main/main
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://localhost/main/main]
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 05:00:16) [GET]
+Rendering main/main
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/main/main]
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 05:01:39) [GET]
+Rendering main/main
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/main/main]
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 05:01:41) [GET]
+Rendering main/main
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/main/main]
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 05:01:43) [GET]
+Rendering main/main
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/main/main]
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 05:02:03) [GET]
+Rendering main/main
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/main/main]
+
+
+Processing ApplicationController#main (for 127.0.0.1 at 2010-03-24 05:02:12) [GET]
+
+SyntaxError (/home/tyler/rstatus/app/controllers/main_controller.rb:14: syntax error, unexpected tASSOC, expecting kEND
+    render and :text => "user not set" and return 
+                       ^):
+  
+
+Rendered rescues/_trace (30.9ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 05:02:29) [GET]
+Rendering main/main
+Completed in 5ms (View: 0, DB: 0) | 200 OK [http://localhost/main/main]
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 05:02:39) [GET]
+Rendering main/main
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://localhost/main/main]
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 05:03:05) [GET]
+Rendering main/main
+Completed in 10ms (View: 1, DB: 0) | 200 OK [http://localhost/main/main]
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 05:03:07) [GET]
+Rendering main/main
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/main/main]
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 05:03:07) [GET]
+Rendering main/main
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/main/main]
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 05:03:34) [GET]
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE (username = '' AND host = 'localhost') LIMIT 1[0m
+
+NoMethodError (NoMethodError):
+  app/controllers/main_controller.rb:7:in `main'
+
+Rendered rescues/_trace (98.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 05:03:58) [GET]
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = '' AND host = 'localhost') LIMIT 1[0m
+Completed in 10ms (View: 1, DB: 0) | 200 OK [http://localhost/main/main]
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 05:04:26) [GET]
+  Parameters: {"user"=>"trylergillies"}
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'trylergillies' AND host = 'localhost') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("created_at", "subscriptions", "updated_at", "picture_url", "username", "profile_url", "foaf_location", "host", "password", "email") VALUES('2010-03-24 12:04:26', NULL, '2010-03-24 12:04:26', NULL, 'trylergillies', NULL, NULL, '--- :localhost
+', NULL, NULL)[0m
+Rendering main/main
+Completed in 30ms (View: 8, DB: 1) | 200 OK [http://localhost/main/main?user=trylergillies]
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 05:04:35) [GET]
+  Parameters: {"user"=>"tylergillies"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("created_at", "subscriptions", "updated_at", "picture_url", "username", "profile_url", "foaf_location", "host", "password", "email") VALUES('2010-03-24 12:04:35', NULL, '2010-03-24 12:04:35', NULL, 'tylergillies', NULL, NULL, '--- :localhost
+', NULL, NULL)[0m
+Rendering main/main
+Completed in 19ms (View: 1, DB: 1) | 200 OK [http://localhost/main/main?user=tylergillies]
+
+
+Processing MainController#subscribe (for 127.0.0.1 at 2010-03-24 05:04:48) [GET]
+  Parameters: {"remotename"=>"tjgillies@identi.ca"}
+Class: Nokogiri::XML::Document
+
+LINKS: [#<Nokogiri::XML::Element:0x3fd3e2d9dec4 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d9dde8 name="href" value="http://identi.ca/tjgillies">, #<Nokogiri::XML::Attr:0x3fd3e2d9ddd4 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2d9ddc0 name="type" value="text/html">]>, #<Nokogiri::XML::Element:0x3fd3e2d9de74 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d9d5dc name="href" value="http://identi.ca/main/sup#3919">, #<Nokogiri::XML::Attr:0x3fd3e2d9d5c8 name="rel" value="http://api.friendfeed.com/2008/03#sup">, #<Nokogiri::XML::Attr:0x3fd3e2d9d5b4 name="type" value="application/json">]>, #<Nokogiri::XML::Element:0x3fd3e2d9d668 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d9cdd0 name="href" value="http://identi.ca/main/push/hub">, #<Nokogiri::XML::Attr:0x3fd3e2d9cdbc name="rel" value="hub">]>, #<Nokogiri::XML::Element:0x3fd3e2d9ce5c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d9c7a4 name="href" value="http://identi.ca/main/salmon/user/3919">, #<Nokogiri::XML::Attr:0x3fd3e2d9c790 name="rel" value="http://salmon-protocol.org/ns/salmon-replies">]>, #<Nokogiri::XML::Element:0x3fd3e2d9c830 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d9c178 name="href" value="http://identi.ca/main/salmon/user/3919">, #<Nokogiri::XML::Attr:0x3fd3e2d9c164 name="rel" value="http://salmon-protocol.org/ns/salmon-mention">]>, #<Nokogiri::XML::Element:0x3fd3e2d9c204 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d9bb4c name="href" value="http://identi.ca/api/statuses/user_timeline/3919.atom">, #<Nokogiri::XML::Attr:0x3fd3e2d9bb38 name="rel" value="self">, #<Nokogiri::XML::Attr:0x3fd3e2d9bb24 name="type" value="application/atom+xml">]>, #<Nokogiri::XML::Element:0x3fd3e2d9bbd8 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d9b340 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2d9b32c name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2d9b318 name="href" value="http://identi.ca/tjgillies">]>, #<Nokogiri::XML::Element:0x3fd3e2d9b3cc name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d9ab34 name="rel" value="avatar">, #<Nokogiri::XML::Attr:0x3fd3e2d9ab20 name="type" value="image/jpeg">, #<Nokogiri::XML::Attr:0x3fd3e2d9ab0c name="width" namespace=#<Nokogiri::XML::Namespace:0x3fd3e2d9e75c prefix="media" href="http://purl.org/syndication/atommedia"> value="178">, #<Nokogiri::XML::Attr:0x3fd3e2d9aaf8 name="height" namespace=#<Nokogiri::XML::Namespace:0x3fd3e2d9e75c prefix="media" href="http://purl.org/syndication/atommedia"> value="178">, #<Nokogiri::XML::Attr:0x3fd3e2d9aae4 name="href" value="http://avatar.identi.ca/3919-original-20080826101830.jpeg">]>, #<Nokogiri::XML::Element:0x3fd3e2d9abc0 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d99b30 name="rel" value="avatar">, #<Nokogiri::XML::Attr:0x3fd3e2d99b1c name="type" value="image/png">, #<Nokogiri::XML::Attr:0x3fd3e2d99b08 name="width" namespace=#<Nokogiri::XML::Namespace:0x3fd3e2d9e75c prefix="media" href="http://purl.org/syndication/atommedia"> value="96">, #<Nokogiri::XML::Attr:0x3fd3e2d99af4 name="height" namespace=#<Nokogiri::XML::Namespace:0x3fd3e2d9e75c prefix="media" href="http://purl.org/syndication/atommedia"> value="96">, #<Nokogiri::XML::Attr:0x3fd3e2d99ae0 name="href" value="http://avatar.identi.ca/3919-96-20080826101830.png">]>, #<Nokogiri::XML::Element:0x3fd3e2d99bbc name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d98b2c name="rel" value="avatar">, #<Nokogiri::XML::Attr:0x3fd3e2d98b18 name="type" value="image/png">, #<Nokogiri::XML::Attr:0x3fd3e2d98b04 name="width" namespace=#<Nokogiri::XML::Namespace:0x3fd3e2d9e75c prefix="media" href="http://purl.org/syndication/atommedia"> value="48">, #<Nokogiri::XML::Attr:0x3fd3e2d98af0 name="height" namespace=#<Nokogiri::XML::Namespace:0x3fd3e2d9e75c prefix="media" href="http://purl.org/syndication/atommedia"> value="48">, #<Nokogiri::XML::Attr:0x3fd3e2d98adc name="href" value="http://avatar.identi.ca/3919-48-20080826101830.png">]>, #<Nokogiri::XML::Element:0x3fd3e2d98bb8 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d97b28 name="rel" value="avatar">, #<Nokogiri::XML::Attr:0x3fd3e2d97b14 name="type" value="image/png">, #<Nokogiri::XML::Attr:0x3fd3e2d97b00 name="width" namespace=#<Nokogiri::XML::Namespace:0x3fd3e2d9e75c prefix="media" href="http://purl.org/syndication/atommedia"> value="24">, #<Nokogiri::XML::Attr:0x3fd3e2d97aec name="height" namespace=#<Nokogiri::XML::Namespace:0x3fd3e2d9e75c prefix="media" href="http://purl.org/syndication/atommedia"> value="24">, #<Nokogiri::XML::Attr:0x3fd3e2d97ad8 name="href" value="http://avatar.identi.ca/3919-24-20080826101830.png">]>, #<Nokogiri::XML::Element:0x3fd3e2d97bb4 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d96b24 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2d96b10 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2d96afc name="href" value="http://identi.ca/notice/25902107">]>, #<Nokogiri::XML::Element:0x3fd3e2d96bb0 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d96318 name="rel" value="related">, #<Nokogiri::XML::Attr:0x3fd3e2d96304 name="href" value="http://identi.ca/notice/25901132">]>, #<Nokogiri::XML::Element:0x3fd3e2d963a4 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d95cec name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2d95cd8 name="href" value="http://identi.ca/conversation/25903250">]>, #<Nokogiri::XML::Element:0x3fd3e2d95d78 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d956c0 name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e2d956ac name="href" value="http://identi.ca/user/8106">]>, #<Nokogiri::XML::Element:0x3fd3e2d9574c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d95094 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2d95080 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2d9506c name="href" value="http://identi.ca/notice/25902072">]>, #<Nokogiri::XML::Element:0x3fd3e2d95120 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d94888 name="rel" value="related">, #<Nokogiri::XML::Attr:0x3fd3e2d94874 name="href" value="http://identi.ca/notice/25902043">]>, #<Nokogiri::XML::Element:0x3fd3e2d94914 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d9425c name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2d94248 name="href" value="http://identi.ca/conversation/25901908">]>, #<Nokogiri::XML::Element:0x3fd3e2d942e8 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d93c30 name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e2d93c1c name="href" value="http://identi.ca/user/418">]>, #<Nokogiri::XML::Element:0x3fd3e2d93cbc name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d93604 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2d935f0 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2d935dc name="href" value="http://identi.ca/notice/25901968">]>, #<Nokogiri::XML::Element:0x3fd3e2d93690 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d92df8 name="rel" value="related">, #<Nokogiri::XML::Attr:0x3fd3e2d92de4 name="href" value="http://identi.ca/notice/25901854">]>, #<Nokogiri::XML::Element:0x3fd3e2d92e84 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d927cc name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2d927b8 name="href" value="http://identi.ca/conversation/25901908">]>, #<Nokogiri::XML::Element:0x3fd3e2d92858 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d921a0 name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e2d9218c name="href" value="http://identi.ca/user/418">]>, #<Nokogiri::XML::Element:0x3fd3e2d9222c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d91b74 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2d91b60 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2d91b4c name="href" value="http://identi.ca/notice/25901435">]>, #<Nokogiri::XML::Element:0x3fd3e2d91c00 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d91368 name="rel" value="related">, #<Nokogiri::XML::Attr:0x3fd3e2d91354 name="href" value="http://identi.ca/notice/25901411">]>, #<Nokogiri::XML::Element:0x3fd3e2d913f4 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d90d3c name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2d90d28 name="href" value="http://identi.ca/conversation/25903525">]>, #<Nokogiri::XML::Element:0x3fd3e2d90dc8 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d90710 name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e2d906fc name="href" value="http://identi.ca/user/3919">]>, #<Nokogiri::XML::Element:0x3fd3e2d9079c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d900e4 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2d900d0 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2d900bc name="href" value="http://identi.ca/notice/25901411">]>, #<Nokogiri::XML::Element:0x3fd3e2d90170 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d8f8d8 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2d8f8c4 name="href" value="http://identi.ca/conversation/25903525">]>, #<Nokogiri::XML::Element:0x3fd3e2d8f964 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d8f2ac name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2d8f298 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2d8f284 name="href" value="http://identi.ca/notice/25893010">]>, #<Nokogiri::XML::Element:0x3fd3e2d8f338 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d8eaa0 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2d8ea8c name="href" value="http://identi.ca/conversation/25895237">]>, #<Nokogiri::XML::Element:0x3fd3e2d8eb2c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d8e474 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2d8e460 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2d8e44c name="href" value="http://identi.ca/notice/25886430">]>, #<Nokogiri::XML::Element:0x3fd3e2d8e500 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d8dc68 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2d8dc54 name="href" value="http://identi.ca/conversation/25888731">]>, #<Nokogiri::XML::Element:0x3fd3e2d8dcf4 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d8d63c name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2d8d628 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2d8d614 name="href" value="http://identi.ca/notice/25885909">]>, #<Nokogiri::XML::Element:0x3fd3e2d8d6c8 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d8ce30 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2d8ce1c name="href" value="http://identi.ca/conversation/25888219">]>, #<Nokogiri::XML::Element:0x3fd3e2d8cebc name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d8c804 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2d8c7f0 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2d8c7dc name="href" value="http://identi.ca/notice/25884964">]>, #<Nokogiri::XML::Element:0x3fd3e2d8c890 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d8bff8 name="rel" value="related">, #<Nokogiri::XML::Attr:0x3fd3e2d8bfe4 name="href" value="http://identi.ca/notice/25884744">]>, #<Nokogiri::XML::Element:0x3fd3e2d8c084 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d8b9cc name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2d8b9b8 name="href" value="http://identi.ca/conversation/25865719">]>, #<Nokogiri::XML::Element:0x3fd3e2d8ba58 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d8b3a0 name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e2d8b38c name="href" value="http://identi.ca/user/25">]>, #<Nokogiri::XML::Element:0x3fd3e2d8b42c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d8ad74 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2d8ad60 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2d8ad4c name="href" value="http://identi.ca/notice/25884472">]>, #<Nokogiri::XML::Element:0x3fd3e2d8ae00 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d8a568 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2d8a554 name="href" value="http://identi.ca/conversation/25886820">]>, #<Nokogiri::XML::Element:0x3fd3e2d8a5f4 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d89f3c name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2d89f28 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2d89f14 name="href" value="http://identi.ca/notice/25883092">]>, #<Nokogiri::XML::Element:0x3fd3e2d89fc8 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d89730 name="rel" value="related">, #<Nokogiri::XML::Attr:0x3fd3e2d8971c name="href" value="http://identi.ca/notice/25881280">]>, #<Nokogiri::XML::Element:0x3fd3e2d897bc name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d89104 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2d890f0 name="href" value="http://identi.ca/conversation/25865719">]>, #<Nokogiri::XML::Element:0x3fd3e2d89190 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d88ad8 name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e2d88ac4 name="href" value="http://identi.ca/user/25">]>, #<Nokogiri::XML::Element:0x3fd3e2d88b64 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d884ac name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2d88498 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2d88484 name="href" value="http://identi.ca/notice/25880962">]>, #<Nokogiri::XML::Element:0x3fd3e2d88538 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d87ca0 name="rel" value="related">, #<Nokogiri::XML::Attr:0x3fd3e2d87c8c name="href" value="http://identi.ca/notice/25862047">]>, #<Nokogiri::XML::Element:0x3fd3e2d87d2c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d87674 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2d87660 name="href" value="http://identi.ca/conversation/25865719">]>, #<Nokogiri::XML::Element:0x3fd3e2d87700 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d87048 name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e2d87034 name="href" value="http://identi.ca/user/25">]>, #<Nokogiri::XML::Element:0x3fd3e2d870d4 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d86a1c name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e2d86a08 name="href" value="http://identi.ca/user/12287">]>, #<Nokogiri::XML::Element:0x3fd3e2d86aa8 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d863f0 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2d863dc name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2d863c8 name="href" value="http://identi.ca/notice/25858788">]>, #<Nokogiri::XML::Element:0x3fd3e2d8647c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d85be4 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2d85bd0 name="href" value="http://identi.ca/conversation/25863151">]>, #<Nokogiri::XML::Element:0x3fd3e2d85c70 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d855b8 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2d855a4 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2d85590 name="href" value="http://identi.ca/notice/25844958">]>, #<Nokogiri::XML::Element:0x3fd3e2d85644 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d84dac name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2d84d98 name="href" value="http://identi.ca/conversation/25850168">]>, #<Nokogiri::XML::Element:0x3fd3e2d84e38 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d84780 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2d8476c name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2d84758 name="href" value="http://identi.ca/notice/25844885">]>, #<Nokogiri::XML::Element:0x3fd3e2d8480c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d83f74 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2d83f60 name="href" value="http://identi.ca/conversation/25850097">]>, #<Nokogiri::XML::Element:0x3fd3e2d84000 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d83948 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2d83934 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2d83920 name="href" value="http://identi.ca/notice/25844739">]>, #<Nokogiri::XML::Element:0x3fd3e2d839d4 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d8313c name="rel" value="related">, #<Nokogiri::XML::Attr:0x3fd3e2d83128 name="href" value="http://identi.ca/notice/25842248">]>, #<Nokogiri::XML::Element:0x3fd3e2d831c8 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d82b10 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2d82afc name="href" value="http://identi.ca/conversation/25847513">]>, #<Nokogiri::XML::Element:0x3fd3e2d82b9c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d824e4 name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e2d824d0 name="href" value="http://identi.ca/user/55937">]>, #<Nokogiri::XML::Element:0x3fd3e2d82570 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d81eb8 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2d81ea4 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2d81e90 name="href" value="http://identi.ca/notice/25763611">]>, #<Nokogiri::XML::Element:0x3fd3e2d81f44 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d816ac name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2d81698 name="href" value="http://identi.ca/conversation/25770684">]>, #<Nokogiri::XML::Element:0x3fd3e2d81738 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d81080 name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e2d8106c name="href" value="http://identi.ca/group/60/id">]>, #<Nokogiri::XML::Element:0x3fd3e2d8110c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d80a54 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2d80a40 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2d80a2c name="href" value="http://identi.ca/notice/25751067">]>, #<Nokogiri::XML::Element:0x3fd3e2d80ae0 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d80248 name="rel" value="related">, #<Nokogiri::XML::Attr:0x3fd3e2d80234 name="href" value="http://identi.ca/notice/25750508">]>, #<Nokogiri::XML::Element:0x3fd3e2d802d4 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d7fc1c name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2d7fc08 name="href" value="http://identi.ca/conversation/25757769">]>, #<Nokogiri::XML::Element:0x3fd3e2d7fca8 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d7f5f0 name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e2d7f5dc name="href" value="http://identi.ca/user/60886">]>, #<Nokogiri::XML::Element:0x3fd3e2d7f67c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d7efc4 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2d7efb0 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2d7ef9c name="href" value="http://identi.ca/notice/25751033">]>, #<Nokogiri::XML::Element:0x3fd3e2d7f050 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d7e7b8 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2d7e7a4 name="href" value="http://identi.ca/conversation/25758287">]>, #<Nokogiri::XML::Element:0x3fd3e2d7e844 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d7e18c name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2d7e178 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2d7e164 name="href" value="http://identi.ca/notice/25750838">]>, #<Nokogiri::XML::Element:0x3fd3e2d7e218 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d7d980 name="rel" value="related">, #<Nokogiri::XML::Attr:0x3fd3e2d7d96c name="href" value="http://evan.status.net/notice/5698">]>, #<Nokogiri::XML::Element:0x3fd3e2d7da0c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d7d354 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2d7d340 name="href" value="http://identi.ca/conversation/25643058">]>, #<Nokogiri::XML::Element:0x3fd3e2d7d3e0 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2d7cd28 name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e2d7cd14 name="href" value="http://evan.status.net/user/1">]>]
+
+Node attrs: hrefhttp://identi.ca/tjgilliesrelalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/main/sup#3919relhttp://api.friendfeed.com/2008/03#suptypeapplication/json
+
+Node attrs: hrefhttp://identi.ca/main/push/hubrelhub
+
+Node attrs: hrefhttp://identi.ca/main/salmon/user/3919relhttp://salmon-protocol.org/ns/salmon-replies
+
+Node attrs: hrefhttp://identi.ca/main/salmon/user/3919relhttp://salmon-protocol.org/ns/salmon-mention
+
+Node attrs: hrefhttp://identi.ca/api/statuses/user_timeline/3919.atomrelselftypeapplication/atom+xml
+
+Node attrs: hrefhttp://identi.ca/tjgilliesrelalternatetypetext/html
+
+Node attrs: hrefhttp://avatar.identi.ca/3919-original-20080826101830.jpegrelavatartypeimage/jpegheight178width178
+
+Node attrs: hrefhttp://avatar.identi.ca/3919-96-20080826101830.pngrelavatartypeimage/pngheight96width96
+
+Node attrs: hrefhttp://avatar.identi.ca/3919-48-20080826101830.pngrelavatartypeimage/pngheight48width48
+
+Node attrs: hrefhttp://avatar.identi.ca/3919-24-20080826101830.pngrelavatartypeimage/pngheight24width24
+
+Node attrs: hrefhttp://identi.ca/notice/25902107relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/notice/25901132relrelated
+
+Node attrs: hrefhttp://identi.ca/conversation/25903250relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/user/8106relostatus:attention
+
+Node attrs: hrefhttp://identi.ca/notice/25902072relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/notice/25902043relrelated
+
+Node attrs: hrefhttp://identi.ca/conversation/25901908relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/user/418relostatus:attention
+
+Node attrs: hrefhttp://identi.ca/notice/25901968relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/notice/25901854relrelated
+
+Node attrs: hrefhttp://identi.ca/conversation/25901908relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/user/418relostatus:attention
+
+Node attrs: hrefhttp://identi.ca/notice/25901435relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/notice/25901411relrelated
+
+Node attrs: hrefhttp://identi.ca/conversation/25903525relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/user/3919relostatus:attention
+
+Node attrs: hrefhttp://identi.ca/notice/25901411relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/conversation/25903525relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/notice/25893010relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/conversation/25895237relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/notice/25886430relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/conversation/25888731relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/notice/25885909relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/conversation/25888219relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/notice/25884964relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/notice/25884744relrelated
+
+Node attrs: hrefhttp://identi.ca/conversation/25865719relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/user/25relostatus:attention
+
+Node attrs: hrefhttp://identi.ca/notice/25884472relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/conversation/25886820relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/notice/25883092relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/notice/25881280relrelated
+
+Node attrs: hrefhttp://identi.ca/conversation/25865719relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/user/25relostatus:attention
+
+Node attrs: hrefhttp://identi.ca/notice/25880962relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/notice/25862047relrelated
+
+Node attrs: hrefhttp://identi.ca/conversation/25865719relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/user/25relostatus:attention
+
+Node attrs: hrefhttp://identi.ca/user/12287relostatus:attention
+
+Node attrs: hrefhttp://identi.ca/notice/25858788relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/conversation/25863151relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/notice/25844958relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/conversation/25850168relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/notice/25844885relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/conversation/25850097relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/notice/25844739relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/notice/25842248relrelated
+
+Node attrs: hrefhttp://identi.ca/conversation/25847513relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/user/55937relostatus:attention
+
+Node attrs: hrefhttp://identi.ca/notice/25763611relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/conversation/25770684relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/group/60/idrelostatus:attention
+
+Node attrs: hrefhttp://identi.ca/notice/25751067relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/notice/25750508relrelated
+
+Node attrs: hrefhttp://identi.ca/conversation/25757769relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/user/60886relostatus:attention
+
+Node attrs: hrefhttp://identi.ca/notice/25751033relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/conversation/25758287relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/notice/25750838relalternatetypetext/html
+
+Node attrs: hrefhttp://evan.status.net/notice/5698relrelated
+
+Node attrs: hrefhttp://identi.ca/conversation/25643058relostatus:conversation
+
+Node attrs: hrefhttp://evan.status.net/user/1relostatus:attention
+
+HUB: http://identi.ca/main/push/hub
+
+
+
+NoMethodError (undefined method `subscriptions' for nil:NilClass):
+  app/controllers/main_controller.rb:38:in `subscribe'
+
+Rendered rescues/_trace (267.8ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 05:06:16) [GET]
+Rendering main/main
+
+ActionView::TemplateError (undefined method `username' for nil:NilClass) on line #15 of app/views/main/main.html.erb:
+12: </style>
+13: <div>
+14:   <p>
+15:     Hello <%= @user.username %>
+16:   </p>
+17: </div>
+18:     
+
+    app/views/main/main.html.erb:15
+
+Rendered rescues/_trace (34.6ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 05:06:19) [GET]
+Rendering main/main
+
+ActionView::TemplateError (undefined method `username' for nil:NilClass) on line #15 of app/views/main/main.html.erb:
+12: </style>
+13: <div>
+14:   <p>
+15:     Hello <%= @user.username %>
+16:   </p>
+17: </div>
+18:     
+
+    app/views/main/main.html.erb:15
+
+Rendered rescues/_trace (134.3ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;36;1mUser Destroy (0.3ms)[0m   [0;1mDELETE FROM "users" WHERE "id" = 10[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;36;1mUser Destroy (0.2ms)[0m   [0;1mDELETE FROM "users" WHERE "id" = 11[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 12) [0m
+  [4;36;1mUser Destroy (0.1ms)[0m   [0;1mDELETE FROM "users" WHERE "id" = 12[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+  [4;36;1mUser Destroy (0.1ms)[0m   [0;1mDELETE FROM "users" WHERE "id" = 13[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 14) [0m
+  [4;36;1mUser Destroy (0.2ms)[0m   [0;1mDELETE FROM "users" WHERE "id" = 14[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("created_at", "subscriptions", "updated_at", "picture_url", "username", "profile_url", "foaf_location", "host", "password", "email") VALUES('2010-03-24 12:06:53', NULL, '2010-03-24 12:06:53', NULL, '--- :tylergillies
+', NULL, NULL, '--- :localhost
+', NULL, NULL)[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 05:07:10) [GET]
+Rendering main/main
+
+ActionView::TemplateError (undefined method `username' for nil:NilClass) on line #15 of app/views/main/main.html.erb:
+12: </style>
+13: <div>
+14:   <p>
+15:     Hello <%= @user.username %>
+16:   </p>
+17: </div>
+18:     
+
+    app/views/main/main.html.erb:15
+
+Rendered rescues/_trace (34.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 05:07:12) [GET]
+Rendering main/main
+
+ActionView::TemplateError (undefined method `username' for nil:NilClass) on line #15 of app/views/main/main.html.erb:
+12: </style>
+13: <div>
+14:   <p>
+15:     Hello <%= @user.username %>
+16:   </p>
+17: </div>
+18:     
+
+    app/views/main/main.html.erb:15
+
+Rendered rescues/_trace (39.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 15) [0m
+  [4;36;1mUser Destroy (0.2ms)[0m   [0;1mDELETE FROM "users" WHERE "id" = 15[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("created_at", "subscriptions", "updated_at", "picture_url", "username", "profile_url", "foaf_location", "host", "password", "email") VALUES('2010-03-24 12:07:36', NULL, '2010-03-24 12:07:36', NULL, 'tylergillies', NULL, NULL, 'localhost', NULL, NULL)[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 05:07:42) [GET]
+Rendering main/main
+
+ActionView::TemplateError (undefined method `username' for nil:NilClass) on line #15 of app/views/main/main.html.erb:
+12: </style>
+13: <div>
+14:   <p>
+15:     Hello <%= @user.username %>
+16:   </p>
+17: </div>
+18:     
+
+    app/views/main/main.html.erb:15
+
+Rendered rescues/_trace (34.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mUser Load (2.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 05:07:44) [GET]
+Rendering main/main
+
+ActionView::TemplateError (undefined method `username' for nil:NilClass) on line #15 of app/views/main/main.html.erb:
+12: </style>
+13: <div>
+14:   <p>
+15:     Hello <%= @user.username %>
+16:   </p>
+17: </div>
+18:     
+
+    app/views/main/main.html.erb:15
+
+Rendered rescues/_trace (126.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 05:08:28) [GET]
+Rendering main/main
+
+ActionView::TemplateError (undefined method `username' for nil:NilClass) on line #15 of app/views/main/main.html.erb:
+12: </style>
+13: <div>
+14:   <p>
+15:     Hello <%= @user.username %>
+16:   </p>
+17: </div>
+18:     
+
+    app/views/main/main.html.erb:15
+
+Rendered rescues/_trace (35.2ms)
+Rendered rescues/_request_and_response (22.9ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 05:08:32) [GET]
+Rendering main/main
+
+ActionView::TemplateError (undefined method `username' for nil:NilClass) on line #15 of app/views/main/main.html.erb:
+12: </style>
+13: <div>
+14:   <p>
+15:     Hello <%= @user.username %>
+16:   </p>
+17: </div>
+18:     
+
+    app/views/main/main.html.erb:15
+
+Rendered rescues/_trace (36.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 05:09:15) [GET]
+  [4;35;1mUser Load (2.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+Rendering main/main
+Completed in 12ms (View: 4, DB: 3) | 200 OK [http://localhost/main/main]
+
+
+Processing MainController#subscribe (for 127.0.0.1 at 2010-03-24 05:09:25) [GET]
+  Parameters: {"remotename"=>"tjgillies@identi.ca"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+Class: Nokogiri::XML::Document
+
+LINKS: [#<Nokogiri::XML::Element:0x3fd3e3092ad0 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e30929f4 name="href" value="http://identi.ca/tjgillies">, #<Nokogiri::XML::Attr:0x3fd3e30929b8 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e3092990 name="type" value="text/html">]>, #<Nokogiri::XML::Element:0x3fd3e3092a80 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e3092030 name="href" value="http://identi.ca/main/sup#3919">, #<Nokogiri::XML::Attr:0x3fd3e309201c name="rel" value="http://api.friendfeed.com/2008/03#sup">, #<Nokogiri::XML::Attr:0x3fd3e3092008 name="type" value="application/json">]>, #<Nokogiri::XML::Element:0x3fd3e30920bc name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e30915e0 name="href" value="http://identi.ca/main/push/hub">, #<Nokogiri::XML::Attr:0x3fd3e30915cc name="rel" value="hub">]>, #<Nokogiri::XML::Element:0x3fd3e3091680 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e3090e10 name="href" value="http://identi.ca/main/salmon/user/3919">, #<Nokogiri::XML::Attr:0x3fd3e3090dfc name="rel" value="http://salmon-protocol.org/ns/salmon-replies">]>, #<Nokogiri::XML::Element:0x3fd3e3090eb0 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e30906a4 name="href" value="http://identi.ca/main/salmon/user/3919">, #<Nokogiri::XML::Attr:0x3fd3e3090690 name="rel" value="http://salmon-protocol.org/ns/salmon-mention">]>, #<Nokogiri::XML::Element:0x3fd3e3090730 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e308fe70 name="href" value="http://identi.ca/api/statuses/user_timeline/3919.atom">, #<Nokogiri::XML::Attr:0x3fd3e308fe5c name="rel" value="self">, #<Nokogiri::XML::Attr:0x3fd3e308fe20 name="type" value="application/atom+xml">]>, #<Nokogiri::XML::Element:0x3fd3e308ff88 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e308f3e4 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e308f3d0 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e308f3bc name="href" value="http://identi.ca/tjgillies">]>, #<Nokogiri::XML::Element:0x3fd3e308f484 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e308e9d0 name="rel" value="avatar">, #<Nokogiri::XML::Attr:0x3fd3e308e9bc name="type" value="image/jpeg">, #<Nokogiri::XML::Attr:0x3fd3e308e9a8 name="width" namespace=#<Nokogiri::XML::Namespace:0x3fd3e308dd28 prefix="media" href="http://purl.org/syndication/atommedia"> value="178">, #<Nokogiri::XML::Attr:0x3fd3e308e994 name="height" namespace=#<Nokogiri::XML::Namespace:0x3fd3e308dd28 prefix="media" href="http://purl.org/syndication/atommedia"> value="178">, #<Nokogiri::XML::Attr:0x3fd3e308e958 name="href" value="http://avatar.identi.ca/3919-original-20080826101830.jpeg">]>, #<Nokogiri::XML::Element:0x3fd3e308ea5c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e308d65c name="rel" value="avatar">, #<Nokogiri::XML::Attr:0x3fd3e308d648 name="type" value="image/png">, #<Nokogiri::XML::Attr:0x3fd3e308d634 name="width" namespace=#<Nokogiri::XML::Namespace:0x3fd3e308dd28 prefix="media" href="http://purl.org/syndication/atommedia"> value="96">, #<Nokogiri::XML::Attr:0x3fd3e308d620 name="height" namespace=#<Nokogiri::XML::Namespace:0x3fd3e308dd28 prefix="media" href="http://purl.org/syndication/atommedia"> value="96">, #<Nokogiri::XML::Attr:0x3fd3e308d60c name="href" value="http://avatar.identi.ca/3919-96-20080826101830.png">]>, #<Nokogiri::XML::Element:0x3fd3e308d710 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e308c2ac name="rel" value="avatar">, #<Nokogiri::XML::Attr:0x3fd3e308c298 name="type" value="image/png">, #<Nokogiri::XML::Attr:0x3fd3e308c284 name="width" namespace=#<Nokogiri::XML::Namespace:0x3fd3e308dd28 prefix="media" href="http://purl.org/syndication/atommedia"> value="48">, #<Nokogiri::XML::Attr:0x3fd3e308c25c name="height" namespace=#<Nokogiri::XML::Namespace:0x3fd3e308dd28 prefix="media" href="http://purl.org/syndication/atommedia"> value="48">, #<Nokogiri::XML::Attr:0x3fd3e308c234 name="href" value="http://avatar.identi.ca/3919-48-20080826101830.png">]>, #<Nokogiri::XML::Element:0x3fd3e308c338 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e3089c8c name="rel" value="avatar">, #<Nokogiri::XML::Attr:0x3fd3e3089c28 name="type" value="image/png">, #<Nokogiri::XML::Attr:0x3fd3e3089bd8 name="width" namespace=#<Nokogiri::XML::Namespace:0x3fd3e308dd28 prefix="media" href="http://purl.org/syndication/atommedia"> value="24">, #<Nokogiri::XML::Attr:0x3fd3e3089b88 name="height" namespace=#<Nokogiri::XML::Namespace:0x3fd3e308dd28 prefix="media" href="http://purl.org/syndication/atommedia"> value="24">, #<Nokogiri::XML::Attr:0x3fd3e3089b74 name="href" value="http://avatar.identi.ca/3919-24-20080826101830.png">]>, #<Nokogiri::XML::Element:0x3fd3e3089d68 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e3088350 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e308833c name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e3088328 name="href" value="http://identi.ca/notice/25902107">]>, #<Nokogiri::XML::Element:0x3fd3e3088418 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e3087964 name="rel" value="related">, #<Nokogiri::XML::Attr:0x3fd3e3087950 name="href" value="http://identi.ca/notice/25901132">]>, #<Nokogiri::XML::Element:0x3fd3e3087a04 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e30871e4 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e30871a8 name="href" value="http://identi.ca/conversation/25903250">]>, #<Nokogiri::XML::Element:0x3fd3e3087270 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e3086a28 name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e3086a14 name="href" value="http://identi.ca/user/8106">]>, #<Nokogiri::XML::Element:0x3fd3e3086ab4 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e308626c name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e3086258 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e308621c name="href" value="http://identi.ca/notice/25902072">]>, #<Nokogiri::XML::Element:0x3fd3e308630c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e3085614 name="rel" value="related">, #<Nokogiri::XML::Attr:0x3fd3e30855d8 name="href" value="http://identi.ca/notice/25902043">]>, #<Nokogiri::XML::Element:0x3fd3e30856c8 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e30847a0 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e308478c name="href" value="http://identi.ca/conversation/25901908">]>, #<Nokogiri::XML::Element:0x3fd3e3084868 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e308400c name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e3083ff8 name="href" value="http://identi.ca/user/418">]>, #<Nokogiri::XML::Element:0x3fd3e30840ac name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e3083878 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e3083864 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e3083850 name="href" value="http://identi.ca/notice/25901968">]>, #<Nokogiri::XML::Element:0x3fd3e3083940 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e3082e64 name="rel" value="related">, #<Nokogiri::XML::Attr:0x3fd3e3082e3c name="href" value="http://identi.ca/notice/25901854">]>, #<Nokogiri::XML::Element:0x3fd3e3082f90 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e3082694 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e308266c name="href" value="http://identi.ca/conversation/25901908">]>, #<Nokogiri::XML::Element:0x3fd3e3082798 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e3081eec name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e3081ed8 name="href" value="http://identi.ca/user/418">]>, #<Nokogiri::XML::Element:0x3fd3e3081fa0 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e3081758 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e3081744 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e3081730 name="href" value="http://identi.ca/notice/25901435">]>, #<Nokogiri::XML::Element:0x3fd3e308180c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e3080d6c name="rel" value="related">, #<Nokogiri::XML::Attr:0x3fd3e3080d44 name="href" value="http://identi.ca/notice/25901411">]>, #<Nokogiri::XML::Element:0x3fd3e3080df8 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e308059c name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e3080588 name="href" value="http://identi.ca/conversation/25903525">]>, #<Nokogiri::XML::Element:0x3fd3e3080664 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e307fe1c name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e307fe08 name="href" value="http://identi.ca/user/3919">]>, #<Nokogiri::XML::Element:0x3fd3e307fea8 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e307f6c4 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e307f6b0 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e307f69c name="href" value="http://identi.ca/notice/25901411">]>, #<Nokogiri::XML::Element:0x3fd3e307f750 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e307eea4 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e307ee90 name="href" value="http://identi.ca/conversation/25903525">]>, #<Nokogiri::XML::Element:0x3fd3e307ef30 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e307e760 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e307e74c name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e307e738 name="href" value="http://identi.ca/notice/25893010">]>, #<Nokogiri::XML::Element:0x3fd3e307e828 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e307deb4 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e307dea0 name="href" value="http://identi.ca/conversation/25895237">]>, #<Nokogiri::XML::Element:0x3fd3e307df54 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e307d7c0 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e307d784 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e307d770 name="href" value="http://identi.ca/notice/25886430">]>, #<Nokogiri::XML::Element:0x3fd3e307d888 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e307cd98 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e307cd70 name="href" value="http://identi.ca/conversation/25888731">]>, #<Nokogiri::XML::Element:0x3fd3e307cec4 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e307c5b4 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e307c5a0 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e307c58c name="href" value="http://identi.ca/notice/25885909">]>, #<Nokogiri::XML::Element:0x3fd3e307c6f4 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e307bbc8 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e307bbb4 name="href" value="http://identi.ca/conversation/25888219">]>, #<Nokogiri::XML::Element:0x3fd3e307bc54 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e307b434 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e307b420 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e307b40c name="href" value="http://identi.ca/notice/25884964">]>, #<Nokogiri::XML::Element:0x3fd3e307b4d4 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e307aa0c name="rel" value="related">, #<Nokogiri::XML::Attr:0x3fd3e307a9f8 name="href" value="http://identi.ca/notice/25884744">]>, #<Nokogiri::XML::Element:0x3fd3e307aad4 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e307a28c name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e307a278 name="href" value="http://identi.ca/conversation/25865719">]>, #<Nokogiri::XML::Element:0x3fd3e307a318 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e3079ad0 name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e3079abc name="href" value="http://identi.ca/user/25">]>, #<Nokogiri::XML::Element:0x3fd3e3079bac name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e3079364 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e3079350 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e3079328 name="href" value="http://identi.ca/notice/25884472">]>, #<Nokogiri::XML::Element:0x3fd3e3079404 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e3078914 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e3078900 name="href" value="http://identi.ca/conversation/25886820">]>, #<Nokogiri::XML::Element:0x3fd3e3078a40 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e3078194 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e307816c name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e3078158 name="href" value="http://identi.ca/notice/25883092">]>, #<Nokogiri::XML::Element:0x3fd3e3078248 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e30777f8 name="rel" value="related">, #<Nokogiri::XML::Attr:0x3fd3e30777e4 name="href" value="http://identi.ca/notice/25881280">]>, #<Nokogiri::XML::Element:0x3fd3e3077884 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e3076fc4 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e3076fb0 name="href" value="http://identi.ca/conversation/25865719">]>, #<Nokogiri::XML::Element:0x3fd3e3077050 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e30767a4 name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e3076790 name="href" value="http://identi.ca/user/25">]>, #<Nokogiri::XML::Element:0x3fd3e307686c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e3075fe8 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e3075fd4 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e3075fac name="href" value="http://identi.ca/notice/25880962">]>, #<Nokogiri::XML::Element:0x3fd3e30760b0 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e307564c name="rel" value="related">, #<Nokogiri::XML::Attr:0x3fd3e3075638 name="href" value="http://identi.ca/notice/25862047">]>, #<Nokogiri::XML::Element:0x3fd3e30756d8 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e3074e40 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e3074e2c name="href" value="http://identi.ca/conversation/25865719">]>, #<Nokogiri::XML::Element:0x3fd3e3074f58 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e30746d4 name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e30746c0 name="href" value="http://identi.ca/user/25">]>, #<Nokogiri::XML::Element:0x3fd3e3074760 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e3073f18 name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e3073f04 name="href" value="http://identi.ca/user/12287">]>, #<Nokogiri::XML::Element:0x3fd3e3073fb8 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e3073784 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e3073770 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e307375c name="href" value="http://identi.ca/notice/25858788">]>, #<Nokogiri::XML::Element:0x3fd3e307384c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e3072dac name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e3072d98 name="href" value="http://identi.ca/conversation/25863151">]>, #<Nokogiri::XML::Element:0x3fd3e3072e4c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e3072604 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e30725f0 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e30725dc name="href" value="http://identi.ca/notice/25844958">]>, #<Nokogiri::XML::Element:0x3fd3e30726e0 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e3071c90 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e3071c7c name="href" value="http://identi.ca/conversation/25850168">]>, #<Nokogiri::XML::Element:0x3fd3e3071d1c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e30714d4 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e3071470 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e307145c name="href" value="http://identi.ca/notice/25844885">]>, #<Nokogiri::XML::Element:0x3fd3e3071588 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e3070a98 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e3070a84 name="href" value="http://identi.ca/conversation/25850097">]>, #<Nokogiri::XML::Element:0x3fd3e3070b38 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e3070304 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e30702dc name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e30702c8 name="href" value="http://identi.ca/notice/25844739">]>, #<Nokogiri::XML::Element:0x3fd3e30703b8 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e306f7ec name="rel" value="related">, #<Nokogiri::XML::Attr:0x3fd3e306f7d8 name="href" value="http://identi.ca/notice/25842248">]>, #<Nokogiri::XML::Element:0x3fd3e306f92c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e306f058 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e306f01c name="href" value="http://identi.ca/conversation/25847513">]>, #<Nokogiri::XML::Element:0x3fd3e306f0e4 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e306e8b0 name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e306e89c name="href" value="http://identi.ca/user/55937">]>, #<Nokogiri::XML::Element:0x3fd3e306e950 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e306dff0 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e306dfb4 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e306df8c name="href" value="http://identi.ca/notice/25763611">]>, #<Nokogiri::XML::Element:0x3fd3e306e0cc name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e306d12c name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e306d118 name="href" value="http://identi.ca/conversation/25770684">]>, #<Nokogiri::XML::Element:0x3fd3e306d244 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e306c9c0 name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e306c9ac name="href" value="http://identi.ca/group/60/id">]>, #<Nokogiri::XML::Element:0x3fd3e306ca4c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e306c204 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e306c1f0 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e306c1c8 name="href" value="http://identi.ca/notice/25751067">]>, #<Nokogiri::XML::Element:0x3fd3e306c2a4 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e306b6c4 name="rel" value="related">, #<Nokogiri::XML::Attr:0x3fd3e306b6b0 name="href" value="http://identi.ca/notice/25750508">]>, #<Nokogiri::XML::Element:0x3fd3e306b750 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e3069f40 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e3069ea0 name="href" value="http://identi.ca/conversation/25757769">]>, #<Nokogiri::XML::Element:0x3fd3e306a5bc name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e30696d0 name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e30696bc name="href" value="http://identi.ca/user/60886">]>, #<Nokogiri::XML::Element:0x3fd3e3069798 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e3068ed8 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e3068ec4 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e3068e38 name="href" value="http://identi.ca/notice/25751033">]>, #<Nokogiri::XML::Element:0x3fd3e3068f8c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e3067ccc name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e3067c54 name="href" value="http://identi.ca/conversation/25758287">]>, #<Nokogiri::XML::Element:0x3fd3e3067d94 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e3067498 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e3067470 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e306745c name="href" value="http://identi.ca/notice/25750838">]>, #<Nokogiri::XML::Element:0x3fd3e306754c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e3065b5c name="rel" value="related">, #<Nokogiri::XML::Attr:0x3fd3e306583c name="href" value="http://evan.status.net/notice/5698">]>, #<Nokogiri::XML::Element:0x3fd3e3065f08 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e3064acc name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e3064aa4 name="href" value="http://identi.ca/conversation/25643058">]>, #<Nokogiri::XML::Element:0x3fd3e3064b80 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e3063938 name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e3063924 name="href" value="http://evan.status.net/user/1">]>]
+
+Node attrs: hrefhttp://identi.ca/tjgilliesrelalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/main/sup#3919relhttp://api.friendfeed.com/2008/03#suptypeapplication/json
+
+Node attrs: hrefhttp://identi.ca/main/push/hubrelhub
+
+Node attrs: hrefhttp://identi.ca/main/salmon/user/3919relhttp://salmon-protocol.org/ns/salmon-replies
+
+Node attrs: hrefhttp://identi.ca/main/salmon/user/3919relhttp://salmon-protocol.org/ns/salmon-mention
+
+Node attrs: hrefhttp://identi.ca/api/statuses/user_timeline/3919.atomrelselftypeapplication/atom+xml
+
+Node attrs: hrefhttp://identi.ca/tjgilliesrelalternatetypetext/html
+
+Node attrs: hrefhttp://avatar.identi.ca/3919-original-20080826101830.jpegrelavatartypeimage/jpegheight178width178
+
+Node attrs: hrefhttp://avatar.identi.ca/3919-96-20080826101830.pngrelavatartypeimage/pngheight96width96
+
+Node attrs: hrefhttp://avatar.identi.ca/3919-48-20080826101830.pngrelavatartypeimage/pngheight48width48
+
+Node attrs: hrefhttp://avatar.identi.ca/3919-24-20080826101830.pngrelavatartypeimage/pngheight24width24
+
+Node attrs: hrefhttp://identi.ca/notice/25902107relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/notice/25901132relrelated
+
+Node attrs: hrefhttp://identi.ca/conversation/25903250relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/user/8106relostatus:attention
+
+Node attrs: hrefhttp://identi.ca/notice/25902072relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/notice/25902043relrelated
+
+Node attrs: hrefhttp://identi.ca/conversation/25901908relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/user/418relostatus:attention
+
+Node attrs: hrefhttp://identi.ca/notice/25901968relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/notice/25901854relrelated
+
+Node attrs: hrefhttp://identi.ca/conversation/25901908relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/user/418relostatus:attention
+
+Node attrs: hrefhttp://identi.ca/notice/25901435relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/notice/25901411relrelated
+
+Node attrs: hrefhttp://identi.ca/conversation/25903525relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/user/3919relostatus:attention
+
+Node attrs: hrefhttp://identi.ca/notice/25901411relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/conversation/25903525relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/notice/25893010relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/conversation/25895237relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/notice/25886430relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/conversation/25888731relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/notice/25885909relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/conversation/25888219relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/notice/25884964relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/notice/25884744relrelated
+
+Node attrs: hrefhttp://identi.ca/conversation/25865719relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/user/25relostatus:attention
+
+Node attrs: hrefhttp://identi.ca/notice/25884472relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/conversation/25886820relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/notice/25883092relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/notice/25881280relrelated
+
+Node attrs: hrefhttp://identi.ca/conversation/25865719relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/user/25relostatus:attention
+
+Node attrs: hrefhttp://identi.ca/notice/25880962relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/notice/25862047relrelated
+
+Node attrs: hrefhttp://identi.ca/conversation/25865719relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/user/25relostatus:attention
+
+Node attrs: hrefhttp://identi.ca/user/12287relostatus:attention
+
+Node attrs: hrefhttp://identi.ca/notice/25858788relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/conversation/25863151relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/notice/25844958relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/conversation/25850168relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/notice/25844885relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/conversation/25850097relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/notice/25844739relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/notice/25842248relrelated
+
+Node attrs: hrefhttp://identi.ca/conversation/25847513relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/user/55937relostatus:attention
+
+Node attrs: hrefhttp://identi.ca/notice/25763611relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/conversation/25770684relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/group/60/idrelostatus:attention
+
+Node attrs: hrefhttp://identi.ca/notice/25751067relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/notice/25750508relrelated
+
+Node attrs: hrefhttp://identi.ca/conversation/25757769relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/user/60886relostatus:attention
+
+Node attrs: hrefhttp://identi.ca/notice/25751033relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/conversation/25758287relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/notice/25750838relalternatetypetext/html
+
+Node attrs: hrefhttp://evan.status.net/notice/5698relrelated
+
+Node attrs: hrefhttp://identi.ca/conversation/25643058relostatus:conversation
+
+Node attrs: hrefhttp://evan.status.net/user/1relostatus:attention
+
+HUB: http://identi.ca/main/push/hub
+
+
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.<<):
+  app/controllers/main_controller.rb:40:in `subscribe'
+
+Rendered rescues/_trace (38.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MainController#subscribe (for 127.0.0.1 at 2010-03-24 05:10:58) [GET]
+  Parameters: {"remotename"=>"tjgillies@identi.ca"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+Class: Nokogiri::XML::Document
+
+LINKS: [#<Nokogiri::XML::Element:0x3fd3e2ee4ef4 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ee4dc8 name="href" value="http://identi.ca/tjgillies">, #<Nokogiri::XML::Attr:0x3fd3e2ee4db4 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2ee4da0 name="type" value="text/html">]>, #<Nokogiri::XML::Element:0x3fd3e2ee4e90 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ee4440 name="href" value="http://identi.ca/main/sup#3919">, #<Nokogiri::XML::Attr:0x3fd3e2ee442c name="rel" value="http://api.friendfeed.com/2008/03#sup">, #<Nokogiri::XML::Attr:0x3fd3e2ee4418 name="type" value="application/json">]>, #<Nokogiri::XML::Element:0x3fd3e2ee44cc name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ee3a54 name="href" value="http://identi.ca/main/push/hub">, #<Nokogiri::XML::Attr:0x3fd3e2ee3a2c name="rel" value="hub">]>, #<Nokogiri::XML::Element:0x3fd3e2ee3b08 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ee32ac name="href" value="http://identi.ca/main/salmon/user/3919">, #<Nokogiri::XML::Attr:0x3fd3e2ee3284 name="rel" value="http://salmon-protocol.org/ns/salmon-replies">]>, #<Nokogiri::XML::Element:0x3fd3e2ee3360 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ee2b54 name="href" value="http://identi.ca/main/salmon/user/3919">, #<Nokogiri::XML::Attr:0x3fd3e2ee2b40 name="rel" value="http://salmon-protocol.org/ns/salmon-mention">]>, #<Nokogiri::XML::Element:0x3fd3e2ee2be0 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ee2410 name="href" value="http://identi.ca/api/statuses/user_timeline/3919.atom">, #<Nokogiri::XML::Attr:0x3fd3e2ee23fc name="rel" value="self">, #<Nokogiri::XML::Attr:0x3fd3e2ee23e8 name="type" value="application/atom+xml">]>, #<Nokogiri::XML::Element:0x3fd3e2ee249c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ee19e8 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2ee19c0 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2ee19ac name="href" value="http://identi.ca/tjgillies">]>, #<Nokogiri::XML::Element:0x3fd3e2ee1a9c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ee0ffc name="rel" value="avatar">, #<Nokogiri::XML::Attr:0x3fd3e2ee0fe8 name="type" value="image/jpeg">, #<Nokogiri::XML::Attr:0x3fd3e2ee0fd4 name="width" namespace=#<Nokogiri::XML::Namespace:0x3fd3e2ee596c prefix="media" href="http://purl.org/syndication/atommedia"> value="178">, #<Nokogiri::XML::Attr:0x3fd3e2ee0fc0 name="height" namespace=#<Nokogiri::XML::Namespace:0x3fd3e2ee596c prefix="media" href="http://purl.org/syndication/atommedia"> value="178">, #<Nokogiri::XML::Attr:0x3fd3e2ee0fac name="href" value="http://avatar.identi.ca/3919-original-20080826101830.jpeg">]>, #<Nokogiri::XML::Element:0x3fd3e2ee10b0 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2edfbd4 name="rel" value="avatar">, #<Nokogiri::XML::Attr:0x3fd3e2edfbc0 name="type" value="image/png">, #<Nokogiri::XML::Attr:0x3fd3e2edfbac name="width" namespace=#<Nokogiri::XML::Namespace:0x3fd3e2ee596c prefix="media" href="http://purl.org/syndication/atommedia"> value="96">, #<Nokogiri::XML::Attr:0x3fd3e2edfb98 name="height" namespace=#<Nokogiri::XML::Namespace:0x3fd3e2ee596c prefix="media" href="http://purl.org/syndication/atommedia"> value="96">, #<Nokogiri::XML::Attr:0x3fd3e2edfb84 name="href" value="http://avatar.identi.ca/3919-96-20080826101830.png">]>, #<Nokogiri::XML::Element:0x3fd3e2edfcb0 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ede810 name="rel" value="avatar">, #<Nokogiri::XML::Attr:0x3fd3e2ede7fc name="type" value="image/png">, #<Nokogiri::XML::Attr:0x3fd3e2ede7e8 name="width" namespace=#<Nokogiri::XML::Namespace:0x3fd3e2ee596c prefix="media" href="http://purl.org/syndication/atommedia"> value="48">, #<Nokogiri::XML::Attr:0x3fd3e2ede7d4 name="height" namespace=#<Nokogiri::XML::Namespace:0x3fd3e2ee596c prefix="media" href="http://purl.org/syndication/atommedia"> value="48">, #<Nokogiri::XML::Attr:0x3fd3e2ede7c0 name="href" value="http://avatar.identi.ca/3919-48-20080826101830.png">]>, #<Nokogiri::XML::Element:0x3fd3e2ede8ec name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2edd4ec name="rel" value="avatar">, #<Nokogiri::XML::Attr:0x3fd3e2edd4d8 name="type" value="image/png">, #<Nokogiri::XML::Attr:0x3fd3e2edd49c name="width" namespace=#<Nokogiri::XML::Namespace:0x3fd3e2ee596c prefix="media" href="http://purl.org/syndication/atommedia"> value="24">, #<Nokogiri::XML::Attr:0x3fd3e2edd474 name="height" namespace=#<Nokogiri::XML::Namespace:0x3fd3e2ee596c prefix="media" href="http://purl.org/syndication/atommedia"> value="24">, #<Nokogiri::XML::Attr:0x3fd3e2edd460 name="href" value="http://avatar.identi.ca/3919-24-20080826101830.png">]>, #<Nokogiri::XML::Element:0x3fd3e2edd578 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2edc114 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2edc0ec name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2edc0d8 name="href" value="http://identi.ca/notice/25902107">]>, #<Nokogiri::XML::Element:0x3fd3e2edc218 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2edb778 name="rel" value="related">, #<Nokogiri::XML::Attr:0x3fd3e2edb764 name="href" value="http://identi.ca/notice/25901132">]>, #<Nokogiri::XML::Element:0x3fd3e2edb818 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2edb00c name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2edaff8 name="href" value="http://identi.ca/conversation/25903250">]>, #<Nokogiri::XML::Element:0x3fd3e2edb0c0 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2eda83c name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e2eda828 name="href" value="http://identi.ca/user/8106">]>, #<Nokogiri::XML::Element:0x3fd3e2eda918 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2eda0bc name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2eda0a8 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2eda094 name="href" value="http://identi.ca/notice/25902072">]>, #<Nokogiri::XML::Element:0x3fd3e2eda170 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ed97fc name="rel" value="related">, #<Nokogiri::XML::Attr:0x3fd3e2ed97e8 name="href" value="http://identi.ca/notice/25902043">]>, #<Nokogiri::XML::Element:0x3fd3e2ed9888 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ed91d0 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2ed91bc name="href" value="http://identi.ca/conversation/25901908">]>, #<Nokogiri::XML::Element:0x3fd3e2ed925c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ed8ba4 name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e2ed8b90 name="href" value="http://identi.ca/user/418">]>, #<Nokogiri::XML::Element:0x3fd3e2ed8c30 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ed8424 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2ed8410 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2ed83fc name="href" value="http://identi.ca/notice/25901968">]>, #<Nokogiri::XML::Element:0x3fd3e2ed84d8 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ed7a74 name="rel" value="related">, #<Nokogiri::XML::Attr:0x3fd3e2ed7a60 name="href" value="http://identi.ca/notice/25901854">]>, #<Nokogiri::XML::Element:0x3fd3e2ed7b3c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ed7330 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2ed731c name="href" value="http://identi.ca/conversation/25901908">]>, #<Nokogiri::XML::Element:0x3fd3e2ed73bc name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ed6bec name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e2ed6bd8 name="href" value="http://identi.ca/user/418">]>, #<Nokogiri::XML::Element:0x3fd3e2ed6c78 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ed65c0 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2ed65ac name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2ed6598 name="href" value="http://identi.ca/notice/25901435">]>, #<Nokogiri::XML::Element:0x3fd3e2ed664c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ed5d78 name="rel" value="related">, #<Nokogiri::XML::Attr:0x3fd3e2ed5d64 name="href" value="http://identi.ca/notice/25901411">]>, #<Nokogiri::XML::Element:0x3fd3e2ed5e40 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ed56c0 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2ed56ac name="href" value="http://identi.ca/conversation/25903525">]>, #<Nokogiri::XML::Element:0x3fd3e2ed574c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ed506c name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e2ed5058 name="href" value="http://identi.ca/user/3919">]>, #<Nokogiri::XML::Element:0x3fd3e2ed50f8 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ed4a40 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2ed4a2c name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2ed4a18 name="href" value="http://identi.ca/notice/25901411">]>, #<Nokogiri::XML::Element:0x3fd3e2ed4acc name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ed4040 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2ed4018 name="href" value="http://identi.ca/conversation/25903525">]>, #<Nokogiri::XML::Element:0x3fd3e2ed40e0 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ed3708 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2ed36f4 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2ed36e0 name="href" value="http://identi.ca/notice/25893010">]>, #<Nokogiri::XML::Element:0x3fd3e2ed37d0 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ed26a0 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2ed268c name="href" value="http://identi.ca/conversation/25895237">]>, #<Nokogiri::XML::Element:0x3fd3e2ed272c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ed1c78 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2ed1c64 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2ed1c50 name="href" value="http://identi.ca/notice/25886430">]>, #<Nokogiri::XML::Element:0x3fd3e2ed1d04 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ed0d64 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2ed0c60 name="href" value="http://identi.ca/conversation/25888731">]>, #<Nokogiri::XML::Element:0x3fd3e2ed12f0 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ecf680 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2ecf66c name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2ecf658 name="href" value="http://identi.ca/notice/25885909">]>, #<Nokogiri::XML::Element:0x3fd3e2ecf93c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ecdac4 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2ecdab0 name="href" value="http://identi.ca/conversation/25888219">]>, #<Nokogiri::XML::Element:0x3fd3e2ecdd44 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ecca20 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2ecca0c name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2ecc9f8 name="href" value="http://identi.ca/notice/25884964">]>, #<Nokogiri::XML::Element:0x3fd3e2eccae8 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ecc1c4 name="rel" value="related">, #<Nokogiri::XML::Attr:0x3fd3e2ecc1b0 name="href" value="http://identi.ca/notice/25884744">]>, #<Nokogiri::XML::Element:0x3fd3e2ecc250 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ecbb70 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2ecbb5c name="href" value="http://identi.ca/conversation/25865719">]>, #<Nokogiri::XML::Element:0x3fd3e2ecbc24 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ecb530 name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e2ecb51c name="href" value="http://identi.ca/user/25">]>, #<Nokogiri::XML::Element:0x3fd3e2ecb5bc name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ecaf04 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2ecaef0 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2ecaedc name="href" value="http://identi.ca/notice/25884472">]>, #<Nokogiri::XML::Element:0x3fd3e2ecaf90 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2eca270 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2eca25c name="href" value="http://identi.ca/conversation/25886820">]>, #<Nokogiri::XML::Element:0x3fd3e2eca2fc name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ec9bf4 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2ec9be0 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2ec9bcc name="href" value="http://identi.ca/notice/25883092">]>, #<Nokogiri::XML::Element:0x3fd3e2ec9c80 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ec9370 name="rel" value="related">, #<Nokogiri::XML::Attr:0x3fd3e2ec935c name="href" value="http://identi.ca/notice/25881280">]>, #<Nokogiri::XML::Element:0x3fd3e2ec93fc name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ec7c3c name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2ec7c00 name="href" value="http://identi.ca/conversation/25865719">]>, #<Nokogiri::XML::Element:0x3fd3e2ec7e94 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ec5e8c name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e2ec5e3c name="href" value="http://identi.ca/user/25">]>, #<Nokogiri::XML::Element:0x3fd3e2ec60e4 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ec3b28 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2ec3b14 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2ec3858 name="href" value="http://identi.ca/notice/25880962">]>, #<Nokogiri::XML::Element:0x3fd3e2ec4104 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ec16d4 name="rel" value="related">, #<Nokogiri::XML::Attr:0x3fd3e2ec16ac name="href" value="http://identi.ca/notice/25862047">]>, #<Nokogiri::XML::Element:0x3fd3e2ec18dc name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ec0f68 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2ec0f54 name="href" value="http://identi.ca/conversation/25865719">]>, #<Nokogiri::XML::Element:0x3fd3e2ec0ff4 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ec0928 name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e2ec0914 name="href" value="http://identi.ca/user/25">]>, #<Nokogiri::XML::Element:0x3fd3e2ec09b4 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ec02fc name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e2ec02e8 name="href" value="http://identi.ca/user/12287">]>, #<Nokogiri::XML::Element:0x3fd3e2ec0388 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ebfbe0 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2ebfbcc name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2ebfbb8 name="href" value="http://identi.ca/notice/25858788">]>, #<Nokogiri::XML::Element:0x3fd3e2ebfc94 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ebf26c name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2ebf258 name="href" value="http://identi.ca/conversation/25863151">]>, #<Nokogiri::XML::Element:0x3fd3e2ebf2f8 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ebec40 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2ebec2c name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2ebec18 name="href" value="http://identi.ca/notice/25844958">]>, #<Nokogiri::XML::Element:0x3fd3e2ebeccc name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ebe434 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2ebe420 name="href" value="http://identi.ca/conversation/25850168">]>, #<Nokogiri::XML::Element:0x3fd3e2ebe4c0 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ebdde0 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2ebddcc name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2ebdda4 name="href" value="http://identi.ca/notice/25844885">]>, #<Nokogiri::XML::Element:0x3fd3e2ebde80 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ebd584 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2ebd570 name="href" value="http://identi.ca/conversation/25850097">]>, #<Nokogiri::XML::Element:0x3fd3e2ebd610 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ebcf1c name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2ebcf08 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2ebcef4 name="href" value="http://identi.ca/notice/25844739">]>, #<Nokogiri::XML::Element:0x3fd3e2ebcfa8 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ebc6e8 name="rel" value="related">, #<Nokogiri::XML::Attr:0x3fd3e2ebc6d4 name="href" value="http://identi.ca/notice/25842248">]>, #<Nokogiri::XML::Element:0x3fd3e2ebc774 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ebc0bc name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2ebc0a8 name="href" value="http://identi.ca/conversation/25847513">]>, #<Nokogiri::XML::Element:0x3fd3e2ebc148 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ebb928 name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e2ebb914 name="href" value="http://identi.ca/user/55937">]>, #<Nokogiri::XML::Element:0x3fd3e2ebb9b4 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ebb1bc name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2ebb1a8 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2ebb194 name="href" value="http://identi.ca/notice/25763611">]>, #<Nokogiri::XML::Element:0x3fd3e2ebb25c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2eba2e4 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2eba2d0 name="href" value="http://identi.ca/conversation/25770684">]>, #<Nokogiri::XML::Element:0x3fd3e2eba474 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2eb918c name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e2eb9178 name="href" value="http://identi.ca/group/60/id">]>, #<Nokogiri::XML::Element:0x3fd3e2eb922c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2eb8778 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2eb873c name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2eb8728 name="href" value="http://identi.ca/notice/25751067">]>, #<Nokogiri::XML::Element:0x3fd3e2eb8a70 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2eb7a80 name="rel" value="related">, #<Nokogiri::XML::Attr:0x3fd3e2eb7a6c name="href" value="http://identi.ca/notice/25750508">]>, #<Nokogiri::XML::Element:0x3fd3e2eb7b0c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2eb6464 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2eb6338 name="href" value="http://identi.ca/conversation/25757769">]>, #<Nokogiri::XML::Element:0x3fd3e2eb6860 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2eb459c name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e2eb454c name="href" value="http://identi.ca/user/60886">]>, #<Nokogiri::XML::Element:0x3fd3e2eb4c18 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2eb1b94 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2eb1b80 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2eb1b44 name="href" value="http://identi.ca/notice/25751033">]>, #<Nokogiri::XML::Element:0x3fd3e2eb1dd8 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2eb06cc name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2eb06b8 name="href" value="http://identi.ca/conversation/25758287">]>, #<Nokogiri::XML::Element:0x3fd3e2eb080c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2eaf9c0 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2eaf9ac name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2eaf998 name="href" value="http://identi.ca/notice/25750838">]>, #<Nokogiri::XML::Element:0x3fd3e2eafa60 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2eadef4 name="rel" value="related">, #<Nokogiri::XML::Attr:0x3fd3e2eadee0 name="href" value="http://evan.status.net/notice/5698">]>, #<Nokogiri::XML::Element:0x3fd3e2eae304 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2eace14 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2eace00 name="href" value="http://identi.ca/conversation/25643058">]>, #<Nokogiri::XML::Element:0x3fd3e2eacea0 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2eaac90 name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e2eaac2c name="href" value="http://evan.status.net/user/1">]>]
+
+Node attrs: hrefhttp://identi.ca/tjgilliesrelalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/main/sup#3919relhttp://api.friendfeed.com/2008/03#suptypeapplication/json
+
+Node attrs: hrefhttp://identi.ca/main/push/hubrelhub
+
+Node attrs: hrefhttp://identi.ca/main/salmon/user/3919relhttp://salmon-protocol.org/ns/salmon-replies
+
+Node attrs: hrefhttp://identi.ca/main/salmon/user/3919relhttp://salmon-protocol.org/ns/salmon-mention
+
+Node attrs: hrefhttp://identi.ca/api/statuses/user_timeline/3919.atomrelselftypeapplication/atom+xml
+
+Node attrs: hrefhttp://identi.ca/tjgilliesrelalternatetypetext/html
+
+Node attrs: hrefhttp://avatar.identi.ca/3919-original-20080826101830.jpegrelavatartypeimage/jpegheight178width178
+
+Node attrs: hrefhttp://avatar.identi.ca/3919-96-20080826101830.pngrelavatartypeimage/pngheight96width96
+
+Node attrs: hrefhttp://avatar.identi.ca/3919-48-20080826101830.pngrelavatartypeimage/pngheight48width48
+
+Node attrs: hrefhttp://avatar.identi.ca/3919-24-20080826101830.pngrelavatartypeimage/pngheight24width24
+
+Node attrs: hrefhttp://identi.ca/notice/25902107relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/notice/25901132relrelated
+
+Node attrs: hrefhttp://identi.ca/conversation/25903250relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/user/8106relostatus:attention
+
+Node attrs: hrefhttp://identi.ca/notice/25902072relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/notice/25902043relrelated
+
+Node attrs: hrefhttp://identi.ca/conversation/25901908relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/user/418relostatus:attention
+
+Node attrs: hrefhttp://identi.ca/notice/25901968relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/notice/25901854relrelated
+
+Node attrs: hrefhttp://identi.ca/conversation/25901908relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/user/418relostatus:attention
+
+Node attrs: hrefhttp://identi.ca/notice/25901435relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/notice/25901411relrelated
+
+Node attrs: hrefhttp://identi.ca/conversation/25903525relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/user/3919relostatus:attention
+
+Node attrs: hrefhttp://identi.ca/notice/25901411relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/conversation/25903525relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/notice/25893010relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/conversation/25895237relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/notice/25886430relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/conversation/25888731relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/notice/25885909relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/conversation/25888219relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/notice/25884964relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/notice/25884744relrelated
+
+Node attrs: hrefhttp://identi.ca/conversation/25865719relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/user/25relostatus:attention
+
+Node attrs: hrefhttp://identi.ca/notice/25884472relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/conversation/25886820relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/notice/25883092relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/notice/25881280relrelated
+
+Node attrs: hrefhttp://identi.ca/conversation/25865719relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/user/25relostatus:attention
+
+Node attrs: hrefhttp://identi.ca/notice/25880962relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/notice/25862047relrelated
+
+Node attrs: hrefhttp://identi.ca/conversation/25865719relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/user/25relostatus:attention
+
+Node attrs: hrefhttp://identi.ca/user/12287relostatus:attention
+
+Node attrs: hrefhttp://identi.ca/notice/25858788relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/conversation/25863151relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/notice/25844958relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/conversation/25850168relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/notice/25844885relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/conversation/25850097relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/notice/25844739relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/notice/25842248relrelated
+
+Node attrs: hrefhttp://identi.ca/conversation/25847513relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/user/55937relostatus:attention
+
+Node attrs: hrefhttp://identi.ca/notice/25763611relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/conversation/25770684relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/group/60/idrelostatus:attention
+
+Node attrs: hrefhttp://identi.ca/notice/25751067relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/notice/25750508relrelated
+
+Node attrs: hrefhttp://identi.ca/conversation/25757769relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/user/60886relostatus:attention
+
+Node attrs: hrefhttp://identi.ca/notice/25751033relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/conversation/25758287relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/notice/25750838relalternatetypetext/html
+
+Node attrs: hrefhttp://evan.status.net/notice/5698relrelated
+
+Node attrs: hrefhttp://identi.ca/conversation/25643058relostatus:conversation
+
+Node attrs: hrefhttp://evan.status.net/user/1relostatus:attention
+
+HUB: http://identi.ca/main/push/hub
+
+
+Completed in 2948ms (View: 1, DB: 0) | 200 OK [http://localhost/main/subscribe?remotename=tjgillies%40identi.ca]
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" LIMIT 1[0m
+
+
+Processing MainController#subscribe (for 127.0.0.1 at 2010-03-24 05:11:48) [GET]
+  Parameters: {"remotename"=>"tjgillies@identi.ca"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+Class: Nokogiri::XML::Document
+
+LINKS: [#<Nokogiri::XML::Element:0x3fd3e300f6d0 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e300f568 name="href" value="http://identi.ca/tjgillies">, #<Nokogiri::XML::Attr:0x3fd3e300f554 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e300f540 name="type" value="text/html">]>, #<Nokogiri::XML::Element:0x3fd3e300f608 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e300eba4 name="href" value="http://identi.ca/main/sup#3919">, #<Nokogiri::XML::Attr:0x3fd3e300eb90 name="rel" value="http://api.friendfeed.com/2008/03#sup">, #<Nokogiri::XML::Attr:0x3fd3e300eb7c name="type" value="application/json">]>, #<Nokogiri::XML::Element:0x3fd3e300ec58 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e300e1cc name="href" value="http://identi.ca/main/push/hub">, #<Nokogiri::XML::Attr:0x3fd3e300e1b8 name="rel" value="hub">]>, #<Nokogiri::XML::Element:0x3fd3e300e258 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e300d9fc name="href" value="http://identi.ca/main/salmon/user/3919">, #<Nokogiri::XML::Attr:0x3fd3e300d9e8 name="rel" value="http://salmon-protocol.org/ns/salmon-replies">]>, #<Nokogiri::XML::Element:0x3fd3e300dad8 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e300d27c name="href" value="http://identi.ca/main/salmon/user/3919">, #<Nokogiri::XML::Attr:0x3fd3e300d268 name="rel" value="http://salmon-protocol.org/ns/salmon-mention">]>, #<Nokogiri::XML::Element:0x3fd3e300d330 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e300cafc name="href" value="http://identi.ca/api/statuses/user_timeline/3919.atom">, #<Nokogiri::XML::Attr:0x3fd3e300cac0 name="rel" value="self">, #<Nokogiri::XML::Attr:0x3fd3e300caac name="type" value="application/atom+xml">]>, #<Nokogiri::XML::Element:0x3fd3e300cb9c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e300c084 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e300c048 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e300c020 name="href" value="http://identi.ca/tjgillies">]>, #<Nokogiri::XML::Element:0x3fd3e300c110 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e300b5f8 name="rel" value="avatar">, #<Nokogiri::XML::Attr:0x3fd3e300b5e4 name="type" value="image/jpeg">, #<Nokogiri::XML::Attr:0x3fd3e300b5bc name="width" namespace=#<Nokogiri::XML::Namespace:0x3fd3e30100f8 prefix="media" href="http://purl.org/syndication/atommedia"> value="178">, #<Nokogiri::XML::Attr:0x3fd3e300b5a8 name="height" namespace=#<Nokogiri::XML::Namespace:0x3fd3e30100f8 prefix="media" href="http://purl.org/syndication/atommedia"> value="178">, #<Nokogiri::XML::Attr:0x3fd3e300b594 name="href" value="http://avatar.identi.ca/3919-original-20080826101830.jpeg">]>, #<Nokogiri::XML::Element:0x3fd3e300b698 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e3009c08 name="rel" value="avatar">, #<Nokogiri::XML::Attr:0x3fd3e3009adc name="type" value="image/png">, #<Nokogiri::XML::Attr:0x3fd3e3009ac8 name="width" namespace=#<Nokogiri::XML::Namespace:0x3fd3e30100f8 prefix="media" href="http://purl.org/syndication/atommedia"> value="96">, #<Nokogiri::XML::Attr:0x3fd3e30099b0 name="height" namespace=#<Nokogiri::XML::Namespace:0x3fd3e30100f8 prefix="media" href="http://purl.org/syndication/atommedia"> value="96">, #<Nokogiri::XML::Attr:0x3fd3e300999c name="href" value="http://avatar.identi.ca/3919-96-20080826101830.png">]>, #<Nokogiri::XML::Element:0x3fd3e300a1a8 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e3004618 name="rel" value="avatar">, #<Nokogiri::XML::Attr:0x3fd3e300458c name="type" value="image/png">, #<Nokogiri::XML::Attr:0x3fd3e3004564 name="width" namespace=#<Nokogiri::XML::Namespace:0x3fd3e30100f8 prefix="media" href="http://purl.org/syndication/atommedia"> value="48">, #<Nokogiri::XML::Attr:0x3fd3e30043fc name="height" namespace=#<Nokogiri::XML::Namespace:0x3fd3e30100f8 prefix="media" href="http://purl.org/syndication/atommedia"> value="48">, #<Nokogiri::XML::Attr:0x3fd3e3004334 name="href" value="http://avatar.identi.ca/3919-48-20080826101830.png">]>, #<Nokogiri::XML::Element:0x3fd3e30047d0 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ffdf20 name="rel" value="avatar">, #<Nokogiri::XML::Attr:0x3fd3e2ffdef8 name="type" value="image/png">, #<Nokogiri::XML::Attr:0x3fd3e2ffdee4 name="width" namespace=#<Nokogiri::XML::Namespace:0x3fd3e30100f8 prefix="media" href="http://purl.org/syndication/atommedia"> value="24">, #<Nokogiri::XML::Attr:0x3fd3e2ffdebc name="height" namespace=#<Nokogiri::XML::Namespace:0x3fd3e30100f8 prefix="media" href="http://purl.org/syndication/atommedia"> value="24">, #<Nokogiri::XML::Attr:0x3fd3e2ffdea8 name="href" value="http://avatar.identi.ca/3919-24-20080826101830.png">]>, #<Nokogiri::XML::Element:0x3fd3e2ffdfac name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ffcb34 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2ffcb20 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2ffcb0c name="href" value="http://identi.ca/notice/25902107">]>, #<Nokogiri::XML::Element:0x3fd3e2ffcbfc name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ffc10c name="rel" value="related">, #<Nokogiri::XML::Attr:0x3fd3e2ffc0f8 name="href" value="http://identi.ca/notice/25901132">]>, #<Nokogiri::XML::Element:0x3fd3e2ffc1d4 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ffb9a0 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2ffb964 name="href" value="http://identi.ca/conversation/25903250">]>, #<Nokogiri::XML::Element:0x3fd3e2ffba2c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ffb194 name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e2ffb180 name="href" value="http://identi.ca/user/8106">]>, #<Nokogiri::XML::Element:0x3fd3e2ffb270 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ffaa00 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2ffa9ec name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2ffa9d8 name="href" value="http://identi.ca/notice/25902072">]>, #<Nokogiri::XML::Element:0x3fd3e2ffaaa0 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ff9efc name="rel" value="related">, #<Nokogiri::XML::Attr:0x3fd3e2ff9ee8 name="href" value="http://identi.ca/notice/25902043">]>, #<Nokogiri::XML::Element:0x3fd3e2ffa104 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ff8e1c name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2ff8e08 name="href" value="http://identi.ca/conversation/25901908">]>, #<Nokogiri::XML::Element:0x3fd3e2ff8f48 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ff7df0 name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e2ff7ddc name="href" value="http://identi.ca/user/418">]>, #<Nokogiri::XML::Element:0x3fd3e2ff7e7c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ff6b44 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2ff6b30 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2ff6b1c name="href" value="http://identi.ca/notice/25901968">]>, #<Nokogiri::XML::Element:0x3fd3e2ff6dc4 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ff585c name="rel" value="related">, #<Nokogiri::XML::Attr:0x3fd3e2ff5794 name="href" value="http://identi.ca/notice/25901854">]>, #<Nokogiri::XML::Element:0x3fd3e2ff5a3c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ff4614 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2ff4600 name="href" value="http://identi.ca/conversation/25901908">]>, #<Nokogiri::XML::Element:0x3fd3e2ff46b4 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ff2c24 name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e2ff2bfc name="href" value="http://identi.ca/user/418">]>, #<Nokogiri::XML::Element:0x3fd3e2ff2cd8 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2ff1158 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2ff1144 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2ff1130 name="href" value="http://identi.ca/notice/25901435">]>, #<Nokogiri::XML::Element:0x3fd3e2ff11e4 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fef830 name="rel" value="related">, #<Nokogiri::XML::Attr:0x3fd3e2fef81c name="href" value="http://identi.ca/notice/25901411">]>, #<Nokogiri::XML::Element:0x3fd3e2fef920 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fee8e0 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2fee8cc name="href" value="http://identi.ca/conversation/25903525">]>, #<Nokogiri::XML::Element:0x3fd3e2feea98 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fee020 name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e2fee00c name="href" value="http://identi.ca/user/3919">]>, #<Nokogiri::XML::Element:0x3fd3e2fee0ac name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fed88c name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2fed878 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2fed864 name="href" value="http://identi.ca/notice/25901411">]>, #<Nokogiri::XML::Element:0x3fd3e2fed918 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fece28 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2fece14 name="href" value="http://identi.ca/conversation/25903525">]>, #<Nokogiri::XML::Element:0x3fd3e2fecef0 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fec680 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2fec66c name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2fec644 name="href" value="http://identi.ca/notice/25893010">]>, #<Nokogiri::XML::Element:0x3fd3e2fec734 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2febc80 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2febc6c name="href" value="http://identi.ca/conversation/25895237">]>, #<Nokogiri::XML::Element:0x3fd3e2febd48 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2feb424 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2feb3fc name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2feb3e8 name="href" value="http://identi.ca/notice/25886430">]>, #<Nokogiri::XML::Element:0x3fd3e2feb5a0 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2feaa74 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2feaa60 name="href" value="http://identi.ca/conversation/25888731">]>, #<Nokogiri::XML::Element:0x3fd3e2feab00 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fea290 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2fea27c name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2fea268 name="href" value="http://identi.ca/notice/25885909">]>, #<Nokogiri::XML::Element:0x3fd3e2fea3a8 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fe98cc name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2fe98b8 name="href" value="http://identi.ca/conversation/25888219">]>, #<Nokogiri::XML::Element:0x3fd3e2fe9958 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fe90fc name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2fe90e8 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2fe90d4 name="href" value="http://identi.ca/notice/25884964">]>, #<Nokogiri::XML::Element:0x3fd3e2fe919c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fe86e8 name="rel" value="related">, #<Nokogiri::XML::Attr:0x3fd3e2fe86d4 name="href" value="http://identi.ca/notice/25884744">]>, #<Nokogiri::XML::Element:0x3fd3e2fe879c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fe7b6c name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2fe7b58 name="href" value="http://identi.ca/conversation/25865719">]>, #<Nokogiri::XML::Element:0x3fd3e2fe7c34 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fe7310 name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e2fe7270 name="href" value="http://identi.ca/user/25">]>, #<Nokogiri::XML::Element:0x3fd3e2fe7414 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fe6a78 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2fe6a64 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2fe6a50 name="href" value="http://identi.ca/notice/25884472">]>, #<Nokogiri::XML::Element:0x3fd3e2fe6b18 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fe5fc4 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2fe5fb0 name="href" value="http://identi.ca/conversation/25886820">]>, #<Nokogiri::XML::Element:0x3fd3e2fe6050 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fe5448 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2fe5434 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2fe53f8 name="href" value="http://identi.ca/notice/25883092">]>, #<Nokogiri::XML::Element:0x3fd3e2fe54d4 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fe49a8 name="rel" value="related">, #<Nokogiri::XML::Attr:0x3fd3e2fe4994 name="href" value="http://identi.ca/notice/25881280">]>, #<Nokogiri::XML::Element:0x3fd3e2fe4a5c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fe4200 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2fe41ec name="href" value="http://identi.ca/conversation/25865719">]>, #<Nokogiri::XML::Element:0x3fd3e2fe428c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fe3a30 name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e2fe3a08 name="href" value="http://identi.ca/user/25">]>, #<Nokogiri::XML::Element:0x3fd3e2fe3abc name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fe3260 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2fe3224 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2fe3210 name="href" value="http://identi.ca/notice/25880962">]>, #<Nokogiri::XML::Element:0x3fd3e2fe3314 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fe2874 name="rel" value="related">, #<Nokogiri::XML::Attr:0x3fd3e2fe2860 name="href" value="http://identi.ca/notice/25862047">]>, #<Nokogiri::XML::Element:0x3fd3e2fe2900 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fe207c name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2fe2018 name="href" value="http://identi.ca/conversation/25865719">]>, #<Nokogiri::XML::Element:0x3fd3e2fe2158 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fe185c name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e2fe1834 name="href" value="http://identi.ca/user/25">]>, #<Nokogiri::XML::Element:0x3fd3e2fe194c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fe09d4 name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e2fe09c0 name="href" value="http://identi.ca/user/12287">]>, #<Nokogiri::XML::Element:0x3fd3e2fe0a60 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fe01b4 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2fe01a0 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2fe018c name="href" value="http://identi.ca/notice/25858788">]>, #<Nokogiri::XML::Element:0x3fd3e2fe0254 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fdf7f0 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2fdf7dc name="href" value="http://identi.ca/conversation/25863151">]>, #<Nokogiri::XML::Element:0x3fd3e2fdf87c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fdf048 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2fdf034 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2fdefe4 name="href" value="http://identi.ca/notice/25844958">]>, #<Nokogiri::XML::Element:0x3fd3e2fdf0d4 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fde558 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2fde530 name="href" value="http://identi.ca/conversation/25850168">]>, #<Nokogiri::XML::Element:0x3fd3e2fde620 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fddae0 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2fddab8 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2fddaa4 name="href" value="http://identi.ca/notice/25844885">]>, #<Nokogiri::XML::Element:0x3fd3e2fddb80 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fdcf64 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2fdcf50 name="href" value="http://identi.ca/conversation/25850097">]>, #<Nokogiri::XML::Element:0x3fd3e2fdd02c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fdc5f0 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2fdc460 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2fdc2d0 name="href" value="http://identi.ca/notice/25844739">]>, #<Nokogiri::XML::Element:0x3fd3e2fdc730 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fda7a0 name="rel" value="related">, #<Nokogiri::XML::Attr:0x3fd3e2fda78c name="href" value="http://identi.ca/notice/25842248">]>, #<Nokogiri::XML::Element:0x3fd3e2fda82c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fd997c name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2fd9968 name="href" value="http://identi.ca/conversation/25847513">]>, #<Nokogiri::XML::Element:0x3fd3e2fd9ae4 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fd89c8 name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e2fd8978 name="href" value="http://identi.ca/user/55937">]>, #<Nokogiri::XML::Element:0x3fd3e2fd8b6c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fd7910 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2fd78e8 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2fd78c0 name="href" value="http://identi.ca/notice/25763611">]>, #<Nokogiri::XML::Element:0x3fd3e2fd7aa0 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fd5a20 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2fd59f8 name="href" value="http://identi.ca/conversation/25770684">]>, #<Nokogiri::XML::Element:0x3fd3e2fd5b60 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fd5264 name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e2fd5250 name="href" value="http://identi.ca/group/60/id">]>, #<Nokogiri::XML::Element:0x3fd3e2fd5304 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fd4620 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2fd460c name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2fd45f8 name="href" value="http://identi.ca/notice/25751067">]>, #<Nokogiri::XML::Element:0x3fd3e2fd46fc name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fd3d24 name="rel" value="related">, #<Nokogiri::XML::Attr:0x3fd3e2fd3d10 name="href" value="http://identi.ca/notice/25750508">]>, #<Nokogiri::XML::Element:0x3fd3e2fd3dc4 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fd357c name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2fd3568 name="href" value="http://identi.ca/conversation/25757769">]>, #<Nokogiri::XML::Element:0x3fd3e2fd3644 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fd2de8 name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e2fd2dd4 name="href" value="http://identi.ca/user/60886">]>, #<Nokogiri::XML::Element:0x3fd3e2fd2ec4 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fd2654 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2fd2640 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2fd262c name="href" value="http://identi.ca/notice/25751033">]>, #<Nokogiri::XML::Element:0x3fd3e2fd271c name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fd14e8 name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2fd14d4 name="href" value="http://identi.ca/conversation/25758287">]>, #<Nokogiri::XML::Element:0x3fd3e2fd15b0 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fd0d54 name="rel" value="alternate">, #<Nokogiri::XML::Attr:0x3fd3e2fd0d40 name="type" value="text/html">, #<Nokogiri::XML::Attr:0x3fd3e2fd0d2c name="href" value="http://identi.ca/notice/25750838">]>, #<Nokogiri::XML::Element:0x3fd3e2fd0de0 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fd0340 name="rel" value="related">, #<Nokogiri::XML::Attr:0x3fd3e2fd0318 name="href" value="http://evan.status.net/notice/5698">]>, #<Nokogiri::XML::Element:0x3fd3e2fd03f4 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fcfbac name="rel" value="ostatus:conversation">, #<Nokogiri::XML::Attr:0x3fd3e2fcfb98 name="href" value="http://identi.ca/conversation/25643058">]>, #<Nokogiri::XML::Element:0x3fd3e2fcfc38 name="link" attributes=[#<Nokogiri::XML::Attr:0x3fd3e2fcf418 name="rel" value="ostatus:attention">, #<Nokogiri::XML::Attr:0x3fd3e2fcf404 name="href" value="http://evan.status.net/user/1">]>]
+
+Node attrs: hrefhttp://identi.ca/tjgilliesrelalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/main/sup#3919relhttp://api.friendfeed.com/2008/03#suptypeapplication/json
+
+Node attrs: hrefhttp://identi.ca/main/push/hubrelhub
+
+Node attrs: hrefhttp://identi.ca/main/salmon/user/3919relhttp://salmon-protocol.org/ns/salmon-replies
+
+Node attrs: hrefhttp://identi.ca/main/salmon/user/3919relhttp://salmon-protocol.org/ns/salmon-mention
+
+Node attrs: hrefhttp://identi.ca/api/statuses/user_timeline/3919.atomrelselftypeapplication/atom+xml
+
+Node attrs: hrefhttp://identi.ca/tjgilliesrelalternatetypetext/html
+
+Node attrs: hrefhttp://avatar.identi.ca/3919-original-20080826101830.jpegrelavatartypeimage/jpegheight178width178
+
+Node attrs: hrefhttp://avatar.identi.ca/3919-96-20080826101830.pngrelavatartypeimage/pngheight96width96
+
+Node attrs: hrefhttp://avatar.identi.ca/3919-48-20080826101830.pngrelavatartypeimage/pngheight48width48
+
+Node attrs: hrefhttp://avatar.identi.ca/3919-24-20080826101830.pngrelavatartypeimage/pngheight24width24
+
+Node attrs: hrefhttp://identi.ca/notice/25902107relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/notice/25901132relrelated
+
+Node attrs: hrefhttp://identi.ca/conversation/25903250relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/user/8106relostatus:attention
+
+Node attrs: hrefhttp://identi.ca/notice/25902072relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/notice/25902043relrelated
+
+Node attrs: hrefhttp://identi.ca/conversation/25901908relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/user/418relostatus:attention
+
+Node attrs: hrefhttp://identi.ca/notice/25901968relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/notice/25901854relrelated
+
+Node attrs: hrefhttp://identi.ca/conversation/25901908relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/user/418relostatus:attention
+
+Node attrs: hrefhttp://identi.ca/notice/25901435relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/notice/25901411relrelated
+
+Node attrs: hrefhttp://identi.ca/conversation/25903525relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/user/3919relostatus:attention
+
+Node attrs: hrefhttp://identi.ca/notice/25901411relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/conversation/25903525relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/notice/25893010relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/conversation/25895237relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/notice/25886430relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/conversation/25888731relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/notice/25885909relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/conversation/25888219relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/notice/25884964relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/notice/25884744relrelated
+
+Node attrs: hrefhttp://identi.ca/conversation/25865719relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/user/25relostatus:attention
+
+Node attrs: hrefhttp://identi.ca/notice/25884472relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/conversation/25886820relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/notice/25883092relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/notice/25881280relrelated
+
+Node attrs: hrefhttp://identi.ca/conversation/25865719relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/user/25relostatus:attention
+
+Node attrs: hrefhttp://identi.ca/notice/25880962relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/notice/25862047relrelated
+
+Node attrs: hrefhttp://identi.ca/conversation/25865719relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/user/25relostatus:attention
+
+Node attrs: hrefhttp://identi.ca/user/12287relostatus:attention
+
+Node attrs: hrefhttp://identi.ca/notice/25858788relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/conversation/25863151relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/notice/25844958relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/conversation/25850168relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/notice/25844885relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/conversation/25850097relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/notice/25844739relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/notice/25842248relrelated
+
+Node attrs: hrefhttp://identi.ca/conversation/25847513relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/user/55937relostatus:attention
+
+Node attrs: hrefhttp://identi.ca/notice/25763611relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/conversation/25770684relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/group/60/idrelostatus:attention
+
+Node attrs: hrefhttp://identi.ca/notice/25751067relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/notice/25750508relrelated
+
+Node attrs: hrefhttp://identi.ca/conversation/25757769relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/user/60886relostatus:attention
+
+Node attrs: hrefhttp://identi.ca/notice/25751033relalternatetypetext/html
+
+Node attrs: hrefhttp://identi.ca/conversation/25758287relostatus:conversation
+
+Node attrs: hrefhttp://identi.ca/notice/25750838relalternatetypetext/html
+
+Node attrs: hrefhttp://evan.status.net/notice/5698relrelated
+
+Node attrs: hrefhttp://identi.ca/conversation/25643058relostatus:conversation
+
+Node attrs: hrefhttp://evan.status.net/user/1relostatus:attention
+
+HUB: http://identi.ca/main/push/hub
+
+
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-03-24 12:11:51', "subscriptions" = '--- 
+- :topic: http://identi.ca/api/statuses/user_timeline/3919.atom
+ :hub: http://identi.ca/main/push/hub
+' WHERE "id" = 16[0m
+Completed in 3084ms (View: 1, DB: 1) | 200 OK [http://localhost/main/subscribe?remotename=tjgillies%40identi.ca]
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" LIMIT 1[0m
+  [4;35;1mUser Load (1.2ms)[0m   [0mSELECT * FROM "users" LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" LIMIT 1[0m

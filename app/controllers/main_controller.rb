@@ -1,5 +1,14 @@
 class MainController < ApplicationController
+  before_filter :set_username
+  
+  def set_username
+    
+    @user = User.find_by_username("tylergillies")
+  end
+    
   def main
+   
+    
   end
   def findname
     user = params[:user]
@@ -28,6 +37,9 @@ class MainController < ApplicationController
                                   :"hub.topic" => feed_url,
                                   :"hub.verify" => :sync })
     Rails.logger.info res
+    @user.subscriptions = [] if @user.subscriptions.nil?
+    @user.subscriptions << { :hub => hub, :topic => feed_url }
+    @user.save
     render :text => "#{hub} #{feed_url} #{image}".to_json
   end  
     
