@@ -23,7 +23,7 @@ class MainController < ApplicationController
     doc = Nokogiri::XML(xml)
     doc.remove_namespaces!
     image = doc.xpath("//link[@rel='avatar']").first['href']
-    res = HTTParty.get(hub, :query => { :"hub.callback" => :"/main/callback",
+    res = HTTParty.get(hub, :query => { :"hub.callback" => :"http://redrob.in/main/callback",
                                   :"hub.mode" => :subscribe,
                                   :"hub.topic" => feed_url,
                                   :"hub.verify" => :sync })
