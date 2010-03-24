@@ -22,7 +22,7 @@
   Subscriptions:<br/>
   <%= @subs.join(", ") %>
   <p/>
-  <button type="button" onClick="$('#remote').dialog({ position: ['center','top'] });">Remote Subscribe [+]</button>
+  <button type="button" onClick="$('#remote').dialog({ position: ['center','top'] }); $('#remotename').focus();">Remote Subscribe [+]</button>
 </div>
 <div id="msg" style="display:none;"></div>
 <div id="remote" style="display:none;">
@@ -53,11 +53,12 @@
       $("#msg").append("<input type='radio' name='user' value="+value+">"+value+"<br/>");
       
     });
-    $("#msg").append("<input type=submit onClick='getChecked();'>");
+    $("#msg").append("<input type=submit onClick='getChecked(); closeMe();'>");
     $('#msg').dialog({ position: ['left','top']});
     
     
   }
+  function closeMe(){ $("#msg").dialog("close"); $("#msg").text("");  }
   function getChecked(){
     var txt = $("input[name='user']:checked").val();
     alert(txt);
@@ -68,6 +69,7 @@
       function(json){ 
         alert(json); 
         $("#remote").dialog("close");
+        $("#remotename").val("");
         window.location.reload();
        });
   }

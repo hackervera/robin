@@ -30,6 +30,8 @@ class MainController < ApplicationController
   end  
   
   def subscribe
+    user_split = params[:remotename].split("@")
+    User.create(:username => user_split.first, :host => user_split.second) unless User.find(:first, :conditions => "username='#{user_split.first}' AND host='#{user_split.second}'")
     Rails.logger.info "called subscribe"
     finger = Redfinger.finger(params[:remotename])
     feed_url = finger.updates_from.first.to_s
