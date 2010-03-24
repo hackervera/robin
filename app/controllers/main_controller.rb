@@ -32,7 +32,7 @@ class MainController < ApplicationController
   end  
     
   def callback
-    challenge = params[:challenge]
+    challenge = params[:"hub.challenge"]
     Rails.logger.info request.body.string
     render :text => challenge unless challenge.nil?
   end
