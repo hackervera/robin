@@ -9828,3 +9828,9 @@ Processing MainController#main (for 127.0.0.1 at 2010-03-24 05:32:10) [GET]
   [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
 Rendering main/main
 Completed in 27ms (View: 11, DB: 0) | 200 OK [http://localhost/main/main]
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-24 05:41:20) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+Rendering main/main
+Completed in 22ms (View: 5, DB: 0) | 200 OK [http://localhost/]
