@@ -4,6 +4,7 @@ class MainController < ApplicationController
   def set_username
     
     @user = User.find_by_username("tylergillies")
+    @user ||= User.create(:username => "tylergillies", :host => "localhost")
   end
     
   def main
