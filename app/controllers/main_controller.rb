@@ -10,12 +10,23 @@ class MainController < ApplicationController
   def main
     @subs = []
     @user.subscriptions = [] if @user.subscriptions.nil?
-   @user.subscriptions.each do |sub|
-     @subs << "<img src=#{sub[:image]} width=48 height=48>"
-   end
-      
+    @user.subscriptions.each do |sub|
+      @subs << "<img src=#{sub[:image]} width=48 height=48>"
+    end
+     @statuses = []
+     @user.subscriptions.each do |sub|
+       user = User.find(:first, :conditions => "username = '#{sub[:user]}' AND host = '#{sub[:host]}'")
+       user.statuses.each do |status|
+         @statuses << { :text => status[:text],
+                        :updated => status[:updated_at],
+                        :user => sub[:user],
+                        :image => sub[:image],
+                        :host => sub[:host]}
+         end
+    end            
     
   end
+  
   def findname
     user = params[:user]
     users = []

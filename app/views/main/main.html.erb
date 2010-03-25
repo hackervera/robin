@@ -37,8 +37,8 @@
 </div>
 <div id="statuses">
   <p>
-    <% @user.subscriptions.each do |sub| %>
-      <img src="<%= sub[:image] %>"> <%= user %>: <%= User.find_by_username(user).statuses.last %>
+    <% @statuses.each do |status| %>
+      <img src=<%= status[:image] %>><%= status[:user] %>@<%= status[:host] %>: <%= status[:text] %>
     <% end %>
   </p>
 </div>
