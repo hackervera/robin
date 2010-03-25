@@ -9,6 +9,11 @@
   .float_right {
     float:right;
   }
+  #statuses {
+    clear:both;
+    padding-top:50px;
+    padding-left:20px;
+  }
 </style>
     
 <div id="status_input" class="float_left">
@@ -30,6 +35,14 @@
   <input type="text" id="remotename"><br/>
   <input type="submit" value="Subscribe" onClick="remoteSub();">
 </div>
+<div id="statuses">
+  <p>
+    <% @user.subscriptions.each do |sub| %>
+      <img src="<%= sub[:image] %>"> <%= user %>: <%= User.find_by_username(user).statuses.last %>
+    <% end %>
+  </p>
+</div>
+
 
 <script>
   var user;

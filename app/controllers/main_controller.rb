@@ -30,8 +30,8 @@ class MainController < ApplicationController
   end  
   
   def subscribe
-    user_split = params[:remotename].split("@")
-    User.create(:username => user_split.first, :host => user_split.second) unless User.find(:first, :conditions => "username='#{user_split.first}' AND host='#{user_split.second}'")
+    user,host = params[:remotename].split("@")
+    User.create(:username => user, :host => host) unless User.find(:first, :conditions => "username='#{user}' AND host='#{host}'")
     Rails.logger.info "called subscribe"
     finger = Redfinger.finger(params[:remotename])
     feed_url = finger.updates_from.first.to_s
@@ -43,7 +43,7 @@ class MainController < ApplicationController
     doc = Nokogiri::XML(xml)
     doc.remove_namespaces!
     image = doc.xpath("//link[@rel='avatar']").first['href']
-    res = HTTParty.get(hub, :query => { :"hub.callback" => :"http://redrob.in/main/callback",
+    res = HTTParty.get(hub, :query => { :"hub.callback" => :"http://redrob.in/main/callback/#{user}/#{host}",
                                   :"hub.mode" => :subscribe,
                                   :"hub.topic" => feed_url,
                                   :"hub.verify" => :sync })
@@ -61,8 +61,15 @@ class MainController < ApplicationController
     
   def callback
     challenge = params[:"hub.challenge"]
+    user = params[:user]
+    host = params[:host]
+    xml = request.body.string
+    doc = Nokogiri::XML(xml)
+    text = doc.xpath("//content").last.text
+    User.find(:first, :conditions => "username  = '#{user}' AND host = '#{host}'").statuses.create(:text => text)
     Rails.logger.info request.body.string
     render :text => challenge unless challenge.nil?
+    render :text => "" if challenge.nil?
   end
             
 end
