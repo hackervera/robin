@@ -38,7 +38,7 @@
 <div id="statuses">
   <p>
     <% @statuses.each do |status| %>
-      <img src=<%= status[:image] %> height="100" width="100"><%= status[:user] %>@<%= status[:host] %>: <%= status[:text] %>
+      <p><img src=<%= status[:image] %> height="100" width="100"><%= status[:user] %>@<%= status[:host] %>: <%= status[:text] %></p>
     <% end %>
   </p>
 </div>
