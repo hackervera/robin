@@ -53,7 +53,8 @@ class MainController < ApplicationController
     hub = FeedTool.is_push?(xml)
     doc = Nokogiri::XML(xml)
     doc.remove_namespaces!
-    image = doc.xpath("//link[@rel='avatar']").first['href']
+    image = doc.xpath("//link[@rel='avatar']").first['href'] unless doc.xpath("//link[@rel='avatar']").first.nil?
+    image ||= "http://blah.com" 
     res = HTTParty.get(hub, :query => { :"hub.callback" => :"http://redrob.in/main/callback/#{user}/#{host}",
                                   :"hub.mode" => :subscribe,
                                   :"hub.topic" => feed_url,
@@ -198,5 +199,17 @@ TEMPLATE
     EOF
     render :text => output
   end
+  
+  def users
+    username = params[:username]
+    user = User.find(:first, :conditions => "username = '#{username}' AND host = 'localhost'")
+    if user.nil?
+      render :text => "no such user", :status => 400 and return
+    end
+        
+    statuses = user.statuses.map(&:text).join("<p>")
+    render :text => statuses
+  end
+    
     
 end
