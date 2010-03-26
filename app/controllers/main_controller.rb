@@ -171,5 +171,32 @@ TEMPLATE
     hub = "http://identi.ca/main/push/hub"
     HTTParty.post(hub, :body => { :"hub.mode" => :publish, :"hub.url" => "http://redrob.in/feeds/#{@user.username}" })
     render :text => "Ok".to_json
-  end          
+  end    
+  
+  def webfinger
+    uri = params[:uri]
+    username = uri.gsub(/(?:acct:)?([^@]+)@redrob\.in/){ $1 }
+
+    output = <<-EOF
+<?xml version='1.0' encoding='UTF-8'?>
+<XRD xmlns='http://docs.oasis-open.org/ns/xri/xrd-1.0'>
+ 
+    <Subject>acct:#{username}@redrob.in</Subject>
+    <Alias>http://redrob.in/users/#{username}</Alias>
+ 
+    <Link rel='magic-public-key'
+          href='data:application/magic-public-key;RSA.xA_Fc4BlK439U1Ow5vUyY5A-Zcdpaniyt7v45jnd5S6-dIUWdHtGSN5sYF6hNb8OyMyVJVqAkBtzG0jGNL4HJQ==.AQAB' />
+    <Link rel='http://webfinger.net/rel/profile-page'
+          type='text/html'
+          href='http://redrob.in/users/#{username}' />
+    <Link rel='http://salmon-protocol.org/ns/salmon-mention'
+          href='http://redrob.in/push/callback' />
+    <Link rel='http://schemas.google.com/g/2010#updates-from'
+          type='application/atom+xml'
+          href='http://redrob.in/feeds/#{username}' />
+</XRD>
+    EOF
+    render :text => output
+  end
+    
 end
