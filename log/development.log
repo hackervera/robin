@@ -16159,3 +16159,73 @@ Completed in 74ms (View: 65, DB: 0) | 200 OK [http://localhost/]
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
   [4;35;1mStatus Load (0.2ms)[0m   [0mSELECT * FROM "statuses" [0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" [0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 16) [0m
+  [4;35;1mUser Destroy (0.3ms)[0m   [0mDELETE FROM "users" WHERE "id" = 16[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 17) [0m
+  [4;35;1mUser Destroy (0.1ms)[0m   [0mDELETE FROM "users" WHERE "id" = 17[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 18) [0m
+  [4;35;1mUser Destroy (0.2ms)[0m   [0mDELETE FROM "users" WHERE "id" = 18[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" [0m
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-25 19:39:02) [GET]
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+  [4;35;1mUser Create (2.9ms)[0m   [0mINSERT INTO "users" ("created_at", "subscriptions", "updated_at", "picture_url", "username", "profile_url", "foaf_location", "host", "password", "email") VALUES('2010-03-26 02:39:02', NULL, '2010-03-26 02:39:02', NULL, 'tylergillies', NULL, NULL, 'localhost', NULL, NULL)[0m
+Rendering main/main
+Completed in 70ms (View: 32, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing MainController#subscribe (for 127.0.0.1 at 2010-03-25 19:39:16) [GET]
+  Parameters: {"remotename"=>"tjgillies@opengard.in"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE (username='tjgillies' AND host='opengard.in') LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("created_at", "subscriptions", "updated_at", "picture_url", "username", "profile_url", "foaf_location", "host", "password", "email") VALUES('2010-03-26 02:39:16', NULL, '2010-03-26 02:39:16', NULL, 'tjgillies', NULL, NULL, 'opengard.in', NULL, NULL)[0m
+called subscribe
+
+Errno::ETIMEDOUT (Connection timed out - connect(2)):
+  /usr/lib/ruby/1.8/net/http.rb:560:in `initialize'
+  /usr/lib/ruby/1.8/net/http.rb:560:in `open'
+  /usr/lib/ruby/1.8/net/http.rb:560:in `connect'
+  /usr/lib/ruby/1.8/timeout.rb:53:in `timeout'
+  /usr/lib/ruby/1.8/timeout.rb:93:in `timeout'
+  /usr/lib/ruby/1.8/net/http.rb:560:in `connect'
+  /usr/lib/ruby/1.8/net/http.rb:553:in `do_start'
+  /usr/lib/ruby/1.8/net/http.rb:542:in `start'
+  /usr/lib/ruby/gems/1.8/gems/rest-client-1.4.2/lib/restclient/request.rb:150:in `transmit'
+  /usr/lib/ruby/gems/1.8/gems/rest-client-1.4.2/lib/restclient/request.rb:55:in `execute'
+  /usr/lib/ruby/gems/1.8/gems/rest-client-1.4.2/lib/restclient/request.rb:30:in `execute'
+  /usr/lib/ruby/gems/1.8/gems/rest-client-1.4.2/lib/restclient.rb:68:in `get'
+  redfinger (0.0.3) [v] lib/redfinger/client.rb:30:in `retrieve_template_from_xrd'
+  redfinger (0.0.3) [v] lib/redfinger/client.rb:15:in `finger'
+  redfinger (0.0.3) [v] lib/redfinger.rb:15:in `finger'
+  app/controllers/main_controller.rb:47:in `subscribe'
+
+Rendered rescues/_trace (113.2ms)
+Rendered rescues/_request_and_response (1.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-25 19:42:25) [GET]
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+Rendering main/main
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-25 19:42:25) [GET]
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+Rendering main/main
+Completed in 14ms (View: 1, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-25 19:42:25) [GET]
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+Rendering main/main
+Completed in 9ms (View: 0, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-03-25 19:42:25) [GET]
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+Rendering main/main
+Completed in 12ms (View: 1, DB: 1) | 200 OK [http://localhost/]
