@@ -61,11 +61,16 @@ class MainController < ApplicationController
     Rails.logger.info res
     @user.subscriptions = [] if @user.subscriptions.nil?
     match = nil
+    user,host = params[:remotename].split("@")
     @user.subscriptions.each do |sub|
-      match = 1 if sub[:user] == params[:remotename]
+      match = 1 if sub[:user] == user && sub[:host] == host
     end
         
-    @user.subscriptions << { :hub => hub, :topic => feed_url, :user => params[:remotename], :image => image } if match.nil?
+    @user.subscriptions << { :hub => hub, 
+                             :topic => feed_url, 
+                             :user => user,
+                             :host => host, 
+                             :image => image } if match.nil?
     @user.save
     render :text => "#{hub} #{feed_url} #{image}".to_json
   end  
