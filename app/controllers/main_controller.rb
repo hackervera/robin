@@ -175,7 +175,7 @@ TEMPLATE
     person = User.find(:first, :conditions => "username = '#{user}' AND host = '#{host}'")
     
     text = params[:text]
-    text[/@\w+/] = "<a href='#{person.profile}'>@#{user}</a>"
+    text[/@\w+/] = "&lt;a href='#{person.profile}'&gt;@#{user}&lt;/a&gt;"
     @user.statuses.create(:text => text)
     hub = "http://pubsubhubbub.appspot.com/"
     HTTParty.post(hub, :body => { :"hub.mode" => :publish, :"hub.url" => "http://redrob.in/feeds/#{@user.username}" })
