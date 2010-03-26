@@ -84,8 +84,8 @@ class MainController < ApplicationController
     doc.remove_namespaces!
     Rails.logger.info xml
     text = doc.xpath("//content").last.text
-    hub = doc.xpath("//link[@rel=hub]").first['href']
-    topic = doc.xpath("//link[@rel=self]").first['href']
+    hub = doc.xpath("//link[@rel='hub']").first['href']
+    topic = doc.xpath("//link[@rel='self']").first['href']
     found_user = User.find(:first, :conditions => "username  = '#{user}' AND host = '#{host}'")
     return if found_user.nil?
     found_user.statuses.create(:text => text)
