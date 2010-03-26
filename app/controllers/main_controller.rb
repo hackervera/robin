@@ -172,7 +172,7 @@ TEMPLATE
   
   def post
     user,host = params[:user].split("@")
-    person = User.find(:first, :conditions => "username = '#{user}' AND host = '#{host}")
+    person = User.find(:first, :conditions => "username = '#{user}' AND host = '#{host}'")
     
     text = params[:text]
     text[/@\w+/] = "<a href='#{person.profile}'>'@#{user}</a>"
