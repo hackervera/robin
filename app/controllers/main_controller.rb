@@ -81,7 +81,7 @@ class MainController < ApplicationController
     host = params[:host]
     xml = request.body.string
     doc = Nokogiri::XML(xml)
-    Rails.logger.info doc.xpath("//content")
+    Rails.logger.info xml
     text = doc.xpath("//content").last.text
     User.find(:first, :conditions => "username  = '#{user}' AND host = '#{host}'").statuses.create(:text => text)
     Rails.logger.info request.body.string
