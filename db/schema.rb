@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100322061944) do
+ActiveRecord::Schema.define(:version => 20100326192019) do
 
   create_table "statuses", :force => true do |t|
     t.datetime "created_at"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(:version => 20100322061944) do
     t.text     "host"
     t.text     "profile_url"
     t.text     "subscriptions"
+    t.text     "profile"
   end
 
 end

@@ -41,10 +41,12 @@ class MainController < ApplicationController
   end  
   
   def subscribe
-    user,host = params[:remotename].split("@")
-    User.create(:username => user, :host => host) unless User.find(:first, :conditions => "username='#{user}' AND host='#{host}'")
-    Rails.logger.info "called subscribe"
     finger = Redfinger.finger(params[:remotename])
+    profile = finger.profile_page.first.to_s
+    user,host = params[:remotename].split("@")
+    User.create(:username => user, :host => host, :profile => profile) unless User.find(:first, :conditions => "username='#{user}' AND host='#{host}'")
+    Rails.logger.info "called subscribe"
+    
     feed_url = finger.updates_from.first.to_s
     Rails.logger.info feed_url.nil?
     render :text => "error".to_json if feed_url.nil?
@@ -71,7 +73,8 @@ class MainController < ApplicationController
                              :topic => feed_url, 
                              :user => user,
                              :host => host, 
-                             :image => image } if match.nil?
+                             :image => image,
+                             :profile => finger.profile_page.first.to_s } if match.nil?
     @user.save
     render :text => "#{hub} #{feed_url} #{image}".to_json
   end  
@@ -168,9 +171,11 @@ TEMPLATE
   end
   
   def post
-    user = params[:user]
+    user,host = params[:user].split("@")
+    person = User.find(:first, :conditions => "username = '#{user}' AND host = '#{host}")
+    
     text = params[:text]
-    text[/@\w+/] = "@#{user}"
+    text[/@\w+/] = "<a href='#{person.profile}'>'@#{user}</a>"
     @user.statuses.create(:text => text)
     hub = "http://pubsubhubbub.appspot.com/"
     HTTParty.post(hub, :body => { :"hub.mode" => :publish, :"hub.url" => "http://redrob.in/feeds/#{@user.username}" })
