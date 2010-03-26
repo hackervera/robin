@@ -164,7 +164,7 @@ TEMPLATE
       entries << entry
     end
     feed = header + entries.join("\n") + "</feed>"
-    render :text => feed
+    render :text => feed, :content_type => "application/atom+xml"
   end
   
   def post
