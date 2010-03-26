@@ -96,59 +96,80 @@ class MainController < ApplicationController
     render :text => "" if challenge.nil?
   end
   
-  def post
-    require "Time"
-    hub = ""
-    template = <<TEMPLATE
+  def feeds
+    user = User.find(:first, :conditions =>  "username = '#{params[:username]}' AND host = 'localhost'" )
+    if user.nil?
+      render :text => "User does not exist!", :status => 400 and return
+    end
+    require "time"
+    header = <<TEMPLATE
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xml:lang="en-US" xmlns="http://www.w3.org/2005/Atom" xmlns:thr="http://purl.org/syndication/thread/1.0" xmlns:georss="http://www.georss.org/georss" xmlns:activity="http://activitystrea.ms/spec/1.0/" xmlns:media="http://purl.org/syndication/atommedia" xmlns:poco="http://portablecontacts.net/spec/1.0" xmlns:ostatus="http://ostatus.org/schema/1.0">
  <generator uri="http://redrob.in" version="0.1alpha">Robin</generator>
- <id>http://redrob.in/feeds/#{@user.username}</id>
- <title>#{@user.username} timeline</title>
- <subtitle>Updates from #{@user.username} on Robin!</subtitle>
+ <id>http://redrob.in/feeds/#{user.username}</id>
+ <title>#{user.username} timeline</title>
+ <subtitle>Updates from #{user.username} on Robin!</subtitle>
  <logo>http://avatar.identi.ca/3919-96-20080826101830.png</logo>
  <updated>#{Time.now.xmlschema}</updated>
 <author>
- <name>#{@user.username}</name>
- <uri>http://redrob.in/users/#{@user.username}</uri>
+ <name>#{user.username}</name>
+ <uri>http://redrob.in/users/#{user.username}</uri>
 
 </author>
  <link href="http://identi.ca/main/push/hub" rel="hub"/>
- <link href="http://redrob.in/salmon/#{@user.username}" rel="http://salmon-protocol.org/ns/salmon-replies"/>
- <link href="http://redrob.in/salmon/#{@user.username}" rel="http://salmon-protocol.org/ns/salmon-mention"/>
- <link href="http://redrob.in/feeds/#{@user.username}" rel="self" type="application/atom+xml"/>
+ <link href="http://redrob.in/salmon/#{user.username}" rel="http://salmon-protocol.org/ns/salmon-replies"/>
+ <link href="http://redrob.in/salmon/#{user.username}" rel="http://salmon-protocol.org/ns/salmon-mention"/>
+ <link href="http://redrob.in/feeds/#{user.username}" rel="self" type="application/atom+xml"/>
 <activity:subject>
  <activity:object-type>http://activitystrea.ms/schema/1.0/person</activity:object-type>
- <id>http://redrob.in/users/#{@user.username}</id>
- <title>#{@user.fullname}</title>
+ <id>http://redrob.in/users/#{user.username}</id>
+ <title>user fullname</title>
  <link rel="avatar" type="image/png" media:width="48" media:height="48" href="http://avatar.identi.ca/3919-48-20080826101830.png"/>
 
-<poco:preferredUsername>#{@user.username}</poco:preferredUsername>
-<poco:displayName>#{@user.fullname}</poco:displayName>
-<poco:note>#{@user.bio}</poco:note>
+<poco:preferredUsername>#{user.username}</poco:preferredUsername>
+<poco:displayName>user fullname</poco:displayName>
+<poco:note>user bio</poco:note>
 <poco:address>
  <poco:formatted>97089, US</poco:formatted>
 </poco:address>
 <poco:urls>
  <poco:type>homepage</poco:type>
- <poco:value>#{@user.homepage}</poco:value>
+ <poco:value>user homepage</poco:value>
  <poco:primary>true</poco:primary>
 
 </poco:urls>
 </activity:subject>
+TEMPLATE
+
+    entries = []
+    user.statuses.each do |status|
+      
+      entry = <<TEMPLATE
 <entry>
- <title>RT @reality &quot;ACS: Law&quot; sounds like a TV show !ppuk</title>
+ <title>#{status.text}</title>
  <link rel="alternate" type="text/html" href="http://identi.ca/notice/26153733"/>
- <id>http://identi.ca/notice/26153733</id>
- <published>2010-03-26T03:59:13-07:00</published>
- <updated>2010-03-26T03:59:13-07:00</updated>
- <link rel="ostatus:conversation" href="http://identi.ca/conversation/26143063"/>
+ <id>notice id</id>
+ <published>#{status.created_at.xmlschema}</published>
+ <updated>#{status.updated_at.xmlschema}</updated>
+ <link rel="ostatus:conversation" href="http://redrob.in/conversations/#"/>
  <ostatus:forward ref="http://identi.ca/notice/26150729" href="http://identi.ca/notice/26150729"></ostatus:forward>
- <content type="html">RT @&lt;span class=&quot;vcard&quot;&gt;&lt;a href=&quot;http://identi.ca/user/55937&quot; class=&quot;url&quot; title=&quot;Luke Slater&quot;&gt;&lt;span class=&quot;fn nickname&quot;&gt;reality&lt;/span&gt;&lt;/a&gt;&lt;/span&gt; &amp;quot;ACS: Law&amp;quot; sounds like a TV show !ppuk</content>
+ <content type="html">#{status.text}</content>
 
 </entry>
 TEMPLATE
-
+      entries << entry
+    end
+    feed = header + entries.join("\n") + "</feed>"
+    render :text => feed
   end
-            
+  
+  def post
+    user = params[:user]
+    text = params[:text]
+    text[/@\w+/] = "@#{user}"
+    @user.statuses.create(:text => text)
+    hub = "http://identi.ca/main/push/hub"
+    HTTParty.post(hub, :body => { :"hub.mode" => :publish, :"hub.url" => "http://redrob.in/feeds/#{@user.username}" })
+    render :text => "Ok".to_json
+  end          
 end

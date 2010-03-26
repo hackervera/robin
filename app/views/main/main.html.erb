@@ -76,6 +76,7 @@
   function getChecked(){
     var txt = $("input[name='user']:checked").val();
     alert(txt);
+    $.getJSON("/main/post", { user: txt, text: $("#text").val() }, function(json){ alert(json); });
   }
   function remoteSub(){
     $.getJSON("/main/subscribe",
