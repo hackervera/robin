@@ -37,7 +37,7 @@
 </div>
 <div id="statuses">
   <p>
-    <% @statuses.sort_by{ |status| status[:updated] }.each do |status| %>
+    <% @statuses.sort_by{ |status| status[:updated] }.reverse.[0..10].each do |status| %>
       <p><img src=<%= status[:image] %> height="48" width="48"><%= status[:user] %>@<%= status[:host] %>: <%= status[:text] %></p>
     <% end %>
   </p>
