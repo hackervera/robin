@@ -117,7 +117,7 @@ class MainController < ApplicationController
  <uri>http://redrob.in/users/#{user.username}</uri>
 
 </author>
- <link href="http://identi.ca/main/push/hub" rel="hub"/>
+ <link href="hhttp://pubsubhubbub.appspot.com/" rel="hub"/>
  <link href="http://redrob.in/salmon/#{user.username}" rel="http://salmon-protocol.org/ns/salmon-replies"/>
  <link href="http://redrob.in/salmon/#{user.username}" rel="http://salmon-protocol.org/ns/salmon-mention"/>
  <link href="http://redrob.in/feeds/#{user.username}" rel="self" type="application/atom+xml"/>
@@ -172,7 +172,7 @@ TEMPLATE
     text = params[:text]
     text[/@\w+/] = "@#{user}"
     @user.statuses.create(:text => text)
-    hub = "http://identi.ca/main/push/hub"
+    hub = "http://pubsubhubbub.appspot.com/"
     HTTParty.post(hub, :body => { :"hub.mode" => :publish, :"hub.url" => "http://redrob.in/feeds/#{@user.username}" })
     render :text => "Ok".to_json
   end    
