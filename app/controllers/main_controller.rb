@@ -83,12 +83,14 @@ class MainController < ApplicationController
     doc = Nokogiri::XML(xml)
     doc.remove_namespaces!
     Rails.logger.info xml
-    text = doc.xpath("//content").last.text
-    hub = doc.xpath("//link[@rel='hub']").first['href']
-    topic = doc.xpath("//link[@rel='self']").first['href']
-    found_user = User.find(:first, :conditions => "username  = '#{user}' AND host = '#{host}'")
-    render :text => "user not found" if found_user.nil?
-    found_user.statuses.create(:text => text)
+    unless xml.empty?
+      text = doc.xpath("//content").last.text
+      hub = doc.xpath("//link[@rel='hub']").first['href']
+      topic = doc.xpath("//link[@rel='self']").first['href']
+      found_user = User.find(:first, :conditions => "username  = '#{user}' AND host = '#{host}'")
+      render :text => "user not found" if found_user.nil?
+      found_user.statuses.create(:text => text)
+    end
     Rails.logger.info request.body.string
     render :text => challenge unless challenge.nil?
     render :text => "" if challenge.nil?
