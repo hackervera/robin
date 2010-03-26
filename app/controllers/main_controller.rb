@@ -87,7 +87,7 @@ class MainController < ApplicationController
     hub = doc.xpath("//link[@rel='hub']").first['href']
     topic = doc.xpath("//link[@rel='self']").first['href']
     found_user = User.find(:first, :conditions => "username  = '#{user}' AND host = '#{host}'")
-    return if found_user.nil?
+    render :text => "user not found" if found_user.nil?
     found_user.statuses.create(:text => text)
     Rails.logger.info request.body.string
     render :text => challenge unless challenge.nil?
