@@ -42,10 +42,10 @@
   <p>
     <%  
     @statuses.sort_by{ |status| status[:updated] }.reverse[0..10].each do |status| 
-      time = (Time.now.to_i - Time.parse(status[:updated]).to_i)/60%>
+      time = distance_of_in_words(Time.parse(status[:updated]), Time.now) %>
     
       <p><img src=<%= status[:image] %> height="48" width="48"><%= status[:user] %>@<%= status[:host] %>: <%= status[:text] %></p>
-      <div class="status-meta"><%= time %> minutes ago</div>
+      <div class="status-meta"><%= time %></div>
     <% end %>
   </p>
 </div>
