@@ -16638,3 +16638,5 @@ Migrating to AddProfileToUser (20100326192019)
 [0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("statuses")[0m
   [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mStatus Load (0.7ms)[0m   [0;1mSELECT * FROM "statuses" ORDER BY statuses.id DESC LIMIT 1[0m
+  [4;35;1mStatus Load (0.3ms)[0m   [0mSELECT * FROM "statuses" [0m
