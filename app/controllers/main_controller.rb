@@ -1,5 +1,7 @@
 class MainController < ApplicationController
   before_filter :set_username
+
+    require "time"
   
   def set_username
     
@@ -106,7 +108,6 @@ class MainController < ApplicationController
     if user.nil?
       render :text => "User does not exist!", :status => 400 and return
     end
-    require "time"
     header = <<TEMPLATE
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xml:lang="en-US" xmlns="http://www.w3.org/2005/Atom" xmlns:thr="http://purl.org/syndication/thread/1.0" xmlns:georss="http://www.georss.org/georss" xmlns:activity="http://activitystrea.ms/spec/1.0/" xmlns:media="http://purl.org/syndication/atommedia" xmlns:poco="http://portablecontacts.net/spec/1.0" xmlns:ostatus="http://ostatus.org/schema/1.0">
