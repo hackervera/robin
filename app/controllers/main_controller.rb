@@ -162,7 +162,7 @@ TEMPLATE
  <id>notice id</id>
  <published>#{status.created_at.xmlschema}</published>
  <updated>#{status.updated_at.xmlschema}</updated>
- <link rel="ostatus:conversation" href="http://redrob.in/conversations/#"/>
+ <link rel="ostatus:conversation" href="#{status.conversation}"/>
  <ostatus:forward ref="http://identi.ca/notice/26150729" href="http://identi.ca/notice/26150729"></ostatus:forward>
  <content type="html">#{status.text}</content>
 
@@ -175,12 +175,14 @@ TEMPLATE
   end
   
   def post
+    conversation = params[:conversation]
     user,host = params[:user].split("@")
     person = User.find(:first, :conditions => "username = '#{user}' AND host = '#{host}'")
     
     text = params[:text]
     text[/@\w+/] = "&lt;a href='#{person.profile}'&gt;@#{user}&lt;/a&gt;"
-    @user.statuses.create(:text => text)
+    conversation ||= "http://redrob.in/conversations/#{Conversation.create.object_id}" 
+    @user.statuses.create(:text => text, :conversation => conversation)
     hub = "http://pubsubhubbub.appspot.com/"
     HTTParty.post(hub, :body => { :"hub.mode" => :publish, :"hub.url" => "http://redrob.in/feeds/#{@user.username}" })
     render :text => "Ok".to_json
@@ -222,6 +224,12 @@ TEMPLATE
     statuses = user.statuses.map(&:text).join("<p>")
     render :text => statuses
   end
+  
+  def statuses
+    message = Status.find(id)
+    render :text => message.text
+  end
+    
     
     
 end
