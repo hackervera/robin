@@ -186,7 +186,7 @@ TEMPLATE
     reply = params[:reply]
     reply_author = params[:reply_author]
     conversation = params[:conversation]
-    user,host = params[:user].split("@")
+    user,host = params[:user].split("@") unless params[:user].nil? 
     person = User.find(:first, :conditions => "username = '#{user}' AND host = '#{host}'")
     
     text = params[:text]
