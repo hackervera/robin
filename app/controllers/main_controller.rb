@@ -158,7 +158,7 @@ TEMPLATE
       entry = <<TEMPLATE
 <entry>
  <title>#{status.text}</title>
- <link rel="alternate" type="text/html" href="http://redrob.in/statuses/#{status.object_id}"/>
+ <link rel="alternate" type="text/html" href="http://redrob.in/statuses/#{status.id}"/>
  <id>notice id</id>
  <published>#{status.created_at.xmlschema}</published>
  <updated>#{status.updated_at.xmlschema}</updated>
