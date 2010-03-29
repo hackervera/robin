@@ -190,9 +190,10 @@ TEMPLATE
     person = User.find(:first, :conditions => "username = '#{user}' AND host = '#{host}'")
     
     text = params[:text]
+    title = text
     text[/@\w+/] = "&lt;a href='#{person.profile}'&gt;@#{user}&lt;/a&gt;"
     conversation ||= "http://redrob.in/conversations/#{Conversation.create.object_id}" 
-    @user.statuses.create(:text => text, :conversation => conversation, :reply => reply, :reply_author => reply_author)
+    @user.statuses.create(:title => title, :text => text, :conversation => conversation, :reply => reply, :reply_author => reply_author)
     hub = "http://pubsubhubbub.appspot.com/"
     HTTParty.post(hub, :body => { :"hub.mode" => :publish, :"hub.url" => "http://redrob.in/feeds/#{@user.username}" })
     render :text => "Ok".to_json
@@ -231,7 +232,7 @@ TEMPLATE
       render :text => "no such user", :status => 400 and return
     end
         
-    statuses = user.statuses.map(&:text).join("<p>")
+    statuses = user.statuses.map(&:text).reverse.join("<p>")
     render :text => statuses
   end
   
