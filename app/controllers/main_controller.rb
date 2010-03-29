@@ -191,7 +191,7 @@ TEMPLATE
     
     text = params[:text]
     title = params[:text]
-    text[/@\w+/] = "&lt;a href='#{person.profile}'&gt;@#{user}&lt;/a&gt;"
+    text[/@\w+/] = "&lt;a href='#{person.profile}'&gt;@#{user}&lt;/a&gt;" unless params[:user].nil?
     conversation ||= "http://redrob.in/conversations/#{Conversation.create.object_id}" 
     @user.statuses.create(:title => title, :text => text, :conversation => conversation, :reply => reply, :reply_author => reply_author)
     hub = "http://pubsubhubbub.appspot.com/"
