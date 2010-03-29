@@ -24,7 +24,9 @@ class MainController < ApplicationController
                         :user => sub[:user],
                         :image => sub[:image],
                         :host => sub[:host],
-                        :conversation => status[:conversation]}
+                        :conversation => status[:conversation],
+                        :id => status[:id],
+                        :url => status[:url]}
          end
     end            
     
@@ -95,10 +97,11 @@ class MainController < ApplicationController
       hub = doc.xpath("//link[@rel='hub']").first['href']
       topic = doc.xpath("//link[@rel='self']").first['href']
       updated = doc.xpath("//updated").last.text 
+      url = doc.xpath("//link[@rel='alternate']").first['href']
       conversation = doc.xpath("//link[@rel='ostatus:conversation']").last['href'] unless doc.xpath("//link[@rel='ostatus:conversation']").last.nil?
       found_user = User.find(:first, :conditions => "username  = '#{user}' AND host = '#{host}'")
       render :text => "user not found" if found_user.nil?
-      found_user.statuses.create(:text => text, :conversation => conversation)
+      found_user.statuses.create(:text => text, :conversation => conversation, :url => url)
     end
     Rails.logger.info request.body.string
     render :text => challenge unless challenge.nil?
@@ -153,8 +156,10 @@ class MainController < ApplicationController
 TEMPLATE
 
     entries = []
+    
     user.statuses.each do |status|
-      
+    replystring = "<thr:in-reply-to ref="if status.reply
+       
       entry = <<TEMPLATE
 <entry>
  <title>#{status.text}</title>
@@ -175,6 +180,7 @@ TEMPLATE
   end
   
   def post
+    reply = params[:reply]
     conversation = params[:conversation]
     user,host = params[:user].split("@")
     person = User.find(:first, :conditions => "username = '#{user}' AND host = '#{host}'")
@@ -182,7 +188,7 @@ TEMPLATE
     text = params[:text]
     text[/@\w+/] = "&lt;a href='#{person.profile}'&gt;@#{user}&lt;/a&gt;"
     conversation ||= "http://redrob.in/conversations/#{Conversation.create.object_id}" 
-    @user.statuses.create(:text => text, :conversation => conversation)
+    @user.statuses.create(:text => text, :conversation => conversation, :reply => reply)
     hub = "http://pubsubhubbub.appspot.com/"
     HTTParty.post(hub, :body => { :"hub.mode" => :publish, :"hub.url" => "http://redrob.in/feeds/#{@user.username}" })
     render :text => "Ok".to_json

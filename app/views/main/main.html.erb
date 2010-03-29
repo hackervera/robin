@@ -47,7 +47,7 @@
       <p><img src=<%= status[:image] %> height="48" width="48"><%= status[:user] %>@<%= status[:host] %>: <%= status[:text] %></p>
       <div class="status-meta">
         <%= time %> <% unless status[:conversation].nil? || status[:conversation].empty? %><a href=<%= status[:conversation] %>>in context</a> <% end %>
-        <a href="javascript:" onClick="enterReply('<%= status[:user] %>','<%= status[:conversation] %>');">reply</a>
+        <a href="javascript:" onClick="enterReply('<%= status[:user] %>','<%= status[:conversation] %>', '<%= status[:url] %>');">reply</a>
       </div>
     <% end %>
   </p>
@@ -89,7 +89,8 @@
   function getChecked(){
     var txt = $("input[name='user']:checked").val();
     alert(txt);
-    $.getJSON("/main/post", { conversation: conversation, user: txt, text: $("#text").val() }, function(json){ alert(json); });
+    $.getJSON("/main/post", { reply: reply_id, conversation: conversation, user: txt, text: $("#text").val() }, function(json){ alert(json); });
+    $("#text").val("");
   }
   function remoteSub(){
     $.getJSON("/main/subscribe",
@@ -101,9 +102,10 @@
         window.location.reload();
        });
   }
-  function enterReply(user,converse){
+  function enterReply(user,converse,reply){
     $("#text").val("@"+user+" ");
     $("#text").focus();
     conversation = converse;
+    reply_id = reply;
   }
 </script>
