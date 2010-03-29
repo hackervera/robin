@@ -16677,3 +16677,166 @@ Migrating to AddConToStatus (20100329001931)
 [0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("statuses")[0m
   [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100322003056)
+Migrating to CreateStatuses (20100322003101)
+Migrating to AddToUserIdToStatus (20100322003837)
+Migrating to AddToStuffToUser (20100322020538)
+Migrating to AddStuffToStatus (20100322020632)
+Migrating to AddSubscriptionsToUser (20100322061944)
+Migrating to AddProfileToUser (20100326192019)
+Migrating to AddConToStatus (20100329001931)
+Migrating to CreateConversations (20100329011753)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100329011753')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mPRAGMA index_list("conversations")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("statuses")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mStatus Load (0.4ms)[0m   [0mSELECT * FROM "statuses" ORDER BY statuses.id DESC LIMIT 1[0m
+  [4;36;1mStatus Load (0.4ms)[0m   [0;1mSELECT * FROM "statuses" [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100322003056)
+Migrating to CreateStatuses (20100322003101)
+Migrating to AddToUserIdToStatus (20100322003837)
+Migrating to AddToStuffToUser (20100322020538)
+Migrating to AddStuffToStatus (20100322020632)
+Migrating to AddSubscriptionsToUser (20100322061944)
+Migrating to AddProfileToUser (20100326192019)
+Migrating to AddConToStatus (20100329001931)
+Migrating to CreateConversations (20100329011753)
+Migrating to AddStatusesToConversation (20100329012128)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "conversations" ADD "statuses" array[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100329012128')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("statuses")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100322003056)
+Migrating to CreateStatuses (20100322003101)
+Migrating to AddToUserIdToStatus (20100322003837)
+Migrating to AddToStuffToUser (20100322020538)
+Migrating to AddStuffToStatus (20100322020632)
+Migrating to AddSubscriptionsToUser (20100322061944)
+Migrating to AddProfileToUser (20100326192019)
+Migrating to AddConToStatus (20100329001931)
+Migrating to CreateConversations (20100329011753)
+Migrating to AddStatusesToConversation (20100329012128)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("statuses")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (3.5ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100322003056)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100322003056')[0m
+Migrating to CreateStatuses (20100322003101)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCREATE TABLE "statuses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100322003101')[0m
+Migrating to AddToUserIdToStatus (20100322003837)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mALTER TABLE "statuses" ADD "user_id" int[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100322003837')[0m
+Migrating to AddToStuffToUser (20100322020538)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mALTER TABLE "users" ADD "password" text[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mALTER TABLE "users" ADD "email" text[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mALTER TABLE "users" ADD "foaf_location" text[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mALTER TABLE "users" ADD "username" text[0m
+  [4;36;1mSQL (12.4ms)[0m   [0;1mALTER TABLE "users" ADD "picture_url" text[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mALTER TABLE "users" ADD "host" text[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mALTER TABLE "users" ADD "profile_url" text[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100322020538')[0m
+Migrating to AddStuffToStatus (20100322020632)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mALTER TABLE "statuses" ADD "text" text[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100322020632')[0m
+Migrating to AddSubscriptionsToUser (20100322061944)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mALTER TABLE "users" ADD "subscriptions" text[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100322061944')[0m
+Migrating to AddProfileToUser (20100326192019)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mALTER TABLE "users" ADD "profile" text[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100326192019')[0m
+Migrating to AddConToStatus (20100329001931)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mALTER TABLE "statuses" ADD "conversation" text[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100329001931')[0m
+Migrating to CreateConversations (20100329011753)
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE TABLE "conversations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100329011753')[0m
+Migrating to AddStatusesToConversation (20100329012128)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mALTER TABLE "conversations" ADD "statuses" text[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100329012128')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("conversations")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("statuses")[0m
+  [4;35;1mSQL (5.6ms)[0m   [0mPRAGMA index_list("users")[0m

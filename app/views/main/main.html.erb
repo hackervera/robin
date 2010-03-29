@@ -45,7 +45,7 @@
       time = distance_of_time_in_words(status[:updated], Time.now) %>
     
       <p><img src=<%= status[:image] %> height="48" width="48"><%= status[:user] %>@<%= status[:host] %>: <%= status[:text] %></p>
-      <div class="status-meta"><%= time %> <a src=<%= status[:conversation] %>>in context</a></div>
+      <div class="status-meta"><%= time %> <% unless status[:conversation].empty? %><a href=<%= status[:conversation] %>>in context</a><% end %></div>
     <% end %>
   </p>
 </div>
