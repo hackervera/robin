@@ -158,12 +158,12 @@ TEMPLATE
       entry = <<TEMPLATE
 <entry>
  <title>#{status.text}</title>
- <link rel="alternate" type="text/html" href="http://identi.ca/notice/26153733"/>
+ <link rel="alternate" type="text/html" href="http://redrob.in/statuses/#{status.object_id}"/>
  <id>notice id</id>
  <published>#{status.created_at.xmlschema}</published>
  <updated>#{status.updated_at.xmlschema}</updated>
  <link rel="ostatus:conversation" href="#{status.conversation}"/>
- <ostatus:forward ref="http://identi.ca/notice/26150729" href="http://identi.ca/notice/26150729"></ostatus:forward>
+ <ostatus:forward ref="#{status.conversation}" href="#{status.conversation}"></ostatus:forward>
  <content type="html">#{status.text}</content>
 
 </entry>
