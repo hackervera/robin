@@ -226,7 +226,7 @@ TEMPLATE
   end
   
   def statuses
-    message = Status.find(id)
+    message = Status.find(status_number)
     render :text => message.text
   end
     
