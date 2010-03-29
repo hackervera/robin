@@ -232,14 +232,14 @@ TEMPLATE
       render :text => "no such user", :status => 400 and return
     end
         
-    statuses = user.statuses.map(&:text).reverse.join("<p>")
+    statuses = user.statuses.map(&:title).reverse.join("<p>")
     render :text => statuses
   end
   
   def statuses
     status_number = params[:status_number]
     message = Status.find(status_number)
-    render :text => message.text
+    render :text => message.title
   end
     
     
