@@ -71,7 +71,7 @@
     }
     else {
       //alert("no username detected")
-      $.getJSON("/main/post", { user: txt, text: $("#text").val() }, function(json){ alert(json); });
+      $.getJSON("/main/post", { text: $("#text").val() }, function(json){ alert(json); });
     }
   }
   function showDialog(text){

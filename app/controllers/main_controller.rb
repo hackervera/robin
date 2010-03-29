@@ -190,7 +190,7 @@ TEMPLATE
     person = User.find(:first, :conditions => "username = '#{user}' AND host = '#{host}'")
     
     text = params[:text]
-    title = text
+    title = params[:text]
     text[/@\w+/] = "&lt;a href='#{person.profile}'&gt;@#{user}&lt;/a&gt;"
     conversation ||= "http://redrob.in/conversations/#{Conversation.create.object_id}" 
     @user.statuses.create(:title => title, :text => text, :conversation => conversation, :reply => reply, :reply_author => reply_author)
