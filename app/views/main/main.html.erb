@@ -21,6 +21,9 @@
   .status-meta {
     float:right;
   }
+  .clear {
+    clear:both;
+  }
 </style>
     
 <div id="status_input" class="float_left">
@@ -53,7 +56,7 @@
           <%= time %> <% unless status[:conversation].nil? || status[:conversation].empty? %><a href=<%= status[:conversation] %>>in context</a> <% end %>
           <a href="javascript:" onClick="enterReply('<%= status[:user] %>','<%= status[:conversation] %>', '<%= status[:url] %>','<%= status[:reply_author] %>');">reply</a>
           <br/></br/>  
-      </div>
+      </div><div class="clear"></div>
     <% end %>
   </p>
 </div>
