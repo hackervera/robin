@@ -97,7 +97,7 @@ class MainController < ApplicationController
       hub = doc.xpath("//link[@rel='hub']").first['href']
       topic = doc.xpath("//link[@rel='self']").first['href']
       updated = doc.xpath("//updated").last.text 
-      url = doc.xpath("//link[@rel='alternate']").first['href']
+      url = doc.xpath("//entry/link[@rel='alternate']").first['href']
       conversation = doc.xpath("//link[@rel='ostatus:conversation']").last['href'] unless doc.xpath("//link[@rel='ostatus:conversation']").last.nil?
       found_user = User.find(:first, :conditions => "username  = '#{user}' AND host = '#{host}'")
       render :text => "user not found" if found_user.nil?
