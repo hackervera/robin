@@ -226,6 +226,7 @@ TEMPLATE
   end
   
   def statuses
+    status_number = params[:status_number]
     message = Status.find(status_number)
     render :text => message.text
   end
