@@ -10,47 +10,51 @@ class SalmonController < ApplicationController
   end
   
   def send_salmon
+    salmon = params[:salmon]
+    title = params[:title]
+    status_id = params[:status_id]
+    username = params[:username]
     notice = "http://opengard.in/notice/2695"
     #endpoint = "http://dev.walkah.me/main/salmon/user/1"
-    endpoint = "http://opengard.in/main/salmon/user/1"
+    endpoint = salmon
     #endpoint = "http://identi.ca/main/salmon/user/141089"
     entry = <<SAMPLE
 <entry xmlns="http://www.w3.org/2005/Atom" xmlns:service="http://activitystrea.ms/service-provider" xmlns:activity="http://activitystrea.ms/spec/1.0/">
   <activity:verb>http://activitystrea.ms/schema/1.0/post</activity:verb>
-  <title type="text">#{Time.now}</title>
+  <title type="text">#{title}</title>
   <service:provider>
-    <name>Cliqset</name>
-    <uri>http://cliqset.com/</uri>
+    <name>Robin</name>
+    <uri>http://redrob.in/</uri>
     <icon>https://cliqset-applications.s3.amazonaws.com/605fcb40fef7c5b1ba5fed445ebda34d_icon</icon>
   </service:provider>
   <activity:object>
     <activity:object-type>http://activitystrea.ms/schema/1.0/note</activity:object-type>
-    <content type="text">this is a test. woot. Time now: #{Time.now}</content>
-    <link rel="alternate" type="text/html" href="http://cliqset.com/user/charlie/yfLi3ZfLcEQHRQee" />
-    <id>#{Time.now}</id>
+    <content type="text">#{text}</content>
+    <link rel="alternate" type="text/html" href="http://redrob.in/statuses/#{status_id}" />
+    <id>http://redrob.in/statuses/#{status_id}</id>
   </activity:object>
   <category scheme="http://schemas.cliqset.com/activity/categories/1.0" term="StatusPosted" label="Status Posted" />
   <updated>#{Time.now.xmlschema}</updated>
   <published>#{Time.now.xmlschema}</published>
   <id>note</id>
-  <link href="http://cliqset.com/user/charlie/yfLi3ZfLcEQHRQee" type="text/xhtml" rel="alternate" title="charlie posted a note on Cliqset" />
+  <link href="http://cliqset.com/users/#{username}" type="text/xhtml" rel="alternate" title="#{username} posted a note on redrob.in" />
   <author>
-    <name>charlie</name>
-    <uri>acct:tjgillies@test.opengard.in</uri>
+    <name>#{username}</name>
+    <uri>acct:#{username}@redrob.in</uri>
   </author>
   <activity:actor xmlns:poco="http://portablecontacts.net/spec/1.0">
     <activity:object-type>http://activitystrea.ms/schema/1.0/person</activity:object-type>
     <poco:name>
-      <poco:givenName>Charlie</poco:givenName>
-      <poco:familyName>Cauthen</poco:familyName>
+      <poco:givenName>Tyler</poco:givenName>
+      <poco:familyName>Gillies</poco:familyName>
     </poco:name>
-    <link xmlns:media="http://purl.org/syndication/atommedia" type="image/png" rel="avatar" href="http://dynamic.cliqset.com/avatar/charlie?s=80" media:height="80" media:width="80" />
-    <link xmlns:media="http://purl.org/syndication/atommedia" type="image/png" rel="avatar" href="http://dynamic.cliqset.com/avatar/charlie?s=120" media:height="120" media:width="120" />
-    <link xmlns:media="http://purl.org/syndication/atommedia" type="image/png" rel="avatar" href="http://dynamic.cliqset.com/avatar/charlie?s=200" media:height="200" media:width="200" />
-    <link href="http://cliqset.com/user/charlie" rel="alternate" type="text/html" length="0" />
-    <id>http://opengard.in/tjgillies</id>
+    <link xmlns:media="http://purl.org/syndication/atommedia" type="image/png" rel="avatar" href="http://avatar.identi.ca/3919-original-20080826101830.jpeg" media:height="80" media:width="80" />
+    <link xmlns:media="http://purl.org/syndication/atommedia" type="image/png" rel="avatar" href="http://avatar.identi.ca/3919-original-20080826101830.jpeg" media:height="120" media:width="120" />
+    <link xmlns:media="http://purl.org/syndication/atommedia" type="image/png" rel="avatar" href="http://avatar.identi.ca/3919-original-20080826101830.jpeg" media:height="200" media:width="200" />
+    <link href="http://redrob.in/users/#{username}" rel="alternate" type="text/html" length="0" />
+    <id>http://redrob.in/#{username}</id>
   </activity:actor>
-  <link href="http://opengard.in/tjgillies" rel="ostatus:attention" />
+  <link href="#{reply_author}" rel="ostatus:attention" />
 </entry>
 SAMPLE
 
@@ -59,7 +63,7 @@ SAMPLE
     require 'net/http'
     require 'uri'
     require 'cgi'
-    privkey = OpenSSL::PKey::RSA.new(File.read("/home/tyler/privkey"))
+    privkey = OpenSSL::PKey::RSA.new(File.read("privkey"))
     data = [entry].pack('mU*').tr('+/','-_').gsub("\n",'')
     sig = privkey.sign(OpenSSL::Digest::SHA256.new, data)
     sig = [sig].pack('mU*').tr('+/','-_').gsub("\n",'')

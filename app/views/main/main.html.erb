@@ -39,6 +39,10 @@
   <p/>
   <button type="button" onClick="$('#remote').dialog({ position: ['center','top'] }); $('#remotename').focus();">Remote Subscribe [+]</button>
 </div>
+<div id="ostatus" class="float_right">
+  <img src="/images/ostatus.png" height=48 width=48>
+</div>
+
 <div id="msg" style="display:none;"></div>
 <div id="remote" style="display:none;">
   Enter remote user@hostname:<br/>
@@ -80,6 +84,7 @@
     else {
       //alert("no username detected")
       $.getJSON("/main/post", { text: $("#text").val() }, function(json){ alert(json); });
+      $("#text").val("");
     }
   }
   function showDialog(text){

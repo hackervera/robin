@@ -96,6 +96,7 @@ class MainController < ApplicationController
     unless xml.empty?
       text = doc.xpath("//content").last.text
       hub = doc.xpath("//link[@rel='hub']").first['href']
+      salmon = doc.xpath("//link[@rel='http://salmon-protocol.org/ns/salmon-replies']").first['href']
       topic = doc.xpath("//link[@rel='self']").first['href']
       updated = doc.xpath("//updated").last.text 
       author = doc.xpath("//author/uri").first.text
@@ -103,7 +104,7 @@ class MainController < ApplicationController
       conversation = doc.xpath("//link[@rel='ostatus:conversation']").last['href'] unless doc.xpath("//link[@rel='ostatus:conversation']").last.nil?
       found_user = User.find(:first, :conditions => "username  = '#{user}' AND host = '#{host}'")
       render :text => "user not found" if found_user.nil?
-      found_user.statuses.create(:text => text, :conversation => conversation, :url => url, :author => author)
+      found_user.statuses.create(:text => text, :conversation => conversation, :url => url, :author => author, :salmon => salmon)
     end
     Rails.logger.info request.body.string
     render :text => challenge unless challenge.nil?
@@ -188,14 +189,17 @@ TEMPLATE
     conversation = params[:conversation]
     user,host = params[:user].split("@") unless params[:user].nil? 
     person = User.find(:first, :conditions => "username = '#{user}' AND host = '#{host}'")
-    
+    username = @user.username
     text = params[:text]
     title = params[:text]
     text[/@\w+/] = "&lt;a href='#{person.profile}'&gt;@#{user}&lt;/a&gt;" unless params[:user].nil?
     conversation ||= "http://redrob.in/conversations/#{Conversation.create.object_id}" 
-    @user.statuses.create(:title => title, :text => text, :conversation => conversation, :reply => reply, :reply_author => reply_author)
+    status = @user.statuses.create(:title => title, :text => text, :conversation => conversation, :reply => reply, :reply_author => reply_author)
     hub = "http://pubsubhubbub.appspot.com/"
+    salmon = status.salmon unless reply.nil?
     HTTParty.post(hub, :body => { :"hub.mode" => :publish, :"hub.url" => "http://redrob.in/feeds/#{@user.username}" })
+    HTTParty.get("/salmon/send_salmon", :query => { :title => title, :text => text, :status_id => status.id, :username => username, :salmon => salmon, :reply_author => reply_author })
+
     render :text => "Ok".to_json
   end    
   
