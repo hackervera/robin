@@ -197,8 +197,9 @@ TEMPLATE
     status = @user.statuses.create(:title => title, :text => text, :conversation => conversation, :reply => reply, :reply_author => reply_author)
     hub = "http://pubsubhubbub.appspot.com/"
     salmon = status.salmon unless reply.nil?
+    author = status.author unless reply.nil?
     HTTParty.post(hub, :body => { :"hub.mode" => :publish, :"hub.url" => "http://redrob.in/feeds/#{@user.username}" })
-    HTTParty.get("/salmon/send_salmon", :query => { :title => title, :text => text, :status_id => status.id, :username => username, :salmon => salmon, :reply_author => reply_author })
+    HTTParty.get("http://redrob.in/salmon/send_salmon", :query => { :title => title, :text => text, :status_id => status.id, :username => username, :salmon => salmon, :author => author })
 
     render :text => "Ok".to_json
   end    
