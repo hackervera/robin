@@ -47,7 +47,7 @@
       <p><img src=<%= status[:image] %> height="48" width="48"><%= status[:user] %>@<%= status[:host] %>: <%= status[:text] %></p>
       <div class="status-meta">
         <%= time %> <% unless status[:conversation].nil? || status[:conversation].empty? %><a href=<%= status[:conversation] %>>in context</a> <% end %>
-        <a href="javascript:" onClick="enterReply('<%= status[:user] %>','<%= status[:conversation] %>', '<%= status[:url] %>');">reply</a>
+        <a href="javascript:" onClick="enterReply('<%= status[:user] %>','<%= status[:conversation] %>', '<%= status[:url] %>','<%= status[:reply_author] %>');">reply</a>
       </div>
     <% end %>
   </p>
@@ -58,6 +58,7 @@
   var user;
   var reply_id;
   var conversation;
+  var reply_author;
   function findName(text){
     //console.log(text);
     //alert(text);
@@ -89,7 +90,7 @@
   function getChecked(){
     var txt = $("input[name='user']:checked").val();
     alert(txt);
-    $.getJSON("/main/post", { reply: reply_id, conversation: conversation, user: txt, text: $("#text").val() }, function(json){ alert(json); });
+    $.getJSON("/main/post", { reply_author: reply_author, reply: reply_id, conversation: conversation, user: txt, text: $("#text").val() }, function(json){ alert(json); });
     $("#text").val("");
   }
   function remoteSub(){
@@ -102,10 +103,11 @@
         window.location.reload();
        });
   }
-  function enterReply(user,converse,reply){
+  function enterReply(user,converse,reply,reply_author){
     $("#text").val("@"+user+" ");
     $("#text").focus();
     conversation = converse;
     reply_id = reply;
+    reply_author = reply_author;
   }
 </script>
