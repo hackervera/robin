@@ -9,13 +9,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100326192019) do
+ActiveRecord::Schema.define(:version => 20100329001931) do
 
   create_table "statuses", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
     t.text     "text"
+    t.text     "conversation"
   end
 
   create_table "users", :force => true do |t|
