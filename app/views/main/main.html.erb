@@ -44,6 +44,7 @@
 </div>
 
 <div id="msg" style="display:none;"></div>
+<div id="salmon" style="display:none"></div>
 <div id="remote" style="display:none;">
   Enter remote user@hostname:<br/>
   <input type="text" id="remotename"><br/>
@@ -124,6 +125,7 @@
     reply_id = reply;
     reply_author = reply_author;
     salmon = salmon;
-    alert(salmon);
+    //alert(salmon);
+    alert($("#salmon").text);
   }
 </script>
