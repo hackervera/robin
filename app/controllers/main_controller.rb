@@ -229,7 +229,7 @@ TEMPLATE
           href='http://redrob.in/feeds/#{username}' />
 </XRD>
     EOF
-    render :text => output
+    render :text => output, :content_type => "application/xrd+xml"
   end
   
   def users
