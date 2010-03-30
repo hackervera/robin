@@ -103,7 +103,7 @@
   function closeMe(){ $("#msg").dialog("close"); $("#msg").text("");  }
   function getChecked(){
     var txt = $("input[name='user']:checked").val();
-    alert(txt);
+    alert(txt+salmon);
     $.getJSON("/main/post", { salmon: salmon, reply_author: reply_author, reply: reply_id, conversation: conversation, user: txt, text: $("#text").val() }, function(json){ alert(json); });
     $("#text").val("");
   }
@@ -123,5 +123,6 @@
     conversation = converse;
     reply_id = reply;
     reply_author = reply_author;
+    salmon = salmon;
   }
 </script>
