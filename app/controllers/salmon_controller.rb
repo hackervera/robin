@@ -29,7 +29,7 @@ class SalmonController < ApplicationController
   </service:provider>
   <activity:object>
     <activity:object-type>http://activitystrea.ms/schema/1.0/note</activity:object-type>
-    <content type="text">#{text}</content>
+    <content type="text">#{title}</content>
     <link rel="alternate" type="text/html" href="http://redrob.in/statuses/#{status_id}" />
     <id>http://redrob.in/statuses/#{status_id}</id>
   </activity:object>
