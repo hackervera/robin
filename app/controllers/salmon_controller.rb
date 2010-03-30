@@ -14,6 +14,7 @@ class SalmonController < ApplicationController
     title = params[:title]
     status_id = params[:status_id]
     username = params[:username]
+    author = params[:author]
     notice = "http://opengard.in/notice/2695"
     #endpoint = "http://dev.walkah.me/main/salmon/user/1"
     endpoint = salmon
@@ -54,7 +55,7 @@ class SalmonController < ApplicationController
     <link href="http://redrob.in/users/#{username}" rel="alternate" type="text/html" length="0" />
     <id>http://redrob.in/#{username}</id>
   </activity:actor>
-  <link href="#{reply_author}" rel="ostatus:attention" />
+  <link href="#{author}" rel="ostatus:attention" />
 </entry>
 SAMPLE
 
