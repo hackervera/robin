@@ -108,8 +108,8 @@ EOF
    #header_stuff = req.each_header {|k,v| puts k,v}
    Rails.logger.warn "req: #{post_body}"
    #res = Net::HTTP.new(url.host, url.port).start { |http| http.request(req) }
-   Rails.logger.warn "res: #{res.body} #{res.code}"
-   #render :text => "look at log"
+   Rails.logger.warn "res: #{res} #{res.body} #{res.code}"
+   render :text => "look at log"
 
   end
   
