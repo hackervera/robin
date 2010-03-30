@@ -100,16 +100,16 @@ EOF
 
     Rails.logger.info "FAIL!"
   end
-  url = URI.parse(endpoint)
-   #res = HTTParty.post(endpoint, :body => { :content => post_body})
-   req = Net::HTTP::Post.new(url.path)
-   req.body = post_body
-   req.content_type = "application/magic-envelope+xml"
-   header_stuff = req.each_header {|k,v| puts k,v}
-   Rails.logger.warn "req: #{post_body} #{url.host}"
-   res = Net::HTTP.new(url.host, url.port).start { |http| http.request(req) }
+  #url = URI.parse(endpoint)
+   res = HTTParty.post(endpoint, :body => { :content => post_body}, :headers => { :content_type => "application/magic-envelope+xml" })
+   #req = Net::HTTP::Post.new(url.path)
+   #req.body = post_body
+   #req.content_type = "application/magic-envelope+xml"
+   #header_stuff = req.each_header {|k,v| puts k,v}
+   Rails.logger.warn "req: #{post_body}"
+   #res = Net::HTTP.new(url.host, url.port).start { |http| http.request(req) }
    Rails.logger.warn "res: #{res.body} #{res.code}"
-   render :text => "look at log"
+   #render :text => "look at log"
 
   end
   
