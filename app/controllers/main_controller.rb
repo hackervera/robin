@@ -27,7 +27,8 @@ class MainController < ApplicationController
                         :conversation => status[:conversation],
                         :id => status[:id],
                         :url => status[:url],
-                        :author => status[:author]}
+                        :author => status[:author],
+                        :salmon => status[:salmon]}
          end
     end            
     
@@ -185,6 +186,7 @@ TEMPLATE
   
   def post
     reply = params[:reply]
+    salmon = params[:salmon]
     reply_author = params[:reply_author]
     conversation = params[:conversation]
     user,host = params[:user].split("@") unless params[:user].nil? 
@@ -196,7 +198,7 @@ TEMPLATE
     conversation ||= "http://redrob.in/conversations/#{Conversation.create.object_id}" 
     status = @user.statuses.create(:title => title, :text => text, :conversation => conversation, :reply => reply, :reply_author => reply_author)
     hub = "http://pubsubhubbub.appspot.com/"
-    salmon = status.salmon unless reply.nil?
+    #salmon = status.salmon
     author = status.author unless reply.nil?
     HTTParty.post(hub, :body => { :"hub.mode" => :publish, :"hub.url" => "http://redrob.in/feeds/#{@user.username}" })
     HTTParty.get("http://redrob.in/salmon/send_salmon", :query => { :title => title, :text => text, :status_id => status.id, :username => username, :salmon => salmon, :author => author })
