@@ -101,7 +101,7 @@ EOF
     Rails.logger.info "FAIL!"
   end
   #url = URI.parse(endpoint)
-   res = HTTParty.post(params[:salmon], :body => { :content => post_body}, :headers => { 'content-type' => "application/magic-envelope+xml" })
+   res = HTTParty.post(params[:salmon], :body => post_body, :headers => { 'content-type' => "application/magic-envelope+xml" })
    #req = Net::HTTP::Post.new(url.path)
    #req.body = post_body
    #req.content_type = "application/magic-envelope+xml"
