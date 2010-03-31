@@ -59,7 +59,7 @@ class MainController < ApplicationController
     render :text => "error".to_json if feed_url.nil?
     xml = HTTParty.get(feed_url)
     hub = FeedTool.is_push?(xml)
-    Rails.logger.info xml,feed_url,hub
+    Rails.logger.info "#{xml} #{feed_url} #{hub}"
     doc = Nokogiri::XML(xml)
     doc.remove_namespaces!
     image = doc.xpath("//link[@rel='avatar']").first['href'] unless doc.xpath("//link[@rel='avatar']").first.nil?
@@ -105,6 +105,10 @@ class MainController < ApplicationController
       conversation = doc.xpath("//link[@rel='ostatus:conversation']").last['href'] unless doc.xpath("//link[@rel='ostatus:conversation']").last.nil?
       found_user = User.find(:first, :conditions => "username  = '#{user}' AND host = '#{host}'")
       render :text => "user not found" if found_user.nil?
+      res = HTTParty.get(hub, :query => { :"hub.callback" => :"http://redrob.in/main/callback/#{user}/#{host}",
+                                  :"hub.mode" => :unsubscribe,
+                                  :"hub.topic" => topic,
+                                  :"hub.verify" => :sync }) if found_user.nil?
       found_user.statuses.create(:text => text, :conversation => conversation, :url => url, :author => author, :salmon => salmon)
     end
     Rails.logger.info request.body.string
