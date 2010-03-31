@@ -54,7 +54,7 @@ class MainController < ApplicationController
     User.create(:username => user, :host => host, :profile => profile) unless User.find(:first, :conditions => "username='#{user}' AND host='#{host}'")
     Rails.logger.info "called subscribe"
     
-    feed_url = finger.updates_from.first.to_s
+    #feed_url = finger.updates_from.first.to_s
     Rails.logger.info feed_url.nil?
     render :text => "error".to_json if feed_url.nil?
     xml = HTTParty.get(feed_url)
@@ -62,6 +62,7 @@ class MainController < ApplicationController
     Rails.logger.info "#{xml} #{feed_url} #{hub}"
     doc = Nokogiri::XML(xml)
     doc.remove_namespaces!
+    feed_url = doc.xpath("//link[@rel='self']").first['href']
     image = doc.xpath("//link[@rel='avatar']").first['href'] unless doc.xpath("//link[@rel='avatar']").first.nil?
     image ||= "" 
     res = HTTParty.get(hub, :query => { :"hub.callback" => :"http://redrob.in/main/callback/#{user}/#{host}",
