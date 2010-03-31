@@ -189,6 +189,7 @@ TEMPLATE
     salmon = params[:salmon]
     reply_author = params[:reply_author]
     conversation = params[:conversation]
+    author = params[:user]
     user,host = params[:user].split("@") unless params[:user].nil? 
     person = User.find(:first, :conditions => "username = '#{user}' AND host = '#{host}'")
     username = @user.username
@@ -199,9 +200,9 @@ TEMPLATE
     status = @user.statuses.create(:title => title, :text => text, :conversation => conversation, :reply => reply, :reply_author => reply_author)
     hub = "http://pubsubhubbub.appspot.com/"
     #salmon = status.salmon
-    author = status.author unless reply.nil?
+    #author = status.author unless reply.nil?
     HTTParty.post(hub, :body => { :"hub.mode" => :publish, :"hub.url" => "http://redrob.in/feeds/#{@user.username}" })
-    HTTParty.get("http://redrob.in/salmon/send_salmon", :query => { :title => title, :text => text, :status_id => status.id, :username => username, :salmon => salmon, :author => author })
+    HTTParty.get("http://redrob.in/salmon/send_salmon", :query => { :title => title, :text => text, :status_id => status.id, :username => username, :salmon => salmon, :author => author }) unless reply.nil?
 
     render :text => "Ok".to_json
   end    

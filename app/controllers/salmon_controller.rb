@@ -15,10 +15,9 @@ class SalmonController < ApplicationController
     status_id = params[:status_id]
     username = params[:username]
     author = params[:author]
-    notice = "http://opengard.in/notice/2695"
-    #endpoint = "http://dev.walkah.me/main/salmon/user/1"
+    finger = Redfinger.finger(author)
+    author = finger.profile
     endpoint = salmon
-    #endpoint = "http://identi.ca/main/salmon/user/141089"
     entry = <<SAMPLE
 <entry xmlns="http://www.w3.org/2005/Atom" xmlns:service="http://activitystrea.ms/service-provider" xmlns:activity="http://activitystrea.ms/spec/1.0/">
   <activity:verb>http://activitystrea.ms/schema/1.0/post</activity:verb>
