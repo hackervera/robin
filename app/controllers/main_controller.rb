@@ -58,12 +58,12 @@ class MainController < ApplicationController
     Rails.logger.info feed_url.nil?
     render :text => "error".to_json if feed_url.nil?
     xml = HTTParty.get(feed_url)
-    Rails.logger.info xml
     hub = FeedTool.is_push?(xml)
+    Rails.logger.info xml,feed_url,hub
     doc = Nokogiri::XML(xml)
     doc.remove_namespaces!
     image = doc.xpath("//link[@rel='avatar']").first['href'] unless doc.xpath("//link[@rel='avatar']").first.nil?
-    image ||= "http://blah.com" 
+    image ||= "" 
     res = HTTParty.get(hub, :query => { :"hub.callback" => :"http://redrob.in/main/callback/#{user}/#{host}",
                                   :"hub.mode" => :subscribe,
                                   :"hub.topic" => feed_url,

@@ -76,7 +76,7 @@
   function findName(text){
     //console.log(text);
     //alert(text);
-    if (username = /@(\w+)/.exec(text)){
+    if (username = /@(\w+)/.exec(text) && reply == undefined){
       //alert("contains username: "+username[1])
       user = username[1];
       $.getJSON("/main/findname",
