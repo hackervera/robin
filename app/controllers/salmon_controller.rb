@@ -16,7 +16,7 @@ class SalmonController < ApplicationController
     username = params[:username]
     author = params[:author]
     finger = Redfinger.finger(author)
-    author = finger.profile
+    author = finger.profile_page.first.to_s
     endpoint = salmon
     entry = <<SAMPLE
 <entry xmlns="http://www.w3.org/2005/Atom" xmlns:service="http://activitystrea.ms/service-provider" xmlns:activity="http://activitystrea.ms/spec/1.0/">
