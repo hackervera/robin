@@ -52,7 +52,7 @@ class SalmonController < ApplicationController
     <link xmlns:media="http://purl.org/syndication/atommedia" type="image/png" rel="avatar" href="http://avatar.identi.ca/3919-original-20080826101830.jpeg" media:height="120" media:width="120" />
     <link xmlns:media="http://purl.org/syndication/atommedia" type="image/png" rel="avatar" href="http://avatar.identi.ca/3919-original-20080826101830.jpeg" media:height="200" media:width="200" />
     <link href="http://redrob.in/users/#{username}" rel="alternate" type="text/html" length="0" />
-    <id>http://redrob.in/#{username}</id>
+    <id>http://redrob.in/users/#{username}</id>
   </activity:actor>
   <link href="#{author}" rel="ostatus:attention" />
 </entry>
