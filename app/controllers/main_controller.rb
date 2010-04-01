@@ -105,12 +105,13 @@ class MainController < ApplicationController
       url = doc.xpath("//entry/link[@rel='alternate']").first['href']
       conversation = doc.xpath("//link[@rel='ostatus:conversation']").last['href'] unless doc.xpath("//link[@rel='ostatus:conversation']").last.nil?
       found_user = User.find(:first, :conditions => "username  = '#{user}' AND host = '#{host}'")
-      
+      Rails.logger.info :"HITTING HUB: #{hub}"
       res = HTTParty.get(hub, :query => { :"hub.callback" => :"http://redrob.in/main/callback/tylergillies/localhost",
                                   :"hub.mode" => :unsubscribe,
                                   :"hub.topic" => topic,
                                   :"hub.verify" => :sync }) if found_user.nil?
       #render and return :text => "user not found" if found_user.nil?
+      Rails.logger.info "HUB SAID: #{res}"
       found_user.statuses.create(:text => text, :conversation => conversation, :url => url, :author => author, :salmon => salmon) unless found_user.nil?
     end
     Rails.logger.info request.body.string
