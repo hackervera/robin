@@ -110,7 +110,7 @@ class MainController < ApplicationController
                                   :"hub.mode" => :unsubscribe,
                                   :"hub.topic" => topic,
                                   :"hub.verify" => :sync }) if found_user.nil?
-      render and return :text => "user not found" if found_user.nil?
+      #render and return :text => "user not found" if found_user.nil?
       found_user.statuses.create(:text => text, :conversation => conversation, :url => url, :author => author, :salmon => salmon)
     end
     Rails.logger.info request.body.string
