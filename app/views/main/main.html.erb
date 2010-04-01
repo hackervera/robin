@@ -69,7 +69,7 @@
 
 <script>
   var user;
-  var reply_id;
+  var reply_id = "";
   var conversation;
   var reply_author;
   var salmon;
@@ -77,9 +77,9 @@
   function findName(text){
     //console.log(text);
     //alert(text);
-    if (username = /@(\w+)/.exec(text) && reply == ""){
+    if (username = /@(\w+)/.exec(text) && reply_id == ""){
       //alert("contains username: "+username[1])
-      alert(reply);
+      alert(reply_id+" username found");
       user = username[1];
       $.getJSON("/main/findname",
         { user: user}, 
@@ -87,7 +87,7 @@
     }
     else {
       //alert("no username detected")
-      alert(reply);
+      alert(reply_id+" username not found");
       $.getJSON("/main/post", { text: $("#text").val() }, function(json){ alert(json); });
       $("#text").val("");
     }
