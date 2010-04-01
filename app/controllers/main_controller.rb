@@ -116,9 +116,9 @@ class MainController < ApplicationController
     end
     Rails.logger.info request.body.string
     if challenge.nil?
-      render and return :text => ""
+      render :text => ""
     else
-      render and return :text => challenge 
+      render :text => challenge 
     end
   end
   
