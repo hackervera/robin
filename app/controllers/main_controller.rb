@@ -64,7 +64,7 @@ class MainController < ApplicationController
     #this_url = doc.xpath("//link[@rel='self']").first['href']
     image = doc.xpath("//link[@rel='avatar']").first['href'] unless doc.xpath("//link[@rel='avatar']").first.nil?
     image ||= "" 
-    Rails.logger.info "HITTING HUB #{hub} with topic #{feed_url}"
+    Rails.logger.info "HITTING HUB #{hub} with topic #{feed_url} SUBSCRIBING"
     res = HTTParty.get(hub, :query => { :"hub.callback" => :"http://redrob.in/main/callback/#{user}/#{host}",
                                   :"hub.mode" => "subscribe",
                                   :"hub.topic" => feed_url,
@@ -105,26 +105,25 @@ class MainController < ApplicationController
       url = doc.xpath("//entry/link[@rel='alternate']").first['href']
       conversation = doc.xpath("//link[@rel='ostatus:conversation']").last['href'] unless doc.xpath("//link[@rel='ostatus:conversation']").last.nil?
       found_user = User.find(:first, :conditions => "username  = '#{user}' AND host = '#{host}'")
-      Rails.logger.info :"HITTING HUB: #{hub}"
+      
      if found_user.nil?
+       Rails.logger.info :"No user found: HITTING HUB: #{hub} UNSUBSCRIBING"
         res = HTTParty.get(hub, :query => { :"hub.callback" => :"http://redrob.in/main/callback/tylergillies/localhost",
                                     :"hub.mode" => :unsubscribe,
                                     :"hub.topic" => topic,
                                     :"hub.verify" => :sync }) 
-        Rails.logger.info "No user found"
      end
       #render and return :text => "user not found" if found_user.nil?
-      Rails.logger.info "GOT REPONSE FROM HUB, LOOK FOR CALLBACK HIT"
       unless found_user.nil?
         found_user.statuses.create(:text => text, :conversation => conversation, :url => url, :author => author, :salmon => salmon) 
       end
     end
     Rails.logger.info request.body.string
     if challenge.nil?
-      Rails.logger.info "echoing empty string back to client"
+      Rails.logger.info "data coming in echoing empty string back to client"
       render :text => ""
     else
-      Rails.logger.info "echoing #{challenge} back to client"
+      Rails.logger.info "sub/unsub request coming in. echoing #{challenge} back to client"
       render :text => challenge 
     end
   end
