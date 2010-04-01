@@ -94,6 +94,8 @@
     else {
       alert("No username and no reponse");
       $.getJSON("/main/post", { text: $("#text").val() }, function(json){ alert(json); });
+      $("#text").val("");
+      window.location.reload();
     }
   }
   function showDialog(text){
