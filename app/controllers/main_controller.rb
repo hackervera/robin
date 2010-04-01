@@ -47,7 +47,7 @@ class MainController < ApplicationController
     users = []
     found_users = User.find_all_by_username(user)
     if found_users.empty?
-      render :text => "none".to_json and return
+      render :text => "none".to_json unless performed?
     end
     found_users.each do |user|
       users << "#{user.username}@#{user.host}"
