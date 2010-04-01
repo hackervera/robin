@@ -29,17 +29,17 @@ class MainController < ApplicationController
                         :url => status[:url],
                         :author => status[:author],
                         :salmon => status[:salmon]}
-       end
-       @user.statuses.each do |status|
-         @statuses << { :text => status[:text],
-                        :updated => status[:updated_at],
-                        :user => @user.username,
-                        :host => "redrob.in",
-                        :image => "http://opengard.in/theme/default/default-avatar-profile.png"
-                        }
-       end
-    end            
-    
+        end
+      end
+      @user.statuses.each do |status|
+        @statuses << { :text => status[:text],
+                       :updated => status[:updated_at],
+                       :user => @user.username,
+                       :host => "redrob.in",
+                       :image => "http://opengard.in/theme/default/default-avatar-profile.png"
+                       }
+      end
+
   end
   
   def findname
