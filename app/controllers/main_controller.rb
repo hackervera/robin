@@ -56,6 +56,7 @@ class MainController < ApplicationController
     if feed_url.nil?
       render and return :text => "error".to_json
     end
+    Rails.logger.info "in sub method"
     xml = HTTParty.get(feed_url)
     hub = FeedTool.is_push?(xml)
     Rails.logger.info "#{feed_url} #{hub}"
