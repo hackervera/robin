@@ -191,6 +191,7 @@ TEMPLATE
   
   def post
     reply = params[:reply]
+    Rails.logger.info "REPLY: #{reply}"
     salmon = params[:salmon]
     reply_author = params[:reply_author]
     conversation = params[:conversation]
