@@ -29,7 +29,12 @@ class MainController < ApplicationController
                         :url => status[:url],
                         :author => status[:author],
                         :salmon => status[:salmon]}
-         end
+       end
+       @user.statuses.each do |status|
+         @statuses << { :text => status[:text],
+                        :updated => status[:updated_at]
+                        }
+       end
     end            
     
   end
