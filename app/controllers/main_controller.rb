@@ -52,7 +52,7 @@ class MainController < ApplicationController
     found_users.each do |user|
       users << "#{user.username}@#{user.host}"
     end
-    render :text => users.to_json
+    render :text => users.to_json  unless performed?
   end  
   
   def subscribe
