@@ -60,7 +60,7 @@
       <p><img src=<%= status[:image] %> height="48" width="48"><%= status[:user] %>@<%= status[:host] %>: <%= status[:text] %></p>
       <div class="controls">
           <%= time %> <% unless status[:conversation].nil? || status[:conversation].empty? %><a href=<%= status[:conversation] %>>in context</a> <% end %>
-          <a href="javascript:" onClick="enterReply('<%= status[:user] %>','<%= status[:conversation] %>', '<%= status[:url] %>','<%= status[:salmon] %>');">reply</a>
+          <a href="javascript:" onClick="enterReply('<%= status[:user] %>','<%= status[:conversation] %>', '<%= status[:url] %>','<%= status[:salmon] %>', '<%= status[:host] %>');">reply</a>
           <br/></br/>  
       </div><div class="clear"></div>
     <% end %>
@@ -125,7 +125,7 @@
         window.location.reload();
        });
   }
-  function enterReply(user,converse,reply,salmon){
+  function enterReply(user,converse,reply,salmon,host){
     $("#text").val("@"+user+" ");
     $("#text").focus();
     conversation = converse;
@@ -133,7 +133,7 @@
     reply_author = reply_author;
     salmon = salmon;
     //alert(salmon);
-    $("#user").val(user);
+    $("#user").val(user+"@"+host);
     $("#salmon").val(salmon);
     alert($("#salmon").val());
     alert($("#user").val());
