@@ -64,11 +64,12 @@ class MainController < ApplicationController
     #this_url = doc.xpath("//link[@rel='self']").first['href']
     image = doc.xpath("//link[@rel='avatar']").first['href'] unless doc.xpath("//link[@rel='avatar']").first.nil?
     image ||= "" 
+    Rails.logger.info "HITTING HUB #{hub}"
     res = HTTParty.get(hub, :query => { :"hub.callback" => :"http://redrob.in/main/callback/#{user}/#{host}",
                                   :"hub.mode" => :subscribe,
                                   :"hub.topic" => feed_url,
                                   :"hub.verify" => :sync })
-    #Rails.logger.info res
+    Rails.logger.info "HUB said #{res}"
     @user.subscriptions = [] if @user.subscriptions.nil?
     match = nil
     user,host = params[:remotename].split("@")
