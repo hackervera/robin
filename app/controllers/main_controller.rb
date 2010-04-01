@@ -115,8 +115,11 @@ class MainController < ApplicationController
       found_user.statuses.create(:text => text, :conversation => conversation, :url => url, :author => author, :salmon => salmon) unless found_user.nil?
     end
     Rails.logger.info request.body.string
-    render :text => challenge unless challenge.nil?
-    render :text => "" if challenge.nil?
+    if challenge.nil?
+      render and return :text => ""
+    else
+      render and return :text => challenge 
+    end
   end
   
   def feeds
