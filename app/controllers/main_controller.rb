@@ -106,7 +106,7 @@ class MainController < ApplicationController
       conversation = doc.xpath("//link[@rel='ostatus:conversation']").last['href'] unless doc.xpath("//link[@rel='ostatus:conversation']").last.nil?
       found_user = User.find(:first, :conditions => "username  = '#{user}' AND host = '#{host}'")
       render :text => "user not found" if found_user.nil?
-      res = HTTParty.get(hub, :query => { :"hub.callback" => :"http://redrob.in/main/callback/#{user}/#{host}",
+      res = HTTParty.get(hub, :query => { :"hub.callback" => :"http://redrob.in/main/callback/tylergillies/localhost",
                                   :"hub.mode" => :unsubscribe,
                                   :"hub.topic" => topic,
                                   :"hub.verify" => :sync }) if found_user.nil?

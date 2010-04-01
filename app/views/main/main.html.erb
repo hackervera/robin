@@ -86,7 +86,7 @@
     }
     else if (reply_id != "") {
       alert(reply_id+" this is a response");
-      $.getJSON("/main/post", { salmon: salmon, text: $("#text").val(), reply_author: reply_author, reply: reply_id, conversation: conversation, user: txt, text: $("#text").val()}, function(json){ alert(json); });
+      $.getJSON("/main/post", { salmon: salmon, text: $("#text").val(), reply_author: reply_author, reply: reply_id, conversation: conversation, text: $("#text").val()}, function(json){ alert(json); });
       $("#text").val("");
     }
     else {
