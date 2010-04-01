@@ -78,18 +78,20 @@
     //console.log(text);
     //alert(text);
     if (username = /@(\w+)/.exec(text) && reply_id == ""){
-      //alert("contains username: "+username[1])
-      alert(reply_id+" username found");
+      alert(reply_id+" username found and no response");
       user = username[1];
       $.getJSON("/main/findname",
         { user: user}, 
         function(json){ showDialog(json); });
     }
-    else {
-      //alert("no username detected")
-      alert(reply_id+" username not found");
-      $.getJSON("/main/post", { text: $("#text").val() }, function(json){ alert(json); });
+    else if (reply_id != "") {
+      alert(reply_id+" this is a response");
+      $.getJSON("/main/post", { salmon: '<%= status[:salmon] %>', text: $("#text").val() }, function(json){ alert(json); });
       $("#text").val("");
+    }
+    else {
+      alert("No username and no reponse");
+      $.getJSON("/main/post", { text: $("#text").val() }, function(json){ alert(json); });
     }
   }
   function showDialog(text){
