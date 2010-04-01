@@ -67,7 +67,7 @@ class MainController < ApplicationController
     image ||= "" 
     res = HTTParty.get(hub, :query => { :"hub.callback" => :"http://redrob.in/main/callback/#{user}/#{host}",
                                   :"hub.mode" => :subscribe,
-                                  :"hub.topic" => this_url,
+                                  :"hub.topic" => feed_url,
                                   :"hub.verify" => :sync })
     Rails.logger.info res
     @user.subscriptions = [] if @user.subscriptions.nil?
@@ -105,11 +105,12 @@ class MainController < ApplicationController
       url = doc.xpath("//entry/link[@rel='alternate']").first['href']
       conversation = doc.xpath("//link[@rel='ostatus:conversation']").last['href'] unless doc.xpath("//link[@rel='ostatus:conversation']").last.nil?
       found_user = User.find(:first, :conditions => "username  = '#{user}' AND host = '#{host}'")
-      render :text => "user not found" if found_user.nil?
+      
       res = HTTParty.get(hub, :query => { :"hub.callback" => :"http://redrob.in/main/callback/tylergillies/localhost",
                                   :"hub.mode" => :unsubscribe,
                                   :"hub.topic" => topic,
                                   :"hub.verify" => :sync }) if found_user.nil?
+      render and return :text => "user not found" if found_user.nil?
       found_user.statuses.create(:text => text, :conversation => conversation, :url => url, :author => author, :salmon => salmon)
     end
     Rails.logger.info request.body.string
