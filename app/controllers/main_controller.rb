@@ -59,7 +59,7 @@ class MainController < ApplicationController
     render :text => "error".to_json if feed_url.nil?
     xml = HTTParty.get(feed_url)
     hub = FeedTool.is_push?(xml)
-    Rails.logger.info "#{xml} #{feed_url} #{hub}"
+    Rails.logger.info "#{feed_url} #{hub}"
     doc = Nokogiri::XML(xml)
     doc.remove_namespaces!
     #this_url = doc.xpath("//link[@rel='self']").first['href']
@@ -69,7 +69,7 @@ class MainController < ApplicationController
                                   :"hub.mode" => :subscribe,
                                   :"hub.topic" => feed_url,
                                   :"hub.verify" => :sync })
-    Rails.logger.info res
+    #Rails.logger.info res
     @user.subscriptions = [] if @user.subscriptions.nil?
     match = nil
     user,host = params[:remotename].split("@")
@@ -111,7 +111,7 @@ class MainController < ApplicationController
                                   :"hub.topic" => topic,
                                   :"hub.verify" => :sync }) if found_user.nil?
       #render and return :text => "user not found" if found_user.nil?
-      found_user.statuses.create(:text => text, :conversation => conversation, :url => url, :author => author, :salmon => salmon)
+      found_user.statuses.create(:text => text, :conversation => conversation, :url => url, :author => author, :salmon => salmon) unless found_user.nil?
     end
     Rails.logger.info request.body.string
     render :text => challenge unless challenge.nil?
