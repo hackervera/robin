@@ -52,11 +52,10 @@ class MainController < ApplicationController
     profile = finger.profile_page.first.to_s
     user,host = params[:remotename].split("@")
     User.create(:username => user, :host => host, :profile => profile) unless User.find(:first, :conditions => "username='#{user}' AND host='#{host}'")
-    Rails.logger.info "called subscribe"
-    
     feed_url = finger.updates_from.first.to_s
-    Rails.logger.info feed_url.nil?
-    render :text => "error".to_json if feed_url.nil?
+    if feed_url.nil?
+      render and return :text => "error".to_json
+    end
     xml = HTTParty.get(feed_url)
     hub = FeedTool.is_push?(xml)
     Rails.logger.info "#{feed_url} #{hub}"

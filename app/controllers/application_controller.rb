@@ -15,17 +15,17 @@ module FeedTool
   def FeedTool.is_push?(xml)
     #Rails.logger.info xml.slice(0,500)
     doc = Nokogiri::XML(xml)
-    Rails.logger.info "Class: #{doc.class}\n\n"
+    #Rails.logger.info "Class: #{doc.class}\n\n"
     doc.remove_namespaces!
     links = doc.xpath("//link")
-    Rails.logger.info "LINKS: #{links.inspect}\n\n"
+    #Rails.logger.info "LINKS: #{links.inspect}\n\n"
     links.each do |node|
       #Rails.logger.info "NODE_VARS: #{node.class} #{node.href}"
       @hub = node.attributes['href'].to_s if node.attributes['rel'].to_s == "hub" 
-      Rails.logger.info "Node attrs: #{node.attributes}\n\n"
+      #Rails.logger.info "Node attrs: #{node.attributes}\n\n"
     end
     @hub ||= false
-    Rails.logger.info "HUB: #{@hub}\n\n"
+    #Rails.logger.info "HUB: #{@hub}\n\n"
     @hub
   end
  end
