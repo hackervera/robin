@@ -62,7 +62,7 @@ class MainController < ApplicationController
     Rails.logger.info "#{xml} #{feed_url} #{hub}"
     doc = Nokogiri::XML(xml)
     doc.remove_namespaces!
-    this_url = doc.xpath("//link[@rel='self']").first['href']
+    #this_url = doc.xpath("//link[@rel='self']").first['href']
     image = doc.xpath("//link[@rel='avatar']").first['href'] unless doc.xpath("//link[@rel='avatar']").first.nil?
     image ||= "" 
     res = HTTParty.get(hub, :query => { :"hub.callback" => :"http://redrob.in/main/callback/#{user}/#{host}",
