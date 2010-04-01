@@ -27,7 +27,7 @@ module Redfinger
     end
 
     def retrieve_template_from_xrd(ssl = true)
-      doc = Nokogiri::XML::Document.parse(RestClient.get(xrd_url(ssl)).body)
+      doc = Nokogiri::XML::Document.parse(RestClient.get(xrd_url(ssl))) #body
       if doc.namespaces["xmlns:hm"] != "http://host-meta.net/xrd/1.0"
         # it's probably not finger, let's try without ssl
         # http://code.google.com/p/webfinger/wiki/WebFingerProtocol
