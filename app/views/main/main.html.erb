@@ -79,6 +79,7 @@
     //alert(text);
     if (username = /@(\w+)/.exec(text) && reply == ""){
       //alert("contains username: "+username[1])
+      alert(reply);
       user = username[1];
       $.getJSON("/main/findname",
         { user: user}, 
@@ -86,6 +87,7 @@
     }
     else {
       //alert("no username detected")
+      alert(reply);
       $.getJSON("/main/post", { text: $("#text").val() }, function(json){ alert(json); });
       $("#text").val("");
     }
