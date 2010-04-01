@@ -13,7 +13,7 @@ class MainController < ApplicationController
     @subs = []
     @user.subscriptions = [] if @user.subscriptions.nil?
     @user.subscriptions.each do |sub|
-      @subs << "<img src=#{sub[:image]} width=48 height=48>"
+      @subs << "<img src='#{sub[:image]}' width=48 height=48>"
     end
      @statuses = []
      @user.subscriptions.each do |sub|

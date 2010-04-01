@@ -57,7 +57,7 @@
     @statuses.sort_by{ |status| status[:updated] }.reverse[0..10].each do |status| 
       time = distance_of_time_in_words(status[:updated], Time.now) %>
     
-      <p><img src=<%= status[:image] %> alt='<% status[:author] %>' height="48" width="48"><%= status[:user] %>@<%= status[:host] %>: <%= status[:text] %></p>
+      <p><img src=<%= status[:image] %> alt='<%= status[:author] %>' height="48" width="48" /><%= status[:user] %>@<%= status[:host] %>: <%= status[:text] %></p>
       <div class="controls">
           <%= time %> <% unless status[:conversation].nil? || status[:conversation].empty? %><a href=<%= status[:conversation] %>>in context</a> <% end %>
           <a href="javascript:" onClick="enterReply('<%= status[:user] %>','<%= status[:conversation] %>', '<%= status[:url] %>','<%= status[:salmon] %>', '<%= status[:host] %>');">reply</a>
