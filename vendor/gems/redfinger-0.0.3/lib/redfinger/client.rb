@@ -13,7 +13,7 @@ module Redfinger
 
     def finger
       self.uri_template ||= retrieve_template_from_xrd
-      Finger.new RestClient.get(swizzle).body
+      Finger.new RestClient.get(swizzle) #body
     end
 
     def xrd_url(ssl = true)
