@@ -79,10 +79,10 @@
   function findName(text){
     //console.log(text);
     //alert(text);
-    if (username = /.*@(\w+).*/.exec(text) && reply_id == ""){
+    if (username = /@(\w+)/.exec(text) && reply_id == ""){
       //alert(reply_id+" username found and no response");
       user = username[1];
-      alert(user);
+      alert(username[1]);
       $.getJSON("/main/findname",
         { user: user}, 
         function(json){ showDialog(json); });
