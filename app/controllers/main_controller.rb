@@ -64,12 +64,12 @@ class MainController < ApplicationController
     #this_url = doc.xpath("//link[@rel='self']").first['href']
     image = doc.xpath("//link[@rel='avatar']").first['href'] unless doc.xpath("//link[@rel='avatar']").first.nil?
     image ||= "" 
-    Rails.logger.info "HITTING HUB #{hub}"
+    Rails.logger.info "HITTING HUB #{hub} with topic #{feed_url}"
     res = HTTParty.get(hub, :query => { :"hub.callback" => :"http://redrob.in/main/callback/#{user}/#{host}",
-                                  :"hub.mode" => :subscribe,
+                                  :"hub.mode" => "subscribe",
                                   :"hub.topic" => feed_url,
-                                  :"hub.verify" => :sync })
-    Rails.logger.info "HUB said #{res}"
+                                  :"hub.verify" => "sync" })
+    Rails.logger.info "GOT RESPONSE FROM HUB, LOOK FOR CALLBACK"
     @user.subscriptions = [] if @user.subscriptions.nil?
     match = nil
     user,host = params[:remotename].split("@")
@@ -106,18 +106,25 @@ class MainController < ApplicationController
       conversation = doc.xpath("//link[@rel='ostatus:conversation']").last['href'] unless doc.xpath("//link[@rel='ostatus:conversation']").last.nil?
       found_user = User.find(:first, :conditions => "username  = '#{user}' AND host = '#{host}'")
       Rails.logger.info :"HITTING HUB: #{hub}"
-      res = HTTParty.get(hub, :query => { :"hub.callback" => :"http://redrob.in/main/callback/tylergillies/localhost",
-                                  :"hub.mode" => :unsubscribe,
-                                  :"hub.topic" => topic,
-                                  :"hub.verify" => :sync }) if found_user.nil?
+     if found_user.nil?
+        res = HTTParty.get(hub, :query => { :"hub.callback" => :"http://redrob.in/main/callback/tylergillies/localhost",
+                                    :"hub.mode" => :unsubscribe,
+                                    :"hub.topic" => topic,
+                                    :"hub.verify" => :sync }) 
+        Rails.logger.info "No user found"
+     end
       #render and return :text => "user not found" if found_user.nil?
-      Rails.logger.info "HUB SAID: #{res}"
-      found_user.statuses.create(:text => text, :conversation => conversation, :url => url, :author => author, :salmon => salmon) unless found_user.nil?
+      Rails.logger.info "GOT REPONSE FROM HUB, LOOK FOR CALLBACK HIT"
+      unless found_user.nil?
+        found_user.statuses.create(:text => text, :conversation => conversation, :url => url, :author => author, :salmon => salmon) 
+      end
     end
     Rails.logger.info request.body.string
     if challenge.nil?
+      Rails.logger.info "echoing empty string back to client"
       render :text => ""
     else
+      Rails.logger.info "echoing #{challenge} back to client"
       render :text => challenge 
     end
   end
