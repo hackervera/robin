@@ -82,7 +82,7 @@
     if (username = /@(\w+)/.exec(text) && reply_id == ""){
       //alert(reply_id+" username found and no response");
       user = username[1];
-      alert(username.inspect);
+      alert(text);
       $.getJSON("/main/findname",
         { user: user}, 
         function(json){ showDialog(json); });
