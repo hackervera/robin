@@ -1,5 +1,6 @@
 class SalmonController < ApplicationController
   require 'time'
+  protect_from_forgery :only => [:create, :update, :destroy]
   
   def create_env
     

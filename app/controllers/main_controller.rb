@@ -117,11 +117,10 @@ class MainController < ApplicationController
       found_user = User.find(:first, :conditions => "username  = '#{user}' AND host = '#{host}'")
       
      if found_user.nil?
-       Rails.logger.info :"No user found: HITTING HUB: #{hub} UNSUBSCRIBING"
+       #Rails.logger.info :"No user found: HITTING HUB: #{hub} UNSUBSCRIBING"
         res = HTTParty.post(hub, :body => { :"hub.callback" => :"http://redrob.in/main/callback/tylergillies/localhost",
                                     :"hub.mode" => :unsubscribe,
-                                    :"hub.topic" => topic,
-                                    :"hub.verify" => :sync }) 
+                                    :"hub.topic" => topic }) 
      end
       #render and return :text => "user not found" if found_user.nil?
       unless found_user.nil?
@@ -130,10 +129,10 @@ class MainController < ApplicationController
     end
     Rails.logger.info request.body.string
     if challenge.nil?
-      Rails.logger.info "data coming in echoing empty string back to client"
+      #Rails.logger.info "data coming in echoing empty string back to client"
       render :text => ""
     else
-      Rails.logger.info "sub/unsub request coming in. echoing #{challenge} back to client"
+      Rails.logger.info challenge
       render :text => challenge 
     end
   end
@@ -224,7 +223,7 @@ TEMPLATE
     text = params[:text]
 
     title = params[:text]
-    text[/@\w+/] = "&lt;a href='#{person.profile}'&gt;@#{user}&lt;/a&gt;" unless params[:user].nil?
+    #text[/@\w+/] = "&lt;a href='#{person.profile}'&gt;@#{user}&lt;/a&gt;" unless params[:user].nil?
     conversation ||= "http://redrob.in/conversations/#{Conversation.create.id}"
     Rails.logger.info "THIS IS TEXT: #{@title}"
     status = @user.statuses.create(:title => title, :text => title, :conversation => conversation, :reply => reply, :reply_author => reply_author)
