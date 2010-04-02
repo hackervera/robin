@@ -108,7 +108,7 @@ class MainController < ApplicationController
     end
     user = params[:user]
     host = params[:host]
-    xml = request.body.to_s
+    xml = request.body.read
     Rails.logger.info "XML: #{xml}"
     doc = Nokogiri::XML(xml)
     doc.remove_namespaces!
@@ -268,6 +268,10 @@ TEMPLATE
     status_number = params[:status_number]
     message = Status.find(status_number)
     render :text => message.title
+  end
+
+  def juggernaut
+    
   end
     
     
