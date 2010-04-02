@@ -13,8 +13,10 @@ class MainController < ApplicationController
   def main
     @subs = []
     @user.subscriptions = [] if @user.subscriptions.nil?
-    @user.subscriptions.each do |sub|
+    @user.subscriptions.each_with_index do |sub,index|
+      @subs << "<br/>" if index != 0 && index % 4 == 0 
       @subs << "<a title='#{sub[:user]}@#{sub[:host]}' href='#{sub[:profile]}' border=0><img src='#{sub[:image]}' width=48 height=48 border=0></a>"
+
     end
      @statuses = []
      @user.subscriptions.each do |sub|
