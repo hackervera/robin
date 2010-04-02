@@ -14,7 +14,7 @@ class MainController < ApplicationController
     @subs = []
     @user.subscriptions = [] if @user.subscriptions.nil?
     @user.subscriptions.each do |sub|
-      @subs << "<a title='#{sub[:user]}@#{sub[:host]}' href='#{sub[:profile]}'><img src='#{sub[:image]}' width=48 height=48></a>"
+      @subs << "<a title='#{sub[:user]}@#{sub[:host]}' href='#{sub[:profile]}' border=0><img src='#{sub[:image]}' width=48 height=48></a>"
     end
      @statuses = []
      @user.subscriptions.each do |sub|
@@ -37,7 +37,7 @@ class MainController < ApplicationController
                        :updated => status[:updated_at],
                        :user => @user.username,
                        :host => "redrob.in",
-                       :image => "http://opengard.in/theme/default/default-avatar-profile.png",
+                       :image => "http://www.owlnet.rice.edu/~psyc101/pomerantz/NAmerican%20Robin.jpg",
                        :conversation => status[:conversation],
                        :url => status[:url],
                        :salmon => status[:salmon]
