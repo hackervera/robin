@@ -76,7 +76,7 @@ class MainController < ApplicationController
     doc.remove_namespaces!
     #this_url = doc.xpath("//link[@rel='self']").first['href']
     image = doc.xpath("//link[@rel='avatar']").first['href'] unless doc.xpath("//link[@rel='avatar']").first.nil?
-    image ||= "" 
+    image ||= "http://www.appscout.com/images/Google%20Buzz%20logo.JPG" 
     Rails.logger.info "HITTING HUB #{hub} with topic #{feed_url} SUBSCRIBING"
     res = HTTParty.post(hub, :body => { :"hub.callback" => :"http://redrob.in/main/callback/#{user}/#{host}",
                                   :"hub.mode" => "subscribe",
