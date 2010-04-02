@@ -129,7 +129,9 @@ class MainController < ApplicationController
       #render and return :text => "user not found" if found_user.nil?
       unless found_user.nil?
         s = TCPSocket.open("realtime.redrob.in","8081")
-        s.puts "ADDMESSAGE #{found_user.username} ping"
+        User.all.each do |ping|
+          s.puts "ADDMESSAGE #{ping.username} ping"
+        end
         s.close
         found_user.statuses.create(:text => text, :conversation => conversation, :url => url, :author => author, :salmon => salmon)
         found_user.salmon = salmon

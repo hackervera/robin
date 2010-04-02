@@ -3,9 +3,7 @@
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="7a29a0b7-60ed-4ca1-a7ba-13ce36c1347b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/main_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/main_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/main/main.html.erb" afterPath="$PROJECT_DIR$/app/views/main/main.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20100402121932_add_salmon_to_user.rb" />
     </list>
     <ignored path="rstatus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,7 +30,7 @@
       <file leaf-file-name="main_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="131" column="56" selection-start="5606" selection-end="5606" vertical-scroll-proportion="0.73773587">
+            <state line="133" column="11" selection-start="5646" selection-end="5646" vertical-scroll-proportion="0.51320755">
               <folding />
             </state>
           </provider>
@@ -607,7 +605,7 @@
     <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
     <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="[deploy site_production] edited info" />
+    <option name="LAST_COMMIT_MESSAGE" value="[deploy site_production] edited realtime crap" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -631,6 +629,7 @@
     <MESSAGE value="[deploy site_production] rmanually hacked juggernaut file crap" />
     <MESSAGE value="[deploy site_production] one by one" />
     <MESSAGE value="[deploy site_production] edited info" />
+    <MESSAGE value="[deploy site_production] edited realtime crap" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -734,7 +733,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="131" column="56" selection-start="5606" selection-end="5606" vertical-scroll-proportion="0.73773587">
+        <state line="133" column="11" selection-start="5646" selection-end="5646" vertical-scroll-proportion="0.51320755">
           <folding />
         </state>
       </provider>
