@@ -43,6 +43,7 @@ ActionController::Routing::Routes.draw do |map|
   map.connect '/webfinger', :controller => :main, :action => :webfinger
   map.connect '/feeds/:username', :controller => :main, :action => :feeds
   map.connect '/main/callback/:user/:host', :host => /[a-z.]+/, :controller => :main, :action => :callback
+  map.connect '/main/callback', :controller => :main, :action => :callback
   map.connect '/', :controller => "main", :action => "main"
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'

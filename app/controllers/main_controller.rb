@@ -102,13 +102,16 @@ class MainController < ApplicationController
     
   def callback
     challenge = params[:"hub.challenge"]
+    unless challenge.nil?
+      render :text => challenge
+      return
+    end
     user = params[:user]
     host = params[:host]
     xml = request.body.string
     doc = Nokogiri::XML(xml)
     doc.remove_namespaces!
     #Rails.logger.info xml
-    Rails.logger.info "PARAMS: #{params}"
     unless xml.empty?
       text = doc.xpath("//content").last.text
       hub = doc.xpath("//link[@rel='hub']").first['href']
@@ -119,25 +122,10 @@ class MainController < ApplicationController
       url = doc.xpath("//entry/link[@rel='alternate']").first['href']
       conversation = doc.xpath("//link[@rel='ostatus:conversation']").last['href'] unless doc.xpath("//link[@rel='ostatus:conversation']").last.nil?
       found_user = User.find(:first, :conditions => "username  = '#{user}' AND host = '#{host}'")
-      
-     if found_user.nil?
-       #Rails.logger.info :"No user found: HITTING HUB: #{hub} UNSUBSCRIBING"
-        res = HTTParty.post(hub, :body => { :"hub.callback" => :"http://redrob.in/main/callback/tylergillies/localhost",
-                                    :"hub.mode" => :unsubscribe,
-                                    :"hub.topic" => topic }) 
-     end
       #render and return :text => "user not found" if found_user.nil?
       unless found_user.nil?
         found_user.statuses.create(:text => text, :conversation => conversation, :url => url, :author => author, :salmon => salmon) 
       end
-    end
-    Rails.logger.info request.body.string
-    if challenge.nil?
-      #Rails.logger.info "data coming in echoing empty string back to client"
-      render :text => ""
-    else
-      Rails.logger.info challenge
-      render :text => challenge 
     end
   end
   
