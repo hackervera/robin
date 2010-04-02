@@ -82,19 +82,19 @@
     if ((username = /@(\w+)/.exec(text)) && (reply_id == "")){
       //alert(reply_id+" username found and no response");
       user = username[1];
-      alert(username[1]);
+      //alert(username[1]);
       $.getJSON("/main/findname",
         { user: user}, 
         function(json){ showDialog(json); });
     }
     else if (reply_id != "") {
       //alert(reply_id+" this is a response");
-      $.getJSON("/main/post", { user: $("#user").val(), salmon: $("#salmon").val(), title: $("#text").val(), reply_author: reply_author, reply: reply_id, conversation: conversation, text: $("#text").val()}, function(json){ alert(json); });
+      $.getJSON("/main/post", { user: $("#user").val(), salmon: $("#salmon").val(), title: $("#text").val(), reply_author: reply_author, reply: reply_id, conversation: conversation, text: $("#text").val()}, function(json){  });
       $("#text").val("");
     }
     else {
       //alert("No username and no reponse");
-      $.getJSON("/main/post", { text: $("#text").val() }, function(json){ alert(json);  window.location.reload(); });
+      $.getJSON("/main/post", { text: $("#text").val() }, function(json){   window.location.reload(); });
       $("#text").val("");
 
     }
@@ -114,7 +114,7 @@
   function closeMe(){ $("#msg").dialog("close"); $("#msg").text("");  }
   function getChecked(){
     var txt = $("input[name='user']:checked").val();
-    alert(txt+salmon);
+    //alert(txt+salmon);
     $.getJSON("/main/post", { salmon: $("#salmon").val(), reply_author: reply_author, reply: reply_id, conversation: conversation, user: txt, text: $("#text").val() }, function(json){ alert(json); });
     $("#text").val("");
   }
@@ -122,7 +122,7 @@
     $.getJSON("/main/subscribe",
       { remotename: $("#remotename").val() },
       function(json){ 
-        alert(json); 
+        //alert(json);
         $("#remote").dialog("close");
         $("#remotename").val("");
         window.location.reload();
@@ -138,8 +138,8 @@
     //alert(salmon);
     $("#user").val(user+"@"+host);
     $("#salmon").val(salmon);
-    alert($("#salmon").val());
-    alert($("#user").val());
+    //alert($("#salmon").val());
+    //alert($("#user").val());
     
   }
 </script>

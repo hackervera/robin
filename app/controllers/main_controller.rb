@@ -198,7 +198,7 @@ TEMPLATE
 TEMPLATE
       entries << entry
     end
-    feed = header + entries.join("\n") + "</feed>"
+    feed = header + entries.reverse.join("\n") + "</feed>"
     render :text => feed, :content_type => "application/atom+xml"
   end
   
