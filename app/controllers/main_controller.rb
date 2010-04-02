@@ -107,7 +107,8 @@ class MainController < ApplicationController
     xml = request.body.string
     doc = Nokogiri::XML(xml)
     doc.remove_namespaces!
-    Rails.logger.info xml
+    #Rails.logger.info xml
+    Rails.logger.info "PARAMS: #{params}"
     unless xml.empty?
       text = doc.xpath("//content").last.text
       hub = doc.xpath("//link[@rel='hub']").first['href']
