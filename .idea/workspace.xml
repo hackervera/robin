@@ -4,6 +4,7 @@
     <list default="true" readonly="true" id="7a29a0b7-60ed-4ca1-a7ba-13ce36c1347b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/main/main.html.erb" afterPath="$PROJECT_DIR$/app/views/main/main.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/main_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/main_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/plugins/juggernaut_plugin/media/juggernaut_hosts.yml" afterPath="$PROJECT_DIR$/vendor/plugins/juggernaut_plugin/media/juggernaut_hosts.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rstatus.iws" />
@@ -31,7 +32,7 @@
       <file leaf-file-name="main_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="200" column="36" selection-start="8886" selection-end="8886" vertical-scroll-proportion="-101.44">
+            <state line="132" column="2" selection-start="5322" selection-end="5331" vertical-scroll-proportion="-20.52">
               <folding />
             </state>
           </provider>
@@ -82,10 +83,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/main/main.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="141" column="6" selection-start="4654" selection-end="4654" vertical-scroll-proportion="0.6749522">
+            <state line="91" column="248" selection-start="2986" selection-end="2986" vertical-scroll-proportion="-3.3877552">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="juggernaut_hosts.yml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vendor/plugins/juggernaut_plugin/media/juggernaut_hosts.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="29" selection-start="710" selection-end="710" vertical-scroll-proportion="0.41754386">
               <folding />
             </state>
           </provider>
@@ -119,6 +129,7 @@
         <option value="$PROJECT_DIR$/app/views/main/juggernaut.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/main_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/main/main.html.erb" />
+        <option value="$PROJECT_DIR$/vendor/plugins/juggernaut_plugin/media/juggernaut_hosts.yml" />
       </list>
     </option>
   </component>
@@ -578,14 +589,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="200" column="36" selection-start="8886" selection-end="8886" vertical-scroll-proportion="-101.44">
+        <state line="132" column="2" selection-start="5322" selection-end="5331" vertical-scroll-proportion="-20.52">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/main/main.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="141" column="6" selection-start="4654" selection-end="4654" vertical-scroll-proportion="0.6749522">
+        <state line="91" column="248" selection-start="2986" selection-end="2986" vertical-scroll-proportion="-3.3877552">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/plugins/juggernaut_plugin/media/juggernaut_hosts.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="29" selection-start="710" selection-end="710" vertical-scroll-proportion="0.41754386">
           <folding />
         </state>
       </provider>

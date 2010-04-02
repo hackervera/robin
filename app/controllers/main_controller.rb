@@ -109,7 +109,7 @@ class MainController < ApplicationController
     user = params[:user]
     host = params[:host]
     xml = request.body.read
-    Rails.logger.info "XML: #{xml}"
+    #Rails.logger.info "XML: #{xml}"
     doc = Nokogiri::XML(xml)
     doc.remove_namespaces!
     #Rails.logger.info xml

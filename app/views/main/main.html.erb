@@ -89,7 +89,7 @@
     }
     else if (reply_id != "") {
       //alert(reply_id+" this is a response");
-      $.getJSON("/main/post", { user: $("#user").val(), salmon: $("#salmon").val(), title: $("#text").val(), reply_author: reply_author, reply: reply_id, conversation: conversation, text: $("#text").val()}, function(json){  });
+      $.getJSON("/main/post", { user: $("#user").val(), salmon: $("#salmon").val(), title: $("#text").val(), reply_author: reply_author, reply: reply_id, conversation: conversation, text: $("#text").val()}, function(json){ window.location.reload(); });
       $("#text").val("");
     }
     else {

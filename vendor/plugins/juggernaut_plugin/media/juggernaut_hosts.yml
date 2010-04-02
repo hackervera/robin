@@ -10,9 +10,9 @@
 # :environment (optional)     limit host to a particular RAILS_ENV
 
 :hosts:
-  - :port: 5001
-    :host: 127.0.0.1
-    :public_host: 127.0.0.1
+  - #:port: 5001
+    #:host: 127.0.0.1
+    :public_host: opengard.in
     :public_port: 5001
     # :secret_key: your_secret_key
     # :environment: :development
