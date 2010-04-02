@@ -127,7 +127,9 @@ class MainController < ApplicationController
       found_user = User.find(:first, :conditions => "username  = '#{user}' AND host = '#{host}'")
       #render and return :text => "user not found" if found_user.nil?
       unless found_user.nil?
-        found_user.statuses.create(:text => text, :conversation => conversation, :url => url, :author => author, :salmon => salmon) 
+        found_user.statuses.create(:text => text, :conversation => conversation, :url => url, :author => author, :salmon => salmon)
+        found_user.salmon = salmon
+        found_user.save
       end
     end
   end
@@ -224,7 +226,7 @@ TEMPLATE
     #salmon = status.salmon
     #author = status.author unless reply.nil?
     HTTParty.post(hub, :body => { :"hub.mode" => :publish, :"hub.url" => "http://redrob.in/feeds/#{@user.username}" })
-    HTTParty.post("http://redrob.in/salmon/send_salmon", :body => { :title => title, :text => text, :status_id => status.id, :username => username, :salmon => salmon, :author => author }) unless reply.nil?
+    HTTParty.post("http://redrob.in/salmon/send_salmon", :body => { :title => title, :text => text, :status_id => status.id, :username => username, :salmon => person.salmon, :author => author }) unless reply.nil?
 
     render :text => "Ok".to_json
   end    
