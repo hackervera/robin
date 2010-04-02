@@ -108,7 +108,7 @@ class MainController < ApplicationController
     end
     user = params[:user]
     host = params[:host]
-    xml = request.body.string
+    xml = request.body
     doc = Nokogiri::XML(xml)
     doc.remove_namespaces!
     #Rails.logger.info xml
