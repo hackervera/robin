@@ -130,6 +130,7 @@ class MainController < ApplicationController
       unless found_user.nil?
         s = TCPSocket.open("realtime.redrob.in","8081")
         User.find_all_by_hostname("localhost").each do |ping|
+          Rails.logger.info "PIGNING #{ping.username}"
           s.puts "ADDMESSAGE #{ping.username} ping"
         end
         s.close
@@ -138,6 +139,7 @@ class MainController < ApplicationController
         found_user.save
       end
     end
+    render :text => ""
   end
   
   def feeds

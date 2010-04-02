@@ -30,7 +30,7 @@
       <file leaf-file-name="main_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="49" selection-start="529" selection-end="529" vertical-scroll-proportion="0.545283">
+            <state line="132" column="53" selection-start="5666" selection-end="5666" vertical-scroll-proportion="0.6207547">
               <folding />
             </state>
           </provider>
@@ -48,7 +48,7 @@
       <file leaf-file-name="main.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/main/main.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="148" column="29" selection-start="4947" selection-end="4947" vertical-scroll-proportion="-36.0">
+            <state line="152" column="22" selection-start="4974" selection-end="4977" vertical-scroll-proportion="-9.632653">
               <folding />
             </state>
           </provider>
@@ -605,7 +605,7 @@
     <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
     <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="[deploy site_production] edited realtime crap" />
+    <option name="LAST_COMMIT_MESSAGE" value="[deploy site_production] holy crap... it actually works. praise JESUS!" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -630,6 +630,7 @@
     <MESSAGE value="[deploy site_production] one by one" />
     <MESSAGE value="[deploy site_production] edited info" />
     <MESSAGE value="[deploy site_production] edited realtime crap" />
+    <MESSAGE value="[deploy site_production] holy crap... it actually works. praise JESUS!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -726,14 +727,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/main/main.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="148" column="29" selection-start="4947" selection-end="4947" vertical-scroll-proportion="-36.0">
+        <state line="152" column="22" selection-start="4974" selection-end="4977" vertical-scroll-proportion="-9.632653">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="49" selection-start="529" selection-end="529" vertical-scroll-proportion="0.545283">
+        <state line="132" column="53" selection-start="5666" selection-end="5666" vertical-scroll-proportion="0.6207547">
           <folding />
         </state>
       </provider>
