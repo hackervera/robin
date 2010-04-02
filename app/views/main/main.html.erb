@@ -116,7 +116,7 @@
   function getChecked(){
     var txt = $("input[name='user']:checked").val();
     alert($("#salmon").val());
-    $.getJSON("/main/post", { salmon: $("#salmon").val(), reply_author: reply_author, reply: reply_id, conversation: conversation, user: txt, text: $("#text").val(), title: $("#text").val() }, function(json){ window.location.reload(); });
+    $.getJSON("/main/post", { salmon: "lookup", reply_author: reply_author, reply: reply_id, conversation: conversation, user: txt, text: $("#text").val(), title: $("#text").val() }, function(json){ window.location.reload(); });
     $("#text").val("");
   }
   function remoteSub(){

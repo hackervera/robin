@@ -29,6 +29,10 @@ module Redfinger
     def updates_from
       relmap('http://schemas.google.com/g/2010#updates-from', true)
     end
+
+    def salmon
+      relmap('http://salmon-protocol.org/ns/salmon-replies', true)
+    end
         
     
     protected

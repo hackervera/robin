@@ -15,7 +15,7 @@ class MainController < ApplicationController
     @subs = []
     @user.subscriptions = [] if @user.subscriptions.nil?
     @user.subscriptions.each_with_index do |sub,index|
-      @subs << "<br/>" if index != 0 && index % 7 == 0 
+      @subs << "<br/>" if index != 0 && index % 10 == 0 
       @subs << "<a title='#{sub[:user]}@#{sub[:host]}' href='#{sub[:profile]}' border=0><img src='#{sub[:image]}' width=48 height=48 border=0></a>"
 
     end
@@ -111,6 +111,11 @@ class MainController < ApplicationController
     end
     user = params[:user]
     host = params[:host]
+    if params[:salmon] == "lookup"
+      finger = Redfinger.finger("#{user}@#{host}")
+      salmon = finger.salmon.first.to_s
+    end
+
     xml = request.body.read
     #Rails.logger.info "XML: #{xml}"
     doc = Nokogiri::XML(xml)
@@ -231,8 +236,6 @@ TEMPLATE
     Rails.logger.info "THIS IS TEXT: #{title}"
     status = @user.statuses.create(:title => title, :text => text, :conversation => conversation, :reply => reply, :reply_author => reply_author)
     hub = "http://pubsubhubbub.appspot.com/"
-    #salmon = status.salmon
-    #author = status.author unless reply.nil?
     HTTParty.post(hub, :body => { :"hub.mode" => :publish, :"hub.url" => "http://redrob.in/feeds/#{@user.username}" })
     HTTParty.post("http://redrob.in/salmon/send_salmon", :body => { :title => title, :text => text, :status_id => status.id, :username => username, :salmon => person.salmon, :author => author }) unless reply.nil?
 
