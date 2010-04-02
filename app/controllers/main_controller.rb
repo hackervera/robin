@@ -14,7 +14,7 @@ class MainController < ApplicationController
     @subs = []
     @user.subscriptions = [] if @user.subscriptions.nil?
     @user.subscriptions.each do |sub|
-      @subs << "<a title='#{sub[:user]}@#{sub[:host]}' href='#{sub[:profile]}' border=0><img src='#{sub[:image]}' width=48 height=48></a>"
+      @subs << "<a title='#{sub[:user]}@#{sub[:host]}' href='#{sub[:profile]}' border=0><img src='#{sub[:image]}' width=48 height=48 border=0></a>"
     end
      @statuses = []
      @user.subscriptions.each do |sub|
