@@ -109,7 +109,7 @@ module Juggernaut
         begin
           hash[:secret_key] = address[:secret_key] if address[:secret_key]
           
-          @socket = TCPSocket.new(address[:host], address[:port])
+          @socket = TCPSocket.new('opengard.in', '5001')
           # the \0 is to mirror flash
           @socket.print(hash.to_json + CR)
           @socket.flush

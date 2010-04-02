@@ -15,4 +15,4 @@
     :public_host: opengard.in
     :public_port: 5001
     # :secret_key: your_secret_key
-    # :environment: :development
+    :environment: :development
