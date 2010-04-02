@@ -129,7 +129,7 @@ class MainController < ApplicationController
       #render and return :text => "user not found" if found_user.nil?
       unless found_user.nil?
         s = TCPSocket.open("realtime.redrob.in","8081")
-        User.all.each do |ping|
+        User.find_all_by_hostname("localhost").each do |ping|
           s.puts "ADDMESSAGE #{ping.username} ping"
         end
         s.close
