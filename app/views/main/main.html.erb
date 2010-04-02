@@ -117,7 +117,7 @@
   function closeMe(){ $("#msg").dialog("close"); $("#msg").text("");  }
   function getChecked(){
     var txt = $("input[name='user']:checked").val();
-    //alert(txt+salmon);
+    alert($("#salmon").val());
     $.getJSON("/main/post", { salmon: $("#salmon").val(), reply_author: reply_author, reply: reply_id, conversation: conversation, user: txt, text: $("#text").val(), title: $("#text").val() }, function(json){ window.location.reload(); });
     $("#text").val("");
   }
