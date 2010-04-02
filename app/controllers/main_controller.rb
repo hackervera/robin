@@ -37,7 +37,10 @@ class MainController < ApplicationController
                        :updated => status[:updated_at],
                        :user => @user.username,
                        :host => "redrob.in",
-                       :image => "http://opengard.in/theme/default/default-avatar-profile.png"
+                       :image => "http://opengard.in/theme/default/default-avatar-profile.png",
+                       :conversation => status[:conversation],
+                       :url => status[:url],
+                       :salmon => status[:salmon]
                        }
       end
 
