@@ -31,7 +31,7 @@
       <file leaf-file-name="main_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="49" selection-start="508" selection-end="508" vertical-scroll-proportion="0.51320755">
+            <state line="173" column="38" selection-start="8224" selection-end="8224" vertical-scroll-proportion="0.6792453">
               <folding />
             </state>
           </provider>
@@ -49,7 +49,7 @@
       <file leaf-file-name="main.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/main/main.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="120" column="173" selection-start="4148" selection-end="4148" vertical-scroll-proportion="-6.244898">
+            <state line="35" column="22" selection-start="770" selection-end="770" vertical-scroll-proportion="-0.3469388">
               <folding />
             </state>
           </provider>
@@ -709,13 +709,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/main/main.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="173" selection-start="4148" selection-end="4148" vertical-scroll-proportion="-6.244898">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/juggernaut_hosts.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="4" selection-start="715" selection-end="715" vertical-scroll-proportion="0.0">
@@ -730,9 +723,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/main/main.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="22" selection-start="770" selection-end="770" vertical-scroll-proportion="-0.3469388">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="49" selection-start="508" selection-end="508" vertical-scroll-proportion="0.51320755">
+        <state line="173" column="38" selection-start="8224" selection-end="8224" vertical-scroll-proportion="0.6792453">
           <folding />
         </state>
       </provider>

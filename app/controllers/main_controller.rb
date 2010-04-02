@@ -158,20 +158,20 @@ class MainController < ApplicationController
 <activity:subject>
  <activity:object-type>http://activitystrea.ms/schema/1.0/person</activity:object-type>
  <id>http://redrob.in/users/#{user.username}</id>
- <title>user fullname</title>
+ <title>Tyler Gillies</title>
  <link ref="alternate" type="text/html" href="http://redrob.in/users/#{user.username}" />
- <link rel="avatar" type="image/jpeg" media:width="178" media:height="178" href="http://avatar.identi.ca/3919-original-20080826101830.jpeg"/>
- <link rel="avatar" type="image/png" media:width="96" media:height="96" href="http://avatar.identi.ca/3919-96-20080826101830.png"/>
- <link rel="avatar" type="image/png" media:width="48" media:height="48" href="http://avatar.identi.ca/3919-48-20080826101830.png"/>
- <link rel="avatar" type="image/png" media:width="24" media:height="24" href="http://avatar.identi.ca/3919-24-20080826101830.png"/>
+ <link rel="avatar" type="image/jpeg" media:width="178" media:height="178" href="http://www.owlnet.rice.edu/~psyc101/pomerantz/NAmerican%20Robin.jpg"/>
+ <link rel="avatar" type="image/png" media:width="96" media:height="96" href="http://www.owlnet.rice.edu/~psyc101/pomerantz/NAmerican%20Robin.jpg"/>
+ <link rel="avatar" type="image/png" media:width="48" media:height="48" href="http://www.owlnet.rice.edu/~psyc101/pomerantz/NAmerican%20Robin.jpg"/>
+ <link rel="avatar" type="image/png" media:width="24" media:height="24" href="http://www.owlnet.rice.edu/~psyc101/pomerantz/NAmerican%20Robin.jpg"/>
 <poco:preferredUsername>#{user.username}</poco:preferredUsername>
-<poco:displayName>user fullname</poco:displayName>
-<poco:note>user bio</poco:note>
+<poco:displayName>Tyler Gillies</poco:displayName>
+<poco:note>rails hacker</poco:note>
 <poco:address>
- <poco:formatted>97089, US</poco:formatted>
+ <poco:formatted>America</poco:formatted>
 </poco:address>
 <poco:urls>
- <poco:type>homepage</poco:type>
+ <poco:type>http://identi.ca/tjgillies</poco:type>
  <poco:value>http://redrob.in/users/#{user.username}</poco:value>
  <poco:primary>true</poco:primary>
 
