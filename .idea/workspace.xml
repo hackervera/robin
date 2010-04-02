@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="7a29a0b7-60ed-4ca1-a7ba-13ce36c1347b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/gems/redfinger-0.0.3/lib/redfinger/link_helpers.rb" afterPath="$PROJECT_DIR$/vendor/gems/redfinger-0.0.3/lib/redfinger/link_helpers.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/main_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/main_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/main/main.html.erb" afterPath="$PROJECT_DIR$/app/views/main/main.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rstatus.iws" />
@@ -32,7 +30,7 @@
       <file leaf-file-name="main_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="115" column="39" selection-start="4574" selection-end="4574" vertical-scroll-proportion="0.4811321">
+            <state line="199" column="70" selection-start="8996" selection-end="8996" vertical-scroll-proportion="0.5188679">
               <folding />
             </state>
           </provider>
@@ -817,7 +815,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="39" selection-start="4574" selection-end="4574" vertical-scroll-proportion="0.4811321">
+        <state line="199" column="70" selection-start="8996" selection-end="8996" vertical-scroll-proportion="0.5188679">
           <folding />
         </state>
       </provider>

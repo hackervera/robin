@@ -197,7 +197,7 @@ TEMPLATE
     entries = []
     
     user.statuses.each do |status|
-    replystring = "<link rel='ostatus:attention' href='#{user.profile}' /><link rel='related' href='#{status.reply}' /><thr:in-reply-to ref='#{status.reply}' href='#{status.reply}'></thr:in-reply-to>" if status.reply
+    replystring = "<link rel='ostatus:attention' href='#{status.author}' /><link rel='related' href='#{status.reply}' /><thr:in-reply-to ref='#{status.reply}' href='#{status.reply}'></thr:in-reply-to>" if status.reply
        
       entry = <<TEMPLATE
 <entry>
