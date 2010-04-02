@@ -59,7 +59,7 @@
     
       <p><img src=<%= status[:image] %> alt='<%= status[:author] %>' height="48" width="48" /><%= status[:user] %>@<%= status[:host] %>: <%= status[:text] %></p>
       <div class="controls">
-          <%= time %> <% unless status[:conversation].nil? || status[:conversation].empty? %><a href=<%= status[:conversation] %>>in context</a> <% end %>
+          <%= time %> ago. <a href='<%= status[:conversation] %>' >in context</a>
           <a href="javascript:" onClick="enterReply('<%= status[:user] %>','<%= status[:conversation] %>', '<%= status[:url] %>','<%= status[:salmon] %>', '<%= status[:host] %>');">reply</a>
           <br/></br/>  
       </div><div class="clear"></div>

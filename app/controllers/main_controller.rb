@@ -222,13 +222,14 @@ TEMPLATE
     text = params[:text]
     title = params[:text]
     text[/@\w+/] = "&lt;a href='#{person.profile}'&gt;@#{user}&lt;/a&gt;" unless params[:user].nil?
-    conversation ||= "http://redrob.in/conversations/#{Conversation.create.id}" 
+    conversation ||= "http://redrob.in/conversations/#{Conversation.create.id}"
+    Rails.logger.info "THIS IS TEXT: #{title}"
     status = @user.statuses.create(:title => title, :text => title, :conversation => conversation, :reply => reply, :reply_author => reply_author)
     hub = "http://pubsubhubbub.appspot.com/"
     #salmon = status.salmon
     #author = status.author unless reply.nil?
     HTTParty.post(hub, :body => { :"hub.mode" => :publish, :"hub.url" => "http://redrob.in/feeds/#{@user.username}" })
-    HTTParty.get("http://redrob.in/salmon/send_salmon", :query => { :title => title, :text => text, :status_id => status.id, :username => username, :salmon => salmon, :author => author }) unless reply.nil?
+    HTTParty.post("http://redrob.in/salmon/send_salmon", :body => { :title => title, :text => text, :status_id => status.id, :username => username, :salmon => salmon, :author => author }) unless reply.nil?
 
     render :text => "Ok".to_json
   end    
