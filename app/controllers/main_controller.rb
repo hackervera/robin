@@ -74,7 +74,7 @@ class MainController < ApplicationController
     image = doc.xpath("//link[@rel='avatar']").first['href'] unless doc.xpath("//link[@rel='avatar']").first.nil?
     image ||= "" 
     Rails.logger.info "HITTING HUB #{hub} with topic #{feed_url} SUBSCRIBING"
-    res = HTTParty.get(hub, :query => { :"hub.callback" => :"http://redrob.in/main/callback/#{user}/#{host}",
+    res = HTTParty.post(hub, :body => { :"hub.callback" => :"http://redrob.in/main/callback/#{user}/#{host}",
                                   :"hub.mode" => "subscribe",
                                   :"hub.topic" => feed_url,
                                   :"hub.verify" => "sync" })
@@ -117,7 +117,7 @@ class MainController < ApplicationController
       
      if found_user.nil?
        Rails.logger.info :"No user found: HITTING HUB: #{hub} UNSUBSCRIBING"
-        res = HTTParty.get(hub, :query => { :"hub.callback" => :"http://redrob.in/main/callback/tylergillies/localhost",
+        res = HTTParty.post(hub, :body => { :"hub.callback" => :"http://redrob.in/main/callback/tylergillies/localhost",
                                     :"hub.mode" => :unsubscribe,
                                     :"hub.topic" => topic,
                                     :"hub.verify" => :sync }) 
