@@ -220,10 +220,11 @@ TEMPLATE
     person = User.find(:first, :conditions => "username = '#{user}' AND host = '#{host}'")
     username = @user.username
     text = params[:text]
+    @title = params[:text]
     title = params[:text]
     text[/@\w+/] = "&lt;a href='#{person.profile}'&gt;@#{user}&lt;/a&gt;" unless params[:user].nil?
     conversation ||= "http://redrob.in/conversations/#{Conversation.create.id}"
-    Rails.logger.info "THIS IS TEXT: #{title}"
+    Rails.logger.info "THIS IS TEXT: #{@title}"
     status = @user.statuses.create(:title => title, :text => title, :conversation => conversation, :reply => reply, :reply_author => reply_author)
     hub = "http://pubsubhubbub.appspot.com/"
     #salmon = status.salmon
