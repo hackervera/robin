@@ -1,3 +1,6 @@
+<%= javascript_include_tag 'prototype', :juggernaut %>
+<%= juggernaut %>
+
 <script src="/javascripts/jquery.js"></script>
 <script src="/javascripts/jquery-ui.js"></script>
 <link rel="stylesheet" href="/stylesheets/ui-lightness/jquery-ui-1.8.custom.css" type="text/css">
@@ -94,7 +97,7 @@
     }
     else {
       //alert("No username and no reponse");
-      $.getJSON("/main/post", { text: $("#text").val() }, function(json){   window.location.reload(); });
+      $.getJSON("/main/post", { title: $("#text").val(), text: $("#text").val() }, function(json){   window.location.reload(); });
       $("#text").val("");
 
     }

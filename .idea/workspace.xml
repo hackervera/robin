@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="7a29a0b7-60ed-4ca1-a7ba-13ce36c1347b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/plugins/juggernaut_plugin/lib/juggernaut.rb" afterPath="$PROJECT_DIR$/vendor/plugins/juggernaut_plugin/lib/juggernaut.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/main/juggernaut.html.erb" afterPath="$PROJECT_DIR$/app/views/main/juggernaut.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/main/main.html.erb" afterPath="$PROJECT_DIR$/app/views/main/main.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/juggernaut_hosts.yml" afterPath="$PROJECT_DIR$/config/juggernaut_hosts.yml" />
     </list>
     <ignored path="rstatus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,10 +37,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/main/main.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="33" selection-start="1629" selection-end="1629" vertical-scroll-proportion="-4.163265">
+            <state line="2" column="0" selection-start="73" selection-end="73" vertical-scroll-proportion="0.06500956">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="juggernaut.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/main/juggernaut.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="72" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
@@ -55,10 +64,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="juggernaut.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="juggernaut.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendor/plugins/juggernaut_plugin/lib/juggernaut.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="111" column="54" selection-start="2972" selection-end="2972" vertical-scroll-proportion="0.11584327">
+            <state line="111" column="54" selection-start="2972" selection-end="2972" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -98,12 +107,12 @@
         <option value="$PROJECT_DIR$/vendor/gems/redfinger-0.0.3/lib/redfinger/client.rb" />
         <option value="$PROJECT_DIR$/app/controllers/salmon_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/views/main/juggernaut.html.erb" />
         <option value="$PROJECT_DIR$/vendor/plugins/juggernaut_plugin/media/juggernaut_hosts.yml" />
         <option value="$PROJECT_DIR$/app/controllers/main_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/main/main.html.erb" />
         <option value="$PROJECT_DIR$/config/juggernaut_hosts.yml" />
         <option value="$PROJECT_DIR$/vendor/plugins/juggernaut_plugin/lib/juggernaut.rb" />
+        <option value="$PROJECT_DIR$/app/views/main/juggernaut.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/main/main.html.erb" />
       </list>
     </option>
   </component>
@@ -547,7 +556,7 @@
     <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
     <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="[deploy site_production] removed string. first push to mongrel. hopefully multi connection works now. doh" />
+    <option name="LAST_COMMIT_MESSAGE" value="[deploy site_production] rmanually hacked juggernaut file crap" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -568,6 +577,7 @@
     <MESSAGE value="echoing back params" />
     <MESSAGE value="cleaned up callback" />
     <MESSAGE value="[deploy site_production] removed string. first push to mongrel. hopefully multi connection works now. doh" />
+    <MESSAGE value="[deploy site_production] rmanually hacked juggernaut file crap" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -581,13 +591,6 @@
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="45" column="74" selection-start="2305" selection-end="2305" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/main/juggernaut.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="73" selection-end="73" vertical-scroll-proportion="-1.4166666">
           <folding />
         </state>
       </provider>
@@ -641,13 +644,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/main/main.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="33" selection-start="1629" selection-end="1629" vertical-scroll-proportion="-4.163265">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/juggernaut_hosts.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="4" selection-start="715" selection-end="715" vertical-scroll-proportion="0.0">
@@ -657,7 +653,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/plugins/juggernaut_plugin/lib/juggernaut.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="54" selection-start="2972" selection-end="2972" vertical-scroll-proportion="0.11584327">
+        <state line="111" column="54" selection-start="2972" selection-end="2972" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/main/juggernaut.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="72" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/main/main.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="73" selection-end="73" vertical-scroll-proportion="0.06500956">
           <folding />
         </state>
       </provider>
