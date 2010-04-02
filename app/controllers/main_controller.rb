@@ -1,5 +1,6 @@
 class MainController < ApplicationController
   before_filter :set_username
+  protect_from_forgery :only => [:create, :update, :destroy]
 
     require "time"
   
@@ -219,8 +220,9 @@ TEMPLATE
     user,host = params[:user].split("@") unless params[:user].nil? 
     person = User.find(:first, :conditions => "username = '#{user}' AND host = '#{host}'")
     username = @user.username
-    text = params[:text]
     @title = params[:text]
+    text = params[:text]
+
     title = params[:text]
     text[/@\w+/] = "&lt;a href='#{person.profile}'&gt;@#{user}&lt;/a&gt;" unless params[:user].nil?
     conversation ||= "http://redrob.in/conversations/#{Conversation.create.id}"
