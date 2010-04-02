@@ -3,6 +3,7 @@ class MainController < ApplicationController
   protect_from_forgery :only => [:create, :update, :destroy]
 
     require "time"
+    require "socket"
   
   def set_username
     
@@ -127,6 +128,9 @@ class MainController < ApplicationController
       found_user = User.find(:first, :conditions => "username  = '#{user}' AND host = '#{host}'")
       #render and return :text => "user not found" if found_user.nil?
       unless found_user.nil?
+        s = TCPSocket.open("realtime.redrob.in","8081")
+        s.puts "ADDMESSAGE #{found_user.username} ping"
+        s.close
         found_user.statuses.create(:text => text, :conversation => conversation, :url => url, :author => author, :salmon => salmon)
         found_user.salmon = salmon
         found_user.save

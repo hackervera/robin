@@ -1,6 +1,4 @@
-<%= javascript_include_tag 'jquery', 'json', 'juggernaut/juggernaut', 'juggernaut/jquerynaut', 'juggernaut/swfobject' %>
-<%= juggernaut %>
-
+<script type="text/javascript" src="http://realtime.redrob.in/meteor.js"></script>
 <script src="/javascripts/jquery.js"></script>
 <script src="/javascripts/jquery-ui.js"></script>
 <link rel="stylesheet" href="/stylesheets/ui-lightness/jquery-ui-1.8.custom.css" type="text/css">
@@ -145,4 +143,20 @@
     //alert($("#user").val());
     
   }
+// Shout out to brianjesse@identi.ca for this help 
+function test(data) {
+	//alert(data) ;
+    window.location.reload();
+}
+
+
+if (typeof Meteor=="undefined"){
+} else {
+    Meteor.host = "realtime.redrob.in";
+    Meteor.registerEventCallback("process", test);
+    Meteor.joinChannel("<%= @user.username %>", 0);
+    Meteor.mode = 'stream';
+    Meteor.connect();
+  }
+
 </script>

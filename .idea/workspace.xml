@@ -3,6 +3,7 @@
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="7a29a0b7-60ed-4ca1-a7ba-13ce36c1347b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/main_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/main_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/main/main.html.erb" afterPath="$PROJECT_DIR$/app/views/main/main.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20100402121932_add_salmon_to_user.rb" />
     </list>
@@ -31,7 +32,7 @@
       <file leaf-file-name="main_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="131" column="23" selection-start="5664" selection-end="5664" vertical-scroll-proportion="0.84528303">
+            <state line="131" column="56" selection-start="5606" selection-end="5606" vertical-scroll-proportion="0.73773587">
               <folding />
             </state>
           </provider>
@@ -49,7 +50,7 @@
       <file leaf-file-name="main.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/main/main.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="116" column="29" selection-start="3814" selection-end="3817" vertical-scroll-proportion="-9.714286">
+            <state line="148" column="29" selection-start="4947" selection-end="4947" vertical-scroll-proportion="-3.7346938">
               <folding />
             </state>
           </provider>
@@ -726,14 +727,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/main/main.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="116" column="29" selection-start="3814" selection-end="3817" vertical-scroll-proportion="-9.714286">
+        <state line="148" column="29" selection-start="4947" selection-end="4947" vertical-scroll-proportion="-3.7346938">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="131" column="23" selection-start="5664" selection-end="5664" vertical-scroll-proportion="0.84528303">
+        <state line="131" column="56" selection-start="5606" selection-end="5606" vertical-scroll-proportion="0.73773587">
           <folding />
         </state>
       </provider>
