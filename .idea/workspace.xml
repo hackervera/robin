@@ -3,7 +3,6 @@
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="7a29a0b7-60ed-4ca1-a7ba-13ce36c1347b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/main_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/main_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/main/main.html.erb" afterPath="$PROJECT_DIR$/app/views/main/main.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rstatus.iws" />
@@ -31,7 +30,7 @@
       <file leaf-file-name="main_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="199" column="70" selection-start="8996" selection-end="8996" vertical-scroll-proportion="0.3264151">
+            <state line="127" column="111" selection-start="5163" selection-end="5163" vertical-scroll-proportion="0.61509436">
               <folding />
             </state>
           </provider>
@@ -49,7 +48,7 @@
       <file leaf-file-name="main.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/main/main.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="131" column="66" selection-start="4531" selection-end="4531" vertical-scroll-proportion="-16.918367">
+            <state line="144" column="19" selection-start="4855" selection-end="4855" vertical-scroll-proportion="-4.8163266">
               <folding />
             </state>
           </provider>
@@ -58,7 +57,7 @@
       <file leaf-file-name="link_helpers.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendor/gems/redfinger-0.0.3/lib/redfinger/link_helpers.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="65" selection-start="935" selection-end="935" vertical-scroll-proportion="0.0">
+            <state line="28" column="103" selection-start="777" selection-end="777" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -772,13 +771,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/json.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/juggernaut_hosts.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="4" selection-start="715" selection-end="715" vertical-scroll-proportion="0.0">
@@ -802,21 +794,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/gems/redfinger-0.0.3/lib/redfinger/link_helpers.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="65" selection-start="935" selection-end="935" vertical-scroll-proportion="0.0">
+        <state line="28" column="103" selection-start="777" selection-end="777" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/main/main.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="131" column="66" selection-start="4531" selection-end="4531" vertical-scroll-proportion="-16.918367">
+        <state line="144" column="19" selection-start="4855" selection-end="4855" vertical-scroll-proportion="-4.8163266">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/json.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="199" column="70" selection-start="8996" selection-end="8996" vertical-scroll-proportion="0.3264151">
+        <state line="127" column="111" selection-start="5163" selection-end="5163" vertical-scroll-proportion="0.61509436">
           <folding />
         </state>
       </provider>

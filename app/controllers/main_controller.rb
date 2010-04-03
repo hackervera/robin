@@ -125,7 +125,7 @@ class MainController < ApplicationController
       text = doc.xpath("//content").last.text
       hub = doc.xpath("//link[@rel='hub']").first['href']
       salmon = doc.xpath("//link[@rel='http://salmon-protocol.org/ns/salmon-replies']").first['href']  unless doc.xpath("//link[@rel='http://salmon-protocol.org/ns/salmon-replies']").first.nil?
-      topic = doc.xpath("//link[@rel='self']").first['href']
+      topic = doc.xpath("//link[@rel='self']").first['href'] unless doc.xpath("//link[@rel='self']").first.nil? 
       updated = doc.xpath("//updated").last.text 
       author = doc.xpath("//author/uri").first.text
       url = doc.xpath("//entry/link[@rel='alternate']").first['href']
