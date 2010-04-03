@@ -102,14 +102,8 @@ EOF
   end
   #url = URI.parse(endpoint)
    res = HTTParty.post(params[:salmon], :body => post_body, :headers => { 'content-type' => "application/magic-envelope+xml" })
-   #req = Net::HTTP::Post.new(url.path)
-   #req.body = post_body
-   #req.content_type = "application/magic-envelope+xml"
-   #header_stuff = req.each_header {|k,v| puts k,v}
-   #Rails.logger.warn "req: #{post_body}"
-   #res = Net::HTTP.new(url.host, url.port).start { |http| http.request(req) }
-   #Rails.logger.warn "res: #{params[:salmon]} #{res} #{res.body} #{res.code}"
-   render :text => "look at log"
+    Rails.logger.info res
+    render :text => "look at log"
 
   end
   
