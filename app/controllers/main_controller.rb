@@ -224,7 +224,7 @@ TEMPLATE
     Rails.logger.info "REPLY: #{reply}"
     salmon = params[:salmon]
     if salmon.nil?
-      finger = Redfinger.finger(params[:author])
+      finger = Redfinger.finger(params[:user])
       salmon = finger.salmon.first.to_s
     end
     
