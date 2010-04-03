@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="7a29a0b7-60ed-4ca1-a7ba-13ce36c1347b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/main_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/main_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/salmon_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/salmon_controller.rb" />
     </list>
     <ignored path="rstatus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,10 +27,10 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="226" column="36" selection-start="10139" selection-end="10139" vertical-scroll-proportion="0.23018868">
+            <state line="226" column="36" selection-start="10139" selection-end="10139" vertical-scroll-proportion="-4.88">
               <folding />
             </state>
           </provider>
@@ -99,10 +99,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="salmon_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="salmon_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/salmon_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="48" selection-start="750" selection-end="750" vertical-scroll-proportion="0.0">
+            <state line="110" column="4" selection-start="4464" selection-end="4464" vertical-scroll-proportion="0.7045045">
               <folding />
             </state>
           </provider>
@@ -131,7 +131,6 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/vendor/gems/redfinger-0.0.3/lib/redfinger/client.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/salmon_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/vendor/plugins/juggernaut_plugin/media/juggernaut_hosts.yml" />
         <option value="$PROJECT_DIR$/config/juggernaut_hosts.yml" />
@@ -140,6 +139,7 @@
         <option value="$PROJECT_DIR$/vendor/gems/redfinger-0.0.3/lib/redfinger/link_helpers.rb" />
         <option value="$PROJECT_DIR$/app/views/main/main.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/main_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/salmon_controller.rb" />
       </list>
     </option>
   </component>
@@ -785,13 +785,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/salmon_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="48" selection-start="750" selection-end="750" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/gems/redfinger-0.0.3/lib/redfinger/link_helpers.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="103" selection-start="777" selection-end="777" vertical-scroll-proportion="0.0">
@@ -815,7 +808,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="226" column="36" selection-start="10139" selection-end="10139" vertical-scroll-proportion="0.23018868">
+        <state line="226" column="36" selection-start="10139" selection-end="10139" vertical-scroll-proportion="-4.88">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/salmon_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="110" column="4" selection-start="4464" selection-end="4464" vertical-scroll-proportion="0.7045045">
           <folding />
         </state>
       </provider>
