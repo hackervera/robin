@@ -223,6 +223,11 @@ TEMPLATE
     reply = params[:reply]
     Rails.logger.info "REPLY: #{reply}"
     salmon = params[:salmon]
+    if salmon.nil?
+      finger = Redfinger.finger(params[:author])
+      salmon = finger.salmon.first.to_s
+    end
+    
     reply_author = params[:reply_author]
     conversation = params[:conversation]
     author = params[:user]
