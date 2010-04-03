@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="7a29a0b7-60ed-4ca1-a7ba-13ce36c1347b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/gems/redfinger-0.0.3/lib/redfinger/link_helpers.rb" afterPath="$PROJECT_DIR$/vendor/gems/redfinger-0.0.3/lib/redfinger/link_helpers.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/salmon_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/salmon_controller.rb" />
     </list>
     <ignored path="rstatus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,64 +54,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="link_helpers.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="link_helpers.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vendor/gems/redfinger-0.0.3/lib/redfinger/link_helpers.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="103" selection-start="777" selection-end="777" vertical-scroll-proportion="0.0">
+            <state line="33" column="59" selection-start="929" selection-end="929" vertical-scroll-proportion="0.76831347">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jquerynaut.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/juggernaut/jquerynaut.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="juggernaut.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/main/juggernaut.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="72" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="juggernaut_hosts.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/juggernaut_hosts.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="4" selection-start="715" selection-end="715" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="juggernaut.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/plugins/juggernaut_plugin/lib/juggernaut.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="111" column="54" selection-start="2972" selection-end="2972" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="salmon_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="salmon_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/salmon_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="104" column="25" selection-start="4191" selection-end="4191" vertical-scroll-proportion="0.6018018">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="juggernaut_helper.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/plugins/juggernaut_plugin/lib/juggernaut_helper.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="104" column="25" selection-start="4191" selection-end="4191" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -136,10 +91,10 @@
         <option value="$PROJECT_DIR$/config/juggernaut_hosts.yml" />
         <option value="$PROJECT_DIR$/vendor/plugins/juggernaut_plugin/lib/juggernaut.rb" />
         <option value="$PROJECT_DIR$/app/views/main/juggernaut.html.erb" />
-        <option value="$PROJECT_DIR$/vendor/gems/redfinger-0.0.3/lib/redfinger/link_helpers.rb" />
         <option value="$PROJECT_DIR$/app/views/main/main.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/main_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/salmon_controller.rb" />
+        <option value="$PROJECT_DIR$/vendor/gems/redfinger-0.0.3/lib/redfinger/link_helpers.rb" />
       </list>
     </option>
   </component>
@@ -785,13 +740,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/gems/redfinger-0.0.3/lib/redfinger/link_helpers.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="103" selection-start="777" selection-end="777" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/main/main.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="144" column="19" selection-start="4855" selection-end="4855" vertical-scroll-proportion="-4.8163266">
@@ -815,7 +763,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/salmon_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="25" selection-start="4191" selection-end="4191" vertical-scroll-proportion="0.6018018">
+        <state line="104" column="25" selection-start="4191" selection-end="4191" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/gems/redfinger-0.0.3/lib/redfinger/link_helpers.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="59" selection-start="929" selection-end="929" vertical-scroll-proportion="0.76831347">
           <folding />
         </state>
       </provider>

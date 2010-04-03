@@ -31,7 +31,7 @@ module Redfinger
     end
 
     def salmon
-      relmap('http://salmon-protocol.org/ns/salmon-replies', true)
+      relmap('http://salmon-protocol.org/ns/salmon-mentions', true)
     end
         
     
