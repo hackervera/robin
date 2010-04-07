@@ -276,14 +276,13 @@ TEMPLATE
   end
   
   def users
-    username = params[:username]
-    user = User.find(:first, :conditions => "username = '#{username}' AND host = 'localhost'")
-    if user.nil?
+    @username = params[:username]
+    @this_user = User.find(:first, :conditions => "username = '#{@username}' AND host = 'localhost'")
+    if @this_user.nil?
       render :text => "no such user", :status => 400 and return
     end
         
-    statuses = user.statuses.map(&:title).reverse.join("<p>")
-    render :text => statuses
+
   end
   
   def statuses
@@ -292,7 +291,7 @@ TEMPLATE
     render :text => message.title
   end
 
-  def juggernaut
+  def replies
     
   end
     

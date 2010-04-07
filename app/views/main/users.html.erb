@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <style>
+          body {
+            background-image:url('/images/background.jpg');
+          }
+          #background {
+              width:800px;
+              margin-left:auto;
+              margin-right:auto;
+              background-color:white;
+              min-height:500px;
+              padding:20px;
+          }
+          #greeting {
+              width:500px;
+              margin-left:auto;
+              margin-right:auto;
+              text-align:center;
+          }
+
+        </style>
+    </head>
+    <body>
+        <div id="background">
+          <div id="greeting">
+            <h1><%= @username %></h1>
+          </div>
+          <% @this_user.statuses.sort_by{ |x| x.updated_at }.slice(0,15).each do |status| %>
+           <p>
+            <%= status.title %><br/>
+            <%= distance_of_time_in_words(status.updated_at, Time.now) %> ago
+           </p>
+          <% end %>
+        </div>
+
+    </div>
+    </body>
+</html>
