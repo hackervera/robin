@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="7a29a0b7-60ed-4ca1-a7ba-13ce36c1347b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/main/users.html.erb" afterPath="$PROJECT_DIR$/app/views/main/users.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
     </list>
     <ignored path="rstatus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -670,7 +668,7 @@
     <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
     <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="[deploy site_production] sexified user profile page a bit" />
+    <option name="LAST_COMMIT_MESSAGE" value="[deploy site_production] sexified user profile page a bit. added IMM products" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -697,6 +695,7 @@
     <MESSAGE value="[deploy site_production] edited realtime crap" />
     <MESSAGE value="[deploy site_production] holy crap... it actually works. praise JESUS!" />
     <MESSAGE value="[deploy site_production] sexified user profile page a bit" />
+    <MESSAGE value="[deploy site_production] sexified user profile page a bit. added IMM products" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
