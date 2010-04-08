@@ -17805,3 +17805,372 @@ Processing MainController#users (for 127.0.0.1 at 2010-04-06 21:20:55) [GET]
 Rendering main/users
   [4;36;1mStatus Load (0.0ms)[0m   [0;1mSELECT * FROM "statuses" WHERE ("statuses".user_id = 1) [0m
 Completed in 36ms (View: 24, DB: 1) | 200 OK [http://localhost/users/tylergillies]
+
+
+Processing MainController#users (for 127.0.0.1 at 2010-04-06 21:25:58) [GET]
+  Parameters: {"username"=>"tylergillies"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+Rendering main/users
+  [4;36;1mStatus Load (1.0ms)[0m   [0;1mSELECT * FROM "statuses" WHERE ("statuses".user_id = 1) [0m
+Completed in 195ms (View: 158, DB: 2) | 200 OK [http://localhost/users/tylergillies]
+
+
+Processing MainController#users (for 127.0.0.1 at 2010-04-06 21:27:24) [GET]
+  Parameters: {"username"=>"tylergillies"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+Rendering main/users
+  [4;35;1mStatus Load (1.0ms)[0m   [0mSELECT * FROM "statuses" WHERE ("statuses".user_id = 1) [0m
+Completed in 90ms (View: 76, DB: 3) | 200 OK [http://localhost/users/tylergillies]
+
+
+Processing MainController#users (for 127.0.0.1 at 2010-04-06 21:28:15) [GET]
+  Parameters: {"username"=>"tylergillies"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+Rendering main/users
+  [4;36;1mStatus Load (1.0ms)[0m   [0;1mSELECT * FROM "statuses" WHERE ("statuses".user_id = 1) [0m
+Completed in 33ms (View: 20, DB: 2) | 200 OK [http://localhost/users/tylergillies]
+
+
+Processing MainController#users (for 127.0.0.1 at 2010-04-06 21:28:26) [GET]
+  Parameters: {"username"=>"tylergillies"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+Rendering main/users
+  [4;35;1mStatus Load (0.0ms)[0m   [0mSELECT * FROM "statuses" WHERE ("statuses".user_id = 1) [0m
+Completed in 35ms (View: 25, DB: 0) | 200 OK [http://localhost/users/tylergillies]
+
+
+Processing MainController#users (for 127.0.0.1 at 2010-04-06 21:28:47) [GET]
+  Parameters: {"username"=>"tylergillies"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+Rendering main/users
+  [4;36;1mStatus Load (1.0ms)[0m   [0;1mSELECT * FROM "statuses" WHERE ("statuses".user_id = 1) [0m
+Completed in 33ms (View: 21, DB: 2) | 200 OK [http://localhost/users/tylergillies]
+
+
+Processing MainController#users (for 127.0.0.1 at 2010-04-06 21:28:55) [GET]
+  Parameters: {"username"=>"tylergillies"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+Rendering main/users
+  [4;35;1mStatus Load (0.0ms)[0m   [0mSELECT * FROM "statuses" WHERE ("statuses".user_id = 1) [0m
+Completed in 34ms (View: 23, DB: 1) | 200 OK [http://localhost/users/tylergillies]
+
+
+Processing MainController#users (for 127.0.0.1 at 2010-04-06 21:29:09) [GET]
+  Parameters: {"username"=>"tylergillies"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+Rendering main/users
+  [4;36;1mStatus Load (1.0ms)[0m   [0;1mSELECT * FROM "statuses" WHERE ("statuses".user_id = 1) [0m
+Completed in 33ms (View: 21, DB: 2) | 200 OK [http://localhost/users/tylergillies]
+
+
+Processing MainController#users (for 127.0.0.1 at 2010-04-06 21:29:20) [GET]
+  Parameters: {"username"=>"tylergillies"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+Rendering main/users
+  [4;35;1mStatus Load (1.0ms)[0m   [0mSELECT * FROM "statuses" WHERE ("statuses".user_id = 1) [0m
+Completed in 91ms (View: 79, DB: 2) | 200 OK [http://localhost/users/tylergillies]
+
+
+Processing MainController#users (for 127.0.0.1 at 2010-04-06 21:30:04) [GET]
+  Parameters: {"username"=>"tylergillies"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+Rendering main/users
+  [4;36;1mStatus Load (1.0ms)[0m   [0;1mSELECT * FROM "statuses" WHERE ("statuses".user_id = 1) [0m
+Completed in 31ms (View: 19, DB: 1) | 200 OK [http://localhost/users/tylergillies]
+
+
+Processing MainController#users (for 127.0.0.1 at 2010-04-06 21:30:15) [GET]
+  Parameters: {"username"=>"tylergillies"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+Rendering main/users
+  [4;35;1mStatus Load (1.0ms)[0m   [0mSELECT * FROM "statuses" WHERE ("statuses".user_id = 1) [0m
+Completed in 32ms (View: 21, DB: 2) | 200 OK [http://localhost/users/tylergillies]
+
+
+Processing MainController#users (for 127.0.0.1 at 2010-04-06 21:30:28) [GET]
+  Parameters: {"username"=>"tylergillies"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+Rendering main/users
+  [4;36;1mStatus Load (0.0ms)[0m   [0;1mSELECT * FROM "statuses" WHERE ("statuses".user_id = 1) [0m
+Completed in 34ms (View: 22, DB: 1) | 200 OK [http://localhost/users/tylergillies]
+
+
+Processing MainController#users (for 127.0.0.1 at 2010-04-06 21:30:35) [GET]
+  Parameters: {"username"=>"tylergillies"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+Rendering main/users
+  [4;35;1mStatus Load (1.0ms)[0m   [0mSELECT * FROM "statuses" WHERE ("statuses".user_id = 1) [0m
+Completed in 35ms (View: 23, DB: 2) | 200 OK [http://localhost/users/tylergillies]
+
+
+Processing MainController#users (for 127.0.0.1 at 2010-04-06 21:30:42) [GET]
+  Parameters: {"username"=>"tylergillies"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+Rendering main/users
+  [4;36;1mStatus Load (0.0ms)[0m   [0;1mSELECT * FROM "statuses" WHERE ("statuses".user_id = 1) [0m
+Completed in 32ms (View: 21, DB: 1) | 200 OK [http://localhost/users/tylergillies]
+
+
+Processing MainController#users (for 127.0.0.1 at 2010-04-06 21:30:58) [GET]
+  Parameters: {"username"=>"tylergillies"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+Rendering main/users
+  [4;35;1mStatus Load (1.0ms)[0m   [0mSELECT * FROM "statuses" WHERE ("statuses".user_id = 1) [0m
+Completed in 32ms (View: 21, DB: 2) | 200 OK [http://localhost/users/tylergillies]
+
+
+Processing MainController#users (for 127.0.0.1 at 2010-04-06 21:31:16) [GET]
+  Parameters: {"username"=>"tylergillies"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+Rendering main/users
+  [4;36;1mStatus Load (0.0ms)[0m   [0;1mSELECT * FROM "statuses" WHERE ("statuses".user_id = 1) [0m
+Completed in 33ms (View: 21, DB: 1) | 200 OK [http://localhost/users/tylergillies]
+
+
+Processing MainController#users (for 127.0.0.1 at 2010-04-06 21:31:28) [GET]
+  Parameters: {"username"=>"tylergillies"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+Rendering main/users
+  [4;35;1mStatus Load (1.0ms)[0m   [0mSELECT * FROM "statuses" WHERE ("statuses".user_id = 1) [0m
+Completed in 32ms (View: 20, DB: 2) | 200 OK [http://localhost/users/tylergillies]
+
+
+Processing MainController#users (for 127.0.0.1 at 2010-04-06 21:31:39) [GET]
+  Parameters: {"username"=>"tylergillies"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+Rendering main/users
+  [4;36;1mStatus Load (0.0ms)[0m   [0;1mSELECT * FROM "statuses" WHERE ("statuses".user_id = 1) [0m
+Completed in 33ms (View: 22, DB: 0) | 200 OK [http://localhost/users/tylergillies]
+
+
+Processing MainController#users (for 127.0.0.1 at 2010-04-07 20:08:19) [GET]
+  Parameters: {"username"=>"tylergillies"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+Rendering main/users
+  [4;35;1mStatus Load (1.0ms)[0m   [0mSELECT * FROM "statuses" WHERE ("statuses".user_id = 1) [0m
+Completed in 32ms (View: 20, DB: 2) | 200 OK [http://localhost/users/tylergillies]
+
+
+Processing MainController#users (for 127.0.0.1 at 2010-04-07 20:11:24) [GET]
+  Parameters: {"username"=>"tylergillies"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+Rendering main/users
+  [4;36;1mStatus Load (1.0ms)[0m   [0;1mSELECT * FROM "statuses" WHERE ("statuses".user_id = 1) [0m
+Completed in 33ms (View: 21, DB: 2) | 200 OK [http://localhost/users/tylergillies]
+
+
+Processing MainController#users (for 127.0.0.1 at 2010-04-07 20:12:15) [GET]
+  Parameters: {"username"=>"tylergillies"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+Rendering main/users
+  [4;35;1mStatus Load (1.0ms)[0m   [0mSELECT * FROM "statuses" WHERE ("statuses".user_id = 1) [0m
+Completed in 34ms (View: 21, DB: 1) | 200 OK [http://localhost/users/tylergillies]
+
+
+Processing MainController#users (for 127.0.0.1 at 2010-04-07 20:12:23) [GET]
+  Parameters: {"username"=>"tylergillies"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+Rendering main/users
+  [4;36;1mStatus Load (1.0ms)[0m   [0;1mSELECT * FROM "statuses" WHERE ("statuses".user_id = 1) [0m
+Completed in 34ms (View: 21, DB: 1) | 200 OK [http://localhost/users/tylergillies]
+
+
+Processing MainController#users (for 127.0.0.1 at 2010-04-07 20:12:53) [GET]
+  Parameters: {"username"=>"tylergillies"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+Rendering main/users
+  [4;35;1mStatus Load (1.0ms)[0m   [0mSELECT * FROM "statuses" WHERE ("statuses".user_id = 1) [0m
+Completed in 33ms (View: 21, DB: 3) | 200 OK [http://localhost/users/tylergillies]
+
+
+Processing MainController#users (for 127.0.0.1 at 2010-04-07 20:13:22) [GET]
+  Parameters: {"username"=>"tylergillies"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+Rendering main/users
+  [4;36;1mStatus Load (1.0ms)[0m   [0;1mSELECT * FROM "statuses" WHERE ("statuses".user_id = 1) [0m
+Completed in 34ms (View: 22, DB: 2) | 200 OK [http://localhost/users/tylergillies]
+
+
+Processing MainController#users (for 127.0.0.1 at 2010-04-07 20:13:51) [GET]
+  Parameters: {"username"=>"tylergillies"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+Rendering main/users
+  [4;35;1mStatus Load (1.0ms)[0m   [0mSELECT * FROM "statuses" WHERE ("statuses".user_id = 1) [0m
+Completed in 35ms (View: 22, DB: 3) | 200 OK [http://localhost/users/tylergillies]
+
+
+Processing MainController#users (for 127.0.0.1 at 2010-04-07 20:14:29) [GET]
+  Parameters: {"username"=>"tylergillies"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+Rendering main/users
+  [4;36;1mStatus Load (0.0ms)[0m   [0;1mSELECT * FROM "statuses" WHERE ("statuses".user_id = 1) [0m
+Completed in 93ms (View: 82, DB: 2) | 200 OK [http://localhost/users/tylergillies]
+
+
+Processing MainController#users (for 127.0.0.1 at 2010-04-07 20:14:38) [GET]
+  Parameters: {"username"=>"tylergillies"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+Rendering main/users
+  [4;35;1mStatus Load (1.0ms)[0m   [0mSELECT * FROM "statuses" WHERE ("statuses".user_id = 1) [0m
+Completed in 32ms (View: 20, DB: 2) | 200 OK [http://localhost/users/tylergillies]
+
+
+Processing MainController#users (for 127.0.0.1 at 2010-04-07 20:14:46) [GET]
+  Parameters: {"username"=>"tylergillies"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+Rendering main/users
+  [4;36;1mStatus Load (1.0ms)[0m   [0;1mSELECT * FROM "statuses" WHERE ("statuses".user_id = 1) [0m
+Completed in 33ms (View: 21, DB: 2) | 200 OK [http://localhost/users/tylergillies]
+
+
+Processing MainController#users (for 127.0.0.1 at 2010-04-07 20:14:53) [GET]
+  Parameters: {"username"=>"tylergillies"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+Rendering main/users
+  [4;35;1mStatus Load (1.0ms)[0m   [0mSELECT * FROM "statuses" WHERE ("statuses".user_id = 1) [0m
+Completed in 32ms (View: 20, DB: 1) | 200 OK [http://localhost/users/tylergillies]
+
+
+Processing MainController#users (for 127.0.0.1 at 2010-04-07 20:15:01) [GET]
+  Parameters: {"username"=>"tylergillies"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+Rendering main/users
+  [4;36;1mStatus Load (1.0ms)[0m   [0;1mSELECT * FROM "statuses" WHERE ("statuses".user_id = 1) [0m
+Completed in 31ms (View: 20, DB: 2) | 200 OK [http://localhost/users/tylergillies]
+
+
+Processing MainController#users (for 127.0.0.1 at 2010-04-07 20:15:07) [GET]
+  Parameters: {"username"=>"tylergillies"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+Rendering main/users
+  [4;35;1mStatus Load (1.0ms)[0m   [0mSELECT * FROM "statuses" WHERE ("statuses".user_id = 1) [0m
+Completed in 43ms (View: 30, DB: 1) | 200 OK [http://localhost/users/tylergillies]
+
+
+Processing MainController#users (for 127.0.0.1 at 2010-04-07 20:15:14) [GET]
+  Parameters: {"username"=>"tylergillies"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+Rendering main/users
+  [4;36;1mStatus Load (1.0ms)[0m   [0;1mSELECT * FROM "statuses" WHERE ("statuses".user_id = 1) [0m
+Completed in 34ms (View: 22, DB: 2) | 200 OK [http://localhost/users/tylergillies]
+
+
+Processing MainController#users (for 127.0.0.1 at 2010-04-07 20:15:22) [GET]
+  Parameters: {"username"=>"tylergillies"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+Rendering main/users
+  [4;35;1mStatus Load (1.0ms)[0m   [0mSELECT * FROM "statuses" WHERE ("statuses".user_id = 1) [0m
+Completed in 47ms (View: 34, DB: 3) | 200 OK [http://localhost/users/tylergillies]
+
+
+Processing MainController#users (for 127.0.0.1 at 2010-04-07 20:15:30) [GET]
+  Parameters: {"username"=>"tylergillies"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+Rendering main/users
+  [4;36;1mStatus Load (0.0ms)[0m   [0;1mSELECT * FROM "statuses" WHERE ("statuses".user_id = 1) [0m
+Completed in 55ms (View: 35, DB: 1) | 200 OK [http://localhost/users/tylergillies]
+
+
+Processing MainController#users (for 127.0.0.1 at 2010-04-07 20:15:38) [GET]
+  Parameters: {"username"=>"tylergillies"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+Rendering main/users
+  [4;35;1mStatus Load (1.0ms)[0m   [0mSELECT * FROM "statuses" WHERE ("statuses".user_id = 1) [0m
+Completed in 41ms (View: 29, DB: 2) | 200 OK [http://localhost/users/tylergillies]
+
+
+Processing MainController#users (for 127.0.0.1 at 2010-04-07 20:15:47) [GET]
+  Parameters: {"username"=>"tylergillies"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+Rendering main/users
+  [4;36;1mStatus Load (1.0ms)[0m   [0;1mSELECT * FROM "statuses" WHERE ("statuses".user_id = 1) [0m
+Completed in 34ms (View: 22, DB: 2) | 200 OK [http://localhost/users/tylergillies]
+
+
+Processing MainController#users (for 127.0.0.1 at 2010-04-07 20:16:14) [GET]
+  Parameters: {"username"=>"tylergillies"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+Rendering main/users
+  [4;35;1mStatus Load (1.0ms)[0m   [0mSELECT * FROM "statuses" WHERE ("statuses".user_id = 1) [0m
+Completed in 102ms (View: 91, DB: 2) | 200 OK [http://localhost/users/tylergillies]
+
+
+Processing MainController#users (for 127.0.0.1 at 2010-04-07 20:16:22) [GET]
+  Parameters: {"username"=>"tylergillies"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+Rendering main/users
+  [4;36;1mStatus Load (1.0ms)[0m   [0;1mSELECT * FROM "statuses" WHERE ("statuses".user_id = 1) [0m
+Completed in 37ms (View: 22, DB: 3) | 200 OK [http://localhost/users/tylergillies]
+
+
+Processing MainController#users (for 127.0.0.1 at 2010-04-07 20:16:32) [GET]
+  Parameters: {"username"=>"tylergillies"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+Rendering main/users
+  [4;35;1mStatus Load (1.0ms)[0m   [0mSELECT * FROM "statuses" WHERE ("statuses".user_id = 1) [0m
+Completed in 39ms (View: 24, DB: 3) | 200 OK [http://localhost/users/tylergillies]
+
+
+Processing MainController#users (for 127.0.0.1 at 2010-04-07 20:16:47) [GET]
+  Parameters: {"username"=>"tylergillies"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+Rendering main/users
+  [4;36;1mStatus Load (0.0ms)[0m   [0;1mSELECT * FROM "statuses" WHERE ("statuses".user_id = 1) [0m
+Completed in 70ms (View: 24, DB: 1) | 200 OK [http://localhost/users/tylergillies]
+
+
+Processing MainController#users (for 127.0.0.1 at 2010-04-07 20:16:59) [GET]
+  Parameters: {"username"=>"tylergillies"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+Rendering main/users
+  [4;35;1mStatus Load (0.0ms)[0m   [0mSELECT * FROM "statuses" WHERE ("statuses".user_id = 1) [0m
+Completed in 35ms (View: 23, DB: 0) | 200 OK [http://localhost/users/tylergillies]
+
+
+Processing MainController#users (for 127.0.0.1 at 2010-04-07 20:17:27) [GET]
+  Parameters: {"username"=>"tylergillies"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'tylergillies') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE (username = 'tylergillies' AND host = 'localhost') LIMIT 1[0m
+Rendering main/users
+  [4;36;1mStatus Load (1.0ms)[0m   [0;1mSELECT * FROM "statuses" WHERE ("statuses".user_id = 1) [0m
+Completed in 28ms (View: 16, DB: 3) | 200 OK [http://localhost/users/tylergillies]

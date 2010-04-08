@@ -8,7 +8,7 @@
               width:800px;
               margin-left:auto;
               margin-right:auto;
-              background-color:white;
+              background-color:rgba(0,10,10, 0.5);
               min-height:500px;
               padding:20px;
           }
@@ -18,6 +18,13 @@
               margin-right:auto;
               text-align:center;
           }
+          iframe {
+              float:right;
+              height:300px;
+              width:200px;
+              //margin-right:-20px;
+              margin-top:-50px;
+          }
 
         </style>
     </head>
@@ -26,6 +33,7 @@
           <div id="greeting">
             <h1><%= @username %></h1>
           </div>
+          <iframe src="http://imm.victusmedia.com/widget"  scrolling="no"></iframe>
           <% @this_user.statuses.sort_by{ |x| x.updated_at }.slice(0,15).each do |status| %>
            <p>
             <%= status.title %><br/>
