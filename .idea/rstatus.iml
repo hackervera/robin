@@ -30,15 +30,15 @@
     </requirement>
     <requirement>
       <requirement>
-        <dependency name="rails" version="0" bound="GREATER_OR_EQUAL" />
+        <dependency name="openid" version="0" bound="GREATER_OR_EQUAL" />
       </requirement>
-      <source from="config/boot.rb" />
+      <source from="config/environment.rb" />
     </requirement>
     <requirement>
       <requirement>
-        <dependency name="ruby-openid" version="0" bound="GREATER_OR_EQUAL" />
+        <dependency name="rails" version="0" bound="GREATER_OR_EQUAL" />
       </requirement>
-      <source from="config/environment.rb" />
+      <source from="config/boot.rb" />
     </requirement>
     <requirement>
       <requirement>
