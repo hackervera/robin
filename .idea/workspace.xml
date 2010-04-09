@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager" verified="true">
-    <list default="true" readonly="true" id="7a29a0b7-60ed-4ca1-a7ba-13ce36c1347b" name="Default" comment="[deploy site_production] sexified user profile page a bit. added IMM products">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/main/login.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/main/main.html.erb" afterPath="$PROJECT_DIR$/app/views/main/main.html.erb" />
+    <list default="true" readonly="true" id="7a29a0b7-60ed-4ca1-a7ba-13ce36c1347b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/main_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/main_controller.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/main/google_callback.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rstatus.iws" />
@@ -30,19 +27,19 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="59" selection-start="104" selection-end="104" vertical-scroll-proportion="-0.68">
+            <state line="1" column="67" selection-start="112" selection-end="112" vertical-scroll-proportion="0.03107861">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="google_callback.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="google_callback.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/main/google_callback.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="20" selection-start="29" selection-end="29" vertical-scroll-proportion="0.030195381">
+            <state line="1" column="20" selection-start="29" selection-end="29" vertical-scroll-proportion="-0.7083333">
               <folding />
             </state>
           </provider>
@@ -665,7 +662,7 @@
     <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
     <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="[deploy site_production] sexified user profile page a bit. added IMM products" />
+    <option name="LAST_COMMIT_MESSAGE" value="[deploy site_production] adding google login federation" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -693,6 +690,7 @@
     <MESSAGE value="[deploy site_production] holy crap... it actually works. praise JESUS!" />
     <MESSAGE value="[deploy site_production] sexified user profile page a bit" />
     <MESSAGE value="[deploy site_production] sexified user profile page a bit. added IMM products" />
+    <MESSAGE value="[deploy site_production] adding google login federation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -776,16 +774,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/main/google_callback.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="59" selection-start="104" selection-end="104" vertical-scroll-proportion="-0.68">
+        <state line="1" column="20" selection-start="29" selection-end="29" vertical-scroll-proportion="-0.7083333">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/main/google_callback.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="20" selection-start="29" selection-end="29" vertical-scroll-proportion="0.030195381">
+        <state line="1" column="67" selection-start="112" selection-end="112" vertical-scroll-proportion="0.03107861">
           <folding />
         </state>
       </provider>
