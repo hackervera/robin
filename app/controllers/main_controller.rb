@@ -11,8 +11,8 @@ class MainController < ApplicationController
     unless cookies[:username]
       redirect_to "/main/login"
     end
-    @user = User.find_by_username("tylergillies")
-    @user ||= User.create(:username => "tylergillies", :host => "localhost")
+    @user = User.find_by_username(cookies[:username])
+    @user ||= User.create(:username => cookies[:username], :host => "localhost")
   end
 
   def login
@@ -23,6 +23,8 @@ class MainController < ApplicationController
 
   def google_callback
     @openid = params[:"openid.claimed_id"]
+    cookies[:username] = params[:"openid.ext1.value.email"].split("@").first
+    redirect_to "/"
   end
     
   def main
