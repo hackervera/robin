@@ -30,7 +30,7 @@
       <file leaf-file-name="main_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="109" selection-start="154" selection-end="154" vertical-scroll-proportion="0.03250478">
+            <state line="1" column="117" selection-start="162" selection-end="162" vertical-scroll-proportion="0.03250478">
               <folding />
             </state>
           </provider>
@@ -802,7 +802,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="109" selection-start="154" selection-end="154" vertical-scroll-proportion="0.03250478">
+        <state line="1" column="117" selection-start="162" selection-end="162" vertical-scroll-proportion="0.03250478">
           <folding />
         </state>
       </provider>
