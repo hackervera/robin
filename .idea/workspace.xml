@@ -4,8 +4,6 @@
     <list default="true" readonly="true" id="7a29a0b7-60ed-4ca1-a7ba-13ce36c1347b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/main_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/main_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environment.rb" afterPath="$PROJECT_DIR$/config/environment.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/rstatus.iml" afterPath="$PROJECT_DIR$/.idea/rstatus.iml" />
     </list>
     <ignored path="rstatus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,7 +30,7 @@
       <file leaf-file-name="main_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="20" selection-start="236" selection-end="236" vertical-scroll-proportion="0.19502868">
+            <state line="7" column="37" selection-start="274" selection-end="274" vertical-scroll-proportion="0.22753346">
               <folding />
             </state>
           </provider>
@@ -800,7 +798,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="20" selection-start="236" selection-end="236" vertical-scroll-proportion="0.19502868">
+        <state line="7" column="37" selection-start="274" selection-end="274" vertical-scroll-proportion="0.22753346">
           <folding />
         </state>
       </provider>
