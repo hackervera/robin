@@ -244,7 +244,7 @@ TEMPLATE
     Rails.logger.info "SALMON NIL? #{salmon.nil?}, SALMON: #{salmon}"
     if salmon.nil?  || salmon.empty?
       finger = Redfinger.finger(params[:user])
-      salmon = finger.salmon.first.to_s
+      salmon = finger.salmon.first.to_s unless finger.salmon.nil?
       Rails.logger.info "SALMON: #{salmon}"
     end
     
