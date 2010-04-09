@@ -16,10 +16,7 @@ class MainController < ApplicationController
   end
 
   def login
-    consumer = OpenID::Consumer.new(Hash.new,OpenID::Store::Filesystem.new("./"))
-    myid = consumer.begin "https://www.google.com/accounts/o8/id"
-    #myid = consumer.begin "http://e-cred.org"
-    redirect_to myid.redirect_url("redrob.in","http://redrob.in/main/google_callback")
+    redirect_to "https://www.google.com/accounts/o8/ud?openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.return_to=http%3A%2F%2Fredrob.in%2Fmain%2Fgoogle_callback&openid.realm=http%3A%2F%2Fredrob.in&openid.assoc_handle=AOQobUe3thI9enZCfFqMh-tGmc_G3g64oUPX7vPBgIqsIoz7_LkmpM4Xp-dMxFYl41fsw_aX&openid.mode=checkid_setup&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_request&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.if_available=firstname%2Clastname&openid.ext1.type.email=http%3A%2F%2Fschema.openid.net%2Fcontact%2Femail&openid.ext1.required=email"
 
   end
 
