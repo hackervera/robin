@@ -4,6 +4,7 @@ class MainController < ApplicationController
 
     require "time"
     require "socket"
+    require "openid"
   
   def set_username
     unless cookies[:username]

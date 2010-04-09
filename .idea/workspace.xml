@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="7a29a0b7-60ed-4ca1-a7ba-13ce36c1347b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/main_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/main_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environment.rb" afterPath="$PROJECT_DIR$/config/environment.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/rstatus.iml" afterPath="$PROJECT_DIR$/.idea/rstatus.iml" />
     </list>
     <ignored path="rstatus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,19 +29,19 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="16" selection-start="617" selection-end="617" vertical-scroll-proportion="-10.2">
+            <state line="6" column="20" selection-start="236" selection-end="236" vertical-scroll-proportion="0.19502868">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="environment.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="environment.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/environment.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="14" selection-start="1123" selection-end="1123" vertical-scroll-proportion="0.78507996">
+            <state line="26" column="3" selection-start="1112" selection-end="1112" vertical-scroll-proportion="-18.416666">
               <folding />
             </state>
           </provider>
@@ -48,7 +50,7 @@
       <file leaf-file-name="google_callback.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/main/google_callback.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="20" selection-start="29" selection-end="29" vertical-scroll-proportion="-0.7083333">
+            <state line="1" column="20" selection-start="29" selection-end="29" vertical-scroll-proportion="-0.35416666">
               <folding />
             </state>
           </provider>
@@ -106,8 +108,8 @@
         <option value="$PROJECT_DIR$/app/views/main/main.html.erb" />
         <option value="$PROJECT_DIR$/app/views/main/google_callback.html.erb" />
         <option value="$PROJECT_DIR$/app/views/main/login.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/main_controller.rb" />
         <option value="$PROJECT_DIR$/config/environment.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/main_controller.rb" />
       </list>
     </option>
   </component>
@@ -754,30 +756,9 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/main/users.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="16" selection-start="638" selection-end="638" vertical-scroll-proportion="-3.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/salmon_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="104" column="25" selection-start="4191" selection-end="4191" vertical-scroll-proportion="0.77272725">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/main/main.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="57" selection-start="1758" selection-end="1758" vertical-scroll-proportion="-20.816326">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/main/google_callback.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="20" selection-start="29" selection-end="29" vertical-scroll-proportion="-0.7083333">
           <folding />
         </state>
       </provider>
@@ -789,16 +770,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/main/users.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="16" selection-start="617" selection-end="617" vertical-scroll-proportion="-10.2">
+        <state line="24" column="16" selection-start="638" selection-end="638" vertical-scroll-proportion="-3.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/main/main.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="57" selection-start="1758" selection-end="1758" vertical-scroll-proportion="-20.816326">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/environment.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="14" selection-start="1123" selection-end="1123" vertical-scroll-proportion="0.78507996">
+        <state line="26" column="3" selection-start="1112" selection-end="1112" vertical-scroll-proportion="-18.416666">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/main/google_callback.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="20" selection-start="29" selection-end="29" vertical-scroll-proportion="-0.35416666">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="20" selection-start="236" selection-end="236" vertical-scroll-proportion="0.19502868">
           <folding />
         </state>
       </provider>
