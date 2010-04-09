@@ -30,7 +30,7 @@
       <file leaf-file-name="main_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="44" selection-start="706" selection-end="706" vertical-scroll-proportion="0.6500956">
+            <state line="19" column="4" selection-start="599" selection-end="599" vertical-scroll-proportion="0.61759084">
               <folding />
             </state>
           </provider>
@@ -672,7 +672,7 @@
     <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
     <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="[deploy site_production] broke down and used openid library, that would have been some bare metal madness" />
+    <option name="LAST_COMMIT_MESSAGE" value="[deploy site_production] google not working trying e-cred then rpx" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -704,6 +704,7 @@
     <MESSAGE value="[deploy site_production] doh dang filters" />
     <MESSAGE value="[deploy site_production] i don't get teh xrds part..." />
     <MESSAGE value="[deploy site_production] broke down and used openid library, that would have been some bare metal madness" />
+    <MESSAGE value="[deploy site_production] google not working trying e-cred then rpx" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -798,7 +799,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="44" selection-start="706" selection-end="706" vertical-scroll-proportion="0.6500956">
+        <state line="19" column="4" selection-start="599" selection-end="599" vertical-scroll-proportion="0.61759084">
           <folding />
         </state>
       </provider>
