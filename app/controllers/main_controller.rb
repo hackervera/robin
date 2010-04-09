@@ -18,7 +18,7 @@ class MainController < ApplicationController
   end
 
   def google
-    HTTParty.post("https://www.google.com/accounts/o8/ud", :body => { "openid.mode" => "checkid_immediate", "openid.ns" => "http://specs.openid.net/auth/2.0", "openid.return_to" => "http://redrob.in/main/google_callback" })
+    HTTParty.post("https://www.google.com/accounts/o8/id", :body => { "openid.mode" => "checkid_immediate", "openid.ns" => "http://specs.openid.net/auth/2.0", "openid.return_to" => "http://redrob.in/main/google_callback" })
   end
 
   def google_callback
