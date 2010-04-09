@@ -1,5 +1,5 @@
 class MainController < ApplicationController
-  before_filter :set_username, :except => [:google_callback, :login, :callback, :webfinger]
+  before_filter :set_username, :except => [:google_callback, :login, :callback, :webfinger, :users, :statuses]
   protect_from_forgery :only => [:create, :update, :destroy]
 
     require "time"

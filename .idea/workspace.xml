@@ -30,7 +30,7 @@
       <file leaf-file-name="main_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="90" selection-start="135" selection-end="135" vertical-scroll-proportion="0.03250478">
+            <state line="1" column="109" selection-start="154" selection-end="154" vertical-scroll-proportion="0.03250478">
               <folding />
             </state>
           </provider>
@@ -672,7 +672,7 @@
     <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
     <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="[deploy site_production] wow it was. ok now creating user based on google id. hope it doesn't break on app domains" />
+    <option name="LAST_COMMIT_MESSAGE" value="[deploy site_production] doh, damn before filter killin my actions again. good reason to put them in a different controller" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -707,6 +707,7 @@
     <MESSAGE value="[deploy site_production] google not working trying e-cred then rpx" />
     <MESSAGE value="[deploy site_production] was it really that simple?!!" />
     <MESSAGE value="[deploy site_production] wow it was. ok now creating user based on google id. hope it doesn't break on app domains" />
+    <MESSAGE value="[deploy site_production] doh, damn before filter killin my actions again. good reason to put them in a different controller" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -801,7 +802,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="90" selection-start="135" selection-end="135" vertical-scroll-proportion="0.03250478">
+        <state line="1" column="109" selection-start="154" selection-end="154" vertical-scroll-proportion="0.03250478">
           <folding />
         </state>
       </provider>
