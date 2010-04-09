@@ -1,14 +1,28 @@
 class MainController < ApplicationController
-  before_filter :set_username
+  before_filter :set_username, :except => [:google_callback]
   protect_from_forgery :only => [:create, :update, :destroy]
 
     require "time"
     require "socket"
   
   def set_username
-    
+    unless cookies[:username]
+      redirect_to "/main/login"
+    end
     @user = User.find_by_username("tylergillies")
     @user ||= User.create(:username => "tylergillies", :host => "localhost")
+  end
+
+  def login
+    
+  end
+
+  def google
+    HTTParty.post("https://www.google.com/accounts/o8/ud", :body => { "openid.mode" => "checkid_immediate", "openid.ns" => "http://specs.openid.net/auth/2.0", "openid.return_to" => "http://redrob.in/main/google_callback" })
+  end
+
+  def google_callback
+    @openid = params[:"openid.claimed_id"]
   end
     
   def main
@@ -16,7 +30,7 @@ class MainController < ApplicationController
     @user.subscriptions = [] if @user.subscriptions.nil?
     @user.subscriptions.each_with_index do |sub,index|
       @subs << "<br/>" if index != 0 && index % 10 == 0 
-      @subs << "<a title='#{sub[:user]}@#{sub[:host]}' href='#{sub[:profile]}' border=0><img src='#{sub[:image]}' width=48 height=48 border=0></a>"
+      @subs << "<a title='#{sub[:user]}@#{sub[:host]}' href='#{sub[:profile]}' border=0 target='_blank'><img src='#{sub[:image]}' width=48 height=48 border=0></a>"
 
     end
      @statuses = []
@@ -32,7 +46,8 @@ class MainController < ApplicationController
                         :id => status[:id],
                         :url => status[:url],
                         :author => status[:author],
-                        :salmon => status[:salmon]}
+                        :salmon => status[:salmon],
+                        :profile => sub[:profile]}
         end
       end
       @user.statuses.each do |status|
@@ -43,7 +58,8 @@ class MainController < ApplicationController
                        :image => "http://www.owlnet.rice.edu/~psyc101/pomerantz/NAmerican%20Robin.jpg",
                        :conversation => status[:conversation],
                        :url => status[:url],
-                       :salmon => status[:salmon]
+                       :salmon => status[:salmon],
+                       :profile => @user.profile
                        }
       end
 
