@@ -16,7 +16,7 @@ class MainController < ApplicationController
   end
 
   def login
-    consumer = OpenID::Consumer.new(Hash.new,OpenID::Store::Filesystem.new("/"))
+    consumer = OpenID::Consumer.new(Hash.new,OpenID::Store::Filesystem.new("./"))
     myid = consumer.begin "https://www.google.com/accounts/o8/id"
     redirect_to myid.redirect_url("redrob.in","http://redrob.in/main/google_callback")
 
