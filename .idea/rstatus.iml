@@ -36,6 +36,12 @@
     </requirement>
     <requirement>
       <requirement>
+        <dependency name="ruby-openid" version="0" bound="GREATER_OR_EQUAL" />
+      </requirement>
+      <source from="config/environment.rb" />
+    </requirement>
+    <requirement>
+      <requirement>
         <dependency name="sqlite3-ruby" version="0" bound="GREATER_OR_EQUAL" />
       </requirement>
       <source from="config/database.yml" />
@@ -59,6 +65,7 @@
     <orderEntry type="library" scope="PROVIDED" name="[gem] crack (v0.1.4, C:/Ruby/lib/ruby/gems/1.8/gems/crack-0.1.4)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] httparty (v0.4.5, C:/Ruby/lib/ruby/gems/1.8/gems/httparty-0.4.5)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] htmlentities (v4.2.0, C:/Ruby/lib/ruby/gems/1.8/gems/htmlentities-4.2.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] ruby-openid (v2.1.7, C:/Ruby/lib/ruby/gems/1.8/gems/ruby-openid-2.1.7)" level="application" />
   </component>
 </module>
 

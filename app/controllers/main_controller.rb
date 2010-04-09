@@ -14,12 +14,12 @@ class MainController < ApplicationController
   end
 
   def login
-    
+    consumer = OpenID::Consumer.new(Hash.new,OpenID::Store::Filesystem.new("/"))
+    myid = consumer.begin "https://www.google.com/accounts/o8/id"
+    redirect_to myid.redirect_url("redrob.in","http://redrob.in/main/google_callback")
+
   end
 
-  def google
-    HTTParty.post("https://www.google.com/accounts/o8/id", :body => { "openid.mode" => "checkid_immediate", "openid.ns" => "http://specs.openid.net/auth/2.0", "openid.return_to" => "http://redrob.in/main/google_callback" })
-  end
 
   def google_callback
     @openid = params[:"openid.claimed_id"]
