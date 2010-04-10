@@ -36,7 +36,7 @@ class SalmonController < ApplicationController
 
     author = message.xpath("//author/name").first.text
     key_name = message.xpath("//author/uri").first.text
-    content = messagfe.xpath("//content").first.text
+    content = message.xpath("//content").first.text
     key_name.gsub(/^(?:[^\/]+:\/\/)?([^\/:]+)/,"")
     domain = $1
     Rails.logger.info author,domain
