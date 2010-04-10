@@ -25,15 +25,13 @@
   .clear {
     clear:both;
   }
-  span {
-      padding:10px;
-  }
   #nav {
       clear:both;
       padding-top:50px;
       width:500px;
       margin-left:auto;
       margin-right:auto;
+      padding:10px;
   }
 </style>
     
@@ -85,7 +83,7 @@
     @statuses.sort_by{ |status| status[:updated] }.reverse[0..10].each do |status| 
       time = distance_of_time_in_words(status[:updated], Time.now) %>
     
-      <p><a href="<%= status[:profile] %>" target="_blank"><img src='<%= status[:image] %>'  height="48" width="48" /></a><%= status[:user] %>@<%= status[:host] %>: <%= status[:text] %></p>
+      <p><a href="<%= status[:profile] %>" target="_blank" border=0><img src='<%= status[:image] %>'  height="48" width="48" /></a><%= status[:user] %>@<%= status[:host] %>: <%= status[:text] %></p>
       <div class="controls">
           <%= time %> ago. <a href='<%= status[:conversation] %>' target='_blank'>in context</a>
           <a href="javascript:" onClick="enterReply('<%= status[:user] %>','<%= status[:conversation] %>', '<%= status[:url] %>','<%= status[:salmon] %>', '<%= status[:host] %>', '<%= status[:author] %>');">reply</a>
