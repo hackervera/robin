@@ -53,7 +53,7 @@ class SalmonController < ApplicationController
     key.e =ex
     Rails.logger.info "verfied?",key.verify( OpenSSL::Digest::SHA256.new, sig, message )
     render :text => "Ok"
-    Status.create(:to => username, :title => content, :username => author, :host => domain)
+    Status.create(:to => username, :title => content, :author => author, :host => domain)
     
   end
   
