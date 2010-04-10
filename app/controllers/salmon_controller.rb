@@ -43,8 +43,8 @@ class SalmonController < ApplicationController
     key = OpenSSL::PKey::RSA.new
     mod =  mod.tr('-_','+/').unpack('mU*')[0]
     ex =   ex.tr('-_','+/').unpack('mU*')[0]
-    mod = OpenSSL::BN.new mod.to_s.unpack("H*")
-    ex =   OpenSSL::BN.new exto_s.unpack("H*")
+    mod = OpenSSL::BN.new mod.to_s.unpack("H*").to_s
+    ex =   OpenSSL::BN.new exto_s.unpack("H*").to_s
 
     sig = sig.tr('-_','+/').unpack('mU*')[0]
 
