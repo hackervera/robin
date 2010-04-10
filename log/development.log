@@ -18187,3 +18187,43 @@ Completed in 143ms (DB: 15) | 302 Found [http://localhost/]
 Processing MainController#login (for 127.0.0.1 at 2010-04-10 06:01:49) [GET]
 Redirected to https://www.google.com/accounts/o8/ud?openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.return_to=http%3A%2F%2Fredrob.in%2Fmain%2Fgoogle_callback&openid.realm=http%3A%2F%2Fredrob.in&openid.assoc_handle=AOQobUe3thI9enZCfFqMh-tGmc_G3g64oUPX7vPBgIqsIoz7_LkmpM4Xp-dMxFYl41fsw_aX&openid.mode=checkid_setup&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_request&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.if_available=firstname%2Clastname&openid.ext1.type.email=http%3A%2F%2Fschema.openid.net%2Fcontact%2Femail&openid.ext1.required=email
 Completed in 2ms (DB: 0) | 302 Found [http://localhost/main/login]
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100322003056)
+Migrating to CreateStatuses (20100322003101)
+Migrating to AddToUserIdToStatus (20100322003837)
+Migrating to AddToStuffToUser (20100322020538)
+Migrating to AddStuffToStatus (20100322020632)
+Migrating to AddSubscriptionsToUser (20100322061944)
+Migrating to AddProfileToUser (20100326192019)
+Migrating to AddConToStatus (20100329001931)
+Migrating to CreateConversations (20100329011753)
+Migrating to AddStatusesToConversation (20100329012128)
+Migrating to AddReplyToStatus (20100329034932)
+Migrating to AddUrlToStatus (20100329040001)
+Migrating to AddAuthorToStatus (20100329051221)
+Migrating to AddReplyAuthorToStatus (20100329052010)
+Migrating to AddTitleToStatus (20100329060349)
+Migrating to AddSalmonToStatus (20100329223928)
+Migrating to AddSalmonToUser (20100402121932)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mALTER TABLE "users" ADD "salmon" text[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100402121932')[0m
+Migrating to AddToToStatus (20100410200854)
+  [4;35;1mSQL (1.0ms)[0m   [0mALTER TABLE "statuses" ADD "to" text[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100410200854')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("conversations")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("statuses")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m

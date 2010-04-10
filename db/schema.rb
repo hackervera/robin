@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100329223928) do
+ActiveRecord::Schema.define(:version => 20100410200854) do
 
   create_table "conversations", :force => true do |t|
     t.datetime "created_at"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(:version => 20100329223928) do
     t.text     "reply_author"
     t.text     "title"
     t.text     "salmon"
+    t.text     "to"
   end
 
   create_table "users", :force => true do |t|
@@ -43,6 +44,7 @@ ActiveRecord::Schema.define(:version => 20100329223928) do
     t.text     "profile_url"
     t.text     "subscriptions"
     t.text     "profile"
+    t.text     "salmon"
   end
 
 end
