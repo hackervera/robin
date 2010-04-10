@@ -36,6 +36,7 @@ class SalmonController < ApplicationController
 
     author = message.xpath("//author/name").first.text
     key_name = message.xpath("//author/uri").first.text
+    content = messagfe.xpath("//content").first.text
     key_name.gsub(/^(?:[^\/]+:\/\/)?([^\/:]+)/,"")
     domain = $1
     Rails.logger.info author,domain
@@ -52,6 +53,7 @@ class SalmonController < ApplicationController
     key.e =ex
     Rails.logger.info "verfied?",key.verify( OpenSSL::Digest::SHA256.new, sig, message )
     render :text => "Ok"
+    Status.create(:to => username, :title => content, :username => author, :host => domain)
     
   end
   
