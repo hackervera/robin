@@ -50,7 +50,7 @@ class SalmonController < ApplicationController
 
     key.n = mod
     key.e =ex
-    puts verify( OpenSSL::Digest::SHA256.new, sig, message )
+    puts key.verify( OpenSSL::Digest::SHA256.new, sig, message )
     
     
   end
