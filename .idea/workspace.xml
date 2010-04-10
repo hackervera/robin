@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager" verified="true">
-    <list default="true" readonly="true" id="7a29a0b7-60ed-4ca1-a7ba-13ce36c1347b" name="Default" comment="">
+    <list default="true" readonly="true" id="7a29a0b7-60ed-4ca1-a7ba-13ce36c1347b" name="Default" comment="&#10;">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/salmon_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/salmon_controller.rb" />
     </list>
@@ -48,7 +48,7 @@
       <file leaf-file-name="salmon_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/salmon_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="25" selection-start="1295" selection-end="1295" vertical-scroll-proportion="0.58113205">
+            <state line="46" column="27" selection-start="1370" selection-end="1370" vertical-scroll-proportion="0.64528304">
               <folding />
             </state>
           </provider>
@@ -762,7 +762,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/salmon_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="25" selection-start="1295" selection-end="1295" vertical-scroll-proportion="0.58113205">
+        <state line="46" column="27" selection-start="1370" selection-end="1370" vertical-scroll-proportion="0.64528304">
           <folding />
         </state>
       </provider>
