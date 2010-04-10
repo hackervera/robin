@@ -24,12 +24,13 @@ class SalmonController < ApplicationController
       return
     end
     body = request.body.read
-    Rails.logger.info body
+    #Rails.logger.info body
     doc = Nokogiri::XML(body)
     doc.remove_namespaces!
     sig = doc.xpath("//sig").first.text
     message = doc.xpath("//data").first.text
     message = message.tr('-_','+/').unpack('mU*')[0]
+    Rails.logger.info message
     message = Nokogiri::XML(message)
     message.remove_namespaces!
 
