@@ -24,6 +24,7 @@ class SalmonController < ApplicationController
       return
     end
     body = request.body.read
+    Rails.logger.info body
     doc = Nokogiri::XML(body)
     doc.remove_namespaces!
     sig = doc.xpath("//sig").first.text
