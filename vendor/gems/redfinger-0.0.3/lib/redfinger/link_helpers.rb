@@ -33,6 +33,10 @@ module Redfinger
     def salmon
       relmap('http://salmon-protocol.org/ns/salmon-mention', true)
     end
+
+    def magic_key
+      relmap('magic-public-key', true)
+    end
         
     
     protected

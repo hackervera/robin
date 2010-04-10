@@ -25,6 +25,16 @@
   .clear {
     clear:both;
   }
+  span {
+      padding:10px;
+  }
+  #nav {
+      clear:both;
+      padding-top:50px;
+      width:500px;
+      margin-left:auto;
+      margin-right:auto;
+  }
 </style>
     
 <div id="status_input" class="float_left">
@@ -34,24 +44,41 @@
   <textarea id="text"  cols="70" rows="2"></textarea><br/>
   <button type="button" onClick="findName($('textarea#text').val());">Ok</button>
 </div>
+
+
 <div id="subscriptions" class="float_left">
   Subscriptions:<br/>
   <%= @subs.join("") %>
   <p/>
   <button type="button" onClick="$('#remote').dialog({ position: ['center','top'] }); $('#remotename').focus();">Remote Subscribe [+]</button>
 </div>
+
+
+
+
 <div id="ostatus" class="float_right">
   <img src="/images/ostatus.png" height=48 width=48>
 </div>
 
+<div id="nav">
+  <span>Friends</span><span>Replies</span><span>Profile</span>
+</div>
+
+
+
 <div id="msg" style="display:none;"></div>
 <div id="salmon" style="display:none"></div>
 <div id="user" style="display:none"></div>
+
+
+
 <div id="remote" style="display:none;">
   Enter remote user@hostname:<br/>
   <input type="text" id="remotename"><br/>
   <input type="submit" value="Subscribe" onClick="remoteSub();">
 </div>
+
+
 <div id="statuses">
   <p>
     <%  

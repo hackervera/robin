@@ -18174,3 +18174,16 @@ Processing MainController#users (for 127.0.0.1 at 2010-04-07 20:17:27) [GET]
 Rendering main/users
   [4;36;1mStatus Load (1.0ms)[0m   [0;1mSELECT * FROM "statuses" WHERE ("statuses".user_id = 1) [0m
 Completed in 28ms (View: 16, DB: 3) | 200 OK [http://localhost/users/tylergillies]
+
+
+Processing MainController#main (for 127.0.0.1 at 2010-04-10 06:01:47) [GET]
+Redirected to http://localhost:3000/main/login
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" IS NULL) LIMIT 1[0m
+  [4;35;1mUser Create (15.0ms)[0m   [0mINSERT INTO "users" ("updated_at", "profile", "picture_url", "username", "subscriptions", "foaf_location", "profile_url", "host", "password", "created_at", "email") VALUES('2010-04-10 13:01:47', NULL, NULL, NULL, NULL, NULL, NULL, 'localhost', NULL, '2010-04-10 13:01:47', NULL)[0m
+Filter chain halted as [:set_username] rendered_or_redirected.
+Completed in 143ms (DB: 15) | 302 Found [http://localhost/]
+
+
+Processing MainController#login (for 127.0.0.1 at 2010-04-10 06:01:49) [GET]
+Redirected to https://www.google.com/accounts/o8/ud?openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.return_to=http%3A%2F%2Fredrob.in%2Fmain%2Fgoogle_callback&openid.realm=http%3A%2F%2Fredrob.in&openid.assoc_handle=AOQobUe3thI9enZCfFqMh-tGmc_G3g64oUPX7vPBgIqsIoz7_LkmpM4Xp-dMxFYl41fsw_aX&openid.mode=checkid_setup&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_request&openid.ext1.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.if_available=firstname%2Clastname&openid.ext1.type.email=http%3A%2F%2Fschema.openid.net%2Fcontact%2Femail&openid.ext1.required=email
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/main/login]

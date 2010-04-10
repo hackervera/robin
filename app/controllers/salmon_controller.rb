@@ -1,5 +1,11 @@
 class SalmonController < ApplicationController
   require 'time'
+  require 'base64'
+  require 'openssl'
+  require 'net/http'
+  require 'uri'
+  require 'cgi'
+  
   protect_from_forgery :only => [:create, :update, :destroy]
   
   def create_env
@@ -7,6 +13,33 @@ class SalmonController < ApplicationController
   end
   
   def check_author
+    
+  end
+
+  def user
+    username = params[:username]
+    user = User.find(:first, :conditions => "username = '#{username}' and host='localhost'")
+    if user.nil?
+      render :text => "No user by that name", :status => 400
+      return
+    end
+    body = request.body.read
+    doc = Nokogiri::XML(body)
+    doc.remove_namespaces!
+    sig = doc.xpath("//sig").first.text
+    message = doc.xpath("//data").first.text
+    author = doc.xpath("//author/name").first.text
+    key_name = dox.xpath("//author/uri").firs.text
+    junk,mod,ex = Redfinger.finger(key_name).magic_key.first.to_s.split(".")
+    key = OpenSSL::PKey::RSA.new
+    mod = mod.tr('-_','+/').unpack('mU*')[0]
+    ex = ex.tr('-_','+/').unpack('mU*')[0]
+    sig = sig.tr('-_','+/').unpack('mU*')[0]
+    data = message.tr('-_','+/').unpack('mU*')[0]
+    key.n = mod
+    key.e =ex
+    puts verify( OpenSSL::Digest::SHA256.new, sig, data )
+    
     
   end
   
@@ -59,11 +92,6 @@ class SalmonController < ApplicationController
 </entry>
 SAMPLE
 
-    require 'base64'
-    require 'openssl'
-    require 'net/http'
-    require 'uri'
-    require 'cgi'
     privkey = OpenSSL::PKey::RSA.new(File.read("privkey"))
     data = [entry].pack('mU*').tr('+/','-_').gsub("\n",'')
     sig = privkey.sign(OpenSSL::Digest::SHA256.new, data)

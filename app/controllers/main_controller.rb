@@ -285,7 +285,7 @@ TEMPLATE
           type='text/html'
           href='http://redrob.in/users/#{username}' />
     <Link rel='http://salmon-protocol.org/ns/salmon-mention'
-          href='http://redrob.in/push/callback' />
+          href='http://redrob.in/salmon/user/#{username}' />
     <Link rel='http://schemas.google.com/g/2010#updates-from'
           type='application/atom+xml'
           href='http://redrob.in/feeds/#{username}' />
