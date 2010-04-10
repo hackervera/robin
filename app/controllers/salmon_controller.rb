@@ -33,7 +33,7 @@ class SalmonController < ApplicationController
     message.remove_namespaces!
 
     author = message.xpath("//author/name").first.text
-    key_name = message.xpath("//author/uri").firs.text
+    key_name = message.xpath("//author/uri").first.text
     junk,mod,ex = Redfinger.finger(key_name).magic_key.first.to_s.split(".")
     key = OpenSSL::PKey::RSA.new
     mod = mod.tr('-_','+/').unpack('mU*')[0]
