@@ -30,7 +30,7 @@
       <file leaf-file-name="main_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="187" column="107" selection-start="8695" selection-end="8802" vertical-scroll-proportion="-7.04">
+            <state line="182" column="19" selection-start="8561" selection-end="8561" vertical-scroll-proportion="-3.64">
               <folding />
             </state>
           </provider>
@@ -48,7 +48,7 @@
       <file leaf-file-name="salmon_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/salmon_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="51" selection-start="1404" selection-end="1404" vertical-scroll-proportion="0.64528304">
+            <state line="46" column="30" selection-start="1383" selection-end="1383" vertical-scroll-proportion="0.51320755">
               <folding />
             </state>
           </provider>
@@ -755,14 +755,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="187" column="107" selection-start="8695" selection-end="8802" vertical-scroll-proportion="-7.04">
+        <state line="182" column="19" selection-start="8561" selection-end="8561" vertical-scroll-proportion="-3.64">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/salmon_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="51" selection-start="1404" selection-end="1404" vertical-scroll-proportion="0.64528304">
+        <state line="46" column="30" selection-start="1383" selection-end="1383" vertical-scroll-proportion="0.51320755">
           <folding />
         </state>
       </provider>
