@@ -28,14 +28,18 @@ class SalmonController < ApplicationController
     doc.remove_namespaces!
     sig = doc.xpath("//sig").first.text
     message = doc.xpath("//data").first.text
-    author = doc.xpath("//author/name").first.text
-    key_name = dox.xpath("//author/uri").firs.text
+    message = message.tr('-_','+/').unpack('mU*')[0]
+    message = Nokogiri::XML(message)
+    message.remove_namespaces!
+
+    author = message.xpath("//author/name").first.text
+    key_name = message.xpath("//author/uri").firs.text
     junk,mod,ex = Redfinger.finger(key_name).magic_key.first.to_s.split(".")
     key = OpenSSL::PKey::RSA.new
     mod = mod.tr('-_','+/').unpack('mU*')[0]
     ex = ex.tr('-_','+/').unpack('mU*')[0]
     sig = sig.tr('-_','+/').unpack('mU*')[0]
-    data = message.tr('-_','+/').unpack('mU*')[0]
+
     key.n = mod
     key.e =ex
     puts verify( OpenSSL::Digest::SHA256.new, sig, data )
