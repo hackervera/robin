@@ -225,6 +225,8 @@ TEMPLATE
  <id>http://redrob.in/statuses/#{status.id}</id>
  <published>#{status.created_at.xmlschema}</published>
  <updated>#{status.updated_at.xmlschema}</updated>
+ <link rel="related" href="http://identi.ca/notice/28141232"/>
+
  #{replystring}
  <link rel="ostatus:conversation" href="#{status.conversation}"/>
  <ostatus:forward ref="#{status.conversation}" href="#{status.conversation}"></ostatus:forward>

@@ -3,6 +3,7 @@
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="7a29a0b7-60ed-4ca1-a7ba-13ce36c1347b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/main/users.html.erb" afterPath="$PROJECT_DIR$/app/views/main/users.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/main_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/main_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path=".idea/workspace.xml" />
@@ -27,10 +28,10 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="297" column="0" selection-start="13953" selection-end="13953" vertical-scroll-proportion="-11.68">
+            <state line="228" column="0" selection-start="11012" selection-end="11012" vertical-scroll-proportion="0.6471698">
               <folding />
             </state>
           </provider>
@@ -72,10 +73,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="users.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/main/users.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="119" selection-start="137" selection-end="137" vertical-scroll-proportion="0.062271062">
+            <state line="38" column="81" selection-start="1147" selection-end="1147" vertical-scroll-proportion="-11.416667">
               <folding />
             </state>
           </provider>
@@ -140,11 +141,11 @@
         <option value="$PROJECT_DIR$/vendor/gems/redfinger-0.0.3/lib/redfinger/link_helpers.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/vendor/gems/redfinger-0.0.3/lib/redfinger/client.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/main_controller.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20100410200854_add_to_to_status.rb" />
         <option value="$PROJECT_DIR$/app/views/main/main.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/salmon_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/main/users.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/main_controller.rb" />
       </list>
     </option>
   </component>
@@ -563,7 +564,7 @@
     <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
     <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="[deploy site_production] replies reverse" />
+    <option name="LAST_COMMIT_MESSAGE" value="[deploy site_production] add feed to profile page" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -576,7 +577,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="render and return on findName" />
     <MESSAGE value="testing title with instance var" />
     <MESSAGE value="echoing back params" />
     <MESSAGE value="cleaned up callback" />
@@ -601,6 +601,7 @@
     <MESSAGE value="[deploy site_production] salmon looks good. now for replies" />
     <MESSAGE value="[deploy site_production] new paragraph on replies" />
     <MESSAGE value="[deploy site_production] replies reverse" />
+    <MESSAGE value="[deploy site_production] add feed to profile page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -698,16 +699,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/main/users.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="297" column="0" selection-start="13953" selection-end="13953" vertical-scroll-proportion="-11.68">
+        <state line="38" column="81" selection-start="1147" selection-end="1147" vertical-scroll-proportion="-11.416667">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/main/users.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="119" selection-start="137" selection-end="137" vertical-scroll-proportion="0.062271062">
+        <state line="228" column="0" selection-start="11012" selection-end="11012" vertical-scroll-proportion="0.6471698">
           <folding />
         </state>
       </provider>

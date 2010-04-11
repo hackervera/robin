@@ -36,7 +36,7 @@
             <h1><%= @username %></h1>
           </div>
           <iframe src="http://imm.victusmedia.com/widget"  scrolling="no"></iframe>
-          <% @this_user.statuses.sort_by{ |x| x.updated_at }.slice(0,15).each do |status| %>
+          <% @this_user.statuses.sort_by{ |x| x.updated_at }.slice(0,15).reverse.each do |status| %>
            <p>
             <%= status.title %><br/>
             <%= distance_of_time_in_words(status.updated_at, Time.now) %> ago
