@@ -41,7 +41,7 @@ class SalmonController < ApplicationController
     domain = "#{$1}"
     author = "#{author}@#{domain}"
     Rails.logger.info "AUTHOR: #{author}, DOMAIN: #{domain}, KEY_NAME: #{key_name}"
-    junk,mod,ex = Redfinger.finger("#{author}@#{domain}").magic_key.first.to_s.split(".")
+    junk,mod,ex = Redfinger.finger(author).magic_key.first.to_s.split(".")
     key = OpenSSL::PKey::RSA.new
     mod =  mod.tr('-_','+/').unpack('mU*')[0]
     ex =   ex.tr('-_','+/').unpack('mU*')[0]
