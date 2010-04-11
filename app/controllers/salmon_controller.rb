@@ -39,7 +39,7 @@ class SalmonController < ApplicationController
     content = message.xpath("//content").first.text
     domain = key_name.gsub(/^(?:[^\/]+:\/\/)?([^\/:]+)/,"\1")
     domain = "#{$1}"
-    Rails.logger.info author,domain
+    Rails.logger.info author,domain,key_name
     junk,mod,ex = Redfinger.finger("#{author}@#{domain}").magic_key.first.to_s.split(".")
     key = OpenSSL::PKey::RSA.new
     mod =  mod.tr('-_','+/').unpack('mU*')[0]
