@@ -48,7 +48,7 @@
       <file leaf-file-name="salmon_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/salmon_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="0" selection-start="1097" selection-end="1097" vertical-scroll-proportion="0.41698113">
+            <state line="40" column="18" selection-start="1115" selection-end="1115" vertical-scroll-proportion="0.41698113">
               <folding />
             </state>
           </provider>
@@ -762,7 +762,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/salmon_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="0" selection-start="1097" selection-end="1097" vertical-scroll-proportion="0.41698113">
+        <state line="40" column="18" selection-start="1115" selection-end="1115" vertical-scroll-proportion="0.41698113">
           <folding />
         </state>
       </provider>
