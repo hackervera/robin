@@ -81,7 +81,8 @@
   <p>
     <%= @show_replies %>replies
     
-    <%   @statuses.sort_by{ |status| status[:updated] }.reverse[0..10].each do |status|
+    <% unless @show_replies == 1 
+       @statuses.sort_by{ |status| status[:updated] }.reverse[0..10].each do |status|
       time = distance_of_time_in_words(status[:updated], Time.now) %>
     
       <p><a href="<%= status[:profile] %>" target="_blank" border=0><img src='<%= status[:image] %>'  height="48" width="48" border=0 /></a><%= status[:user] %>@<%= status[:host] %>: <%= status[:text] %></p>
@@ -90,12 +91,12 @@
           <a href="javascript:" onClick="enterReply('<%= status[:user] %>','<%= status[:conversation] %>', '<%= status[:url] %>','<%= status[:salmon] %>', '<%= status[:host] %>', '<%= status[:author] %>');">reply</a>
           <br/></br/>  
       </div><div class="clear"></div>
-    <% end %>
-
+    <% end %>   <% end %>
+    <%  if @show_replies == 1 %>
       <% replies = Status.find(:all, :conditions => "recip = '#{@user.username}'")
         replies.each do |reply| %>
           <%= reply.author %>: <%= reply.title %>: <%= reply.updated_at %>
-      <%end %>
+      <%end %>  <% end %>
 
 
   </p>
