@@ -81,7 +81,7 @@
   <p>
     <%= @show_replies %>replies
     
-    <% unless @show_replies == 1 
+    <% unless @show_replies 
        @statuses.sort_by{ |status| status[:updated] }.reverse[0..10].each do |status|
       time = distance_of_time_in_words(status[:updated], Time.now) %>
     
@@ -92,6 +92,7 @@
           <br/></br/>  
       </div><div class="clear"></div>
     <% end %>   <% end %>
+  
     <%  if @show_replies == 1 %>
       <% replies = Status.find(:all, :conditions => "recip = '#{@user.username}'")
         replies.each do |reply| %>
