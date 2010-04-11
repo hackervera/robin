@@ -27,10 +27,10 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="17" selection-start="1641" selection-end="1648" vertical-scroll-proportion="23.32">
+            <state line="30" column="17" selection-start="1641" selection-end="1648" vertical-scroll-proportion="-2.5173674">
               <folding />
             </state>
           </provider>
@@ -72,10 +72,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/main/main.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="101" column="128" selection-start="3079" selection-end="3079" vertical-scroll-proportion="0.620438">
+            <state line="100" column="24" selection-start="2940" selection-end="2940" vertical-scroll-proportion="-70.833336">
               <folding />
             </state>
           </provider>
@@ -554,7 +554,7 @@
     <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
     <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="[deploy site_production] salmon looks good. now for replies" />
+    <option name="LAST_COMMIT_MESSAGE" value="[deploy site_production] new paragraph on replies" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -567,7 +567,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="reading own statuses once" />
     <MESSAGE value="disabled alert windows" />
     <MESSAGE value="render and return on findName" />
     <MESSAGE value="testing title with instance var" />
@@ -592,6 +591,7 @@
     <MESSAGE value="[deploy site_production] damn phone rings right when i try and push a commit" />
     <MESSAGE value="[deploy site_production] added salmon endpoint. last leg. woohoo!" />
     <MESSAGE value="[deploy site_production] salmon looks good. now for replies" />
+    <MESSAGE value="[deploy site_production] new paragraph on replies" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -687,16 +687,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/main/main.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="17" selection-start="1641" selection-end="1648" vertical-scroll-proportion="23.32">
+        <state line="100" column="24" selection-start="2940" selection-end="2940" vertical-scroll-proportion="-70.833336">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/main/main.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="128" selection-start="3079" selection-end="3079" vertical-scroll-proportion="0.620438">
+        <state line="30" column="17" selection-start="1641" selection-end="1648" vertical-scroll-proportion="-2.5173674">
           <folding />
         </state>
       </provider>

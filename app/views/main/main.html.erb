@@ -98,7 +98,7 @@
   
     <%  if @show_replies %>
       <% replies = Status.find(:all, :conditions => "recip = '#{@user.username}'")
-        replies.each do |reply| %>
+        replies.reverse.each do |reply| %>
           <p><a href="<%= reply.url %>" target="_blank"><%= reply.author %></a>: <%= reply.title %>: <%= reply.updated_at %></p>
       <%end %>  <% end %>
 
