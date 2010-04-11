@@ -145,7 +145,7 @@ EOF
   end
   #url = URI.parse(endpoint)
    res = HTTParty.post(params[:salmon], :body => post_body, :headers => { 'content-type' => "application/magic-envelope+xml" })
-    Rails.logger.info "REPLY: #{res}"
+    Rails.logger.info "REPLY: #{res} #{res.code}"
     render :text => "look at log"
 
   end

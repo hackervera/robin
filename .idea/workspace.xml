@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="7a29a0b7-60ed-4ca1-a7ba-13ce36c1347b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/main/main.html.erb" afterPath="$PROJECT_DIR$/app/views/main/main.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/salmon_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/salmon_controller.rb" />
     </list>
     <ignored path=".idea/workspace.xml" />
     <ignored path="rstatus.iws" />
@@ -27,10 +27,10 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="17" selection-start="1641" selection-end="1648" vertical-scroll-proportion="-2.5173674">
+            <state line="266" column="52" selection-start="12729" selection-end="12738" vertical-scroll-proportion="-20.52">
               <folding />
             </state>
           </provider>
@@ -45,10 +45,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="salmon_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="salmon_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/salmon_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="92" selection-start="1827" selection-end="1827" vertical-scroll-proportion="-17.8">
+            <state line="147" column="47" selection-start="5762" selection-end="5762" vertical-scroll-proportion="0.61509436">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="response.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://C:/Ruby/lib/ruby/gems/1.8/gems/httparty-0.4.5/lib/httparty/response.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="7" selection-start="7" selection-end="7" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -134,8 +143,8 @@
         <option value="$PROJECT_DIR$/vendor/gems/redfinger-0.0.3/lib/redfinger/client.rb" />
         <option value="$PROJECT_DIR$/app/controllers/main_controller.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20100410200854_add_to_to_status.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/salmon_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/main/main.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/salmon_controller.rb" />
       </list>
     </option>
   </component>
@@ -554,7 +563,7 @@
     <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
     <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="[deploy site_production] new paragraph on replies" />
+    <option name="LAST_COMMIT_MESSAGE" value="[deploy site_production] replies reverse" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -567,7 +576,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="disabled alert windows" />
     <MESSAGE value="render and return on findName" />
     <MESSAGE value="testing title with instance var" />
     <MESSAGE value="echoing back params" />
@@ -592,16 +600,12 @@
     <MESSAGE value="[deploy site_production] added salmon endpoint. last leg. woohoo!" />
     <MESSAGE value="[deploy site_production] salmon looks good. now for replies" />
     <MESSAGE value="[deploy site_production] new paragraph on replies" />
+    <MESSAGE value="[deploy site_production] replies reverse" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/juggernaut_hosts.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="4" selection-start="715" selection-end="715" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/plugins/juggernaut_plugin/lib/juggernaut.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="111" column="54" selection-start="2972" selection-end="2972" vertical-scroll-proportion="0.0" />
@@ -680,13 +684,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/salmon_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="92" selection-start="1827" selection-end="1827" vertical-scroll-proportion="-17.8">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/main/main.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="100" column="24" selection-start="2940" selection-end="2940" vertical-scroll-proportion="-70.833336">
@@ -694,9 +691,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://C:/Ruby/lib/ruby/gems/1.8/gems/httparty-0.4.5/lib/httparty/response.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="7" selection-start="7" selection-end="7" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="17" selection-start="1641" selection-end="1648" vertical-scroll-proportion="-2.5173674">
+        <state line="266" column="52" selection-start="12729" selection-end="12738" vertical-scroll-proportion="-20.52">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/salmon_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="147" column="47" selection-start="5762" selection-end="5762" vertical-scroll-proportion="0.61509436">
           <folding />
         </state>
       </provider>
