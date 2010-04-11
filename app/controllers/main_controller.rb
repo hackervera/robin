@@ -28,6 +28,7 @@ class MainController < ApplicationController
   end
     
   def main
+    @show_replies = params[:replies]
     @subs = []
     @user.subscriptions = [] if @user.subscriptions.nil?
     @user.subscriptions.each_with_index do |sub,index|

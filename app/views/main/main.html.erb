@@ -59,7 +59,7 @@
 </div>
 
 <div id="nav">
-  <span>Friends</span><span>Replies</span><span>Profile</span>
+  <span>Friends</span><span><a href="/?replies"Replies</span><span>Profile</span>
 </div>
 
 
@@ -79,7 +79,7 @@
 
 <div id="statuses">
   <p>
-    <%   unless show_replies
+    <%   unless @show_replies
     @statuses.sort_by{ |status| status[:updated] }.reverse[0..10].each do |status| 
       time = distance_of_time_in_words(status[:updated], Time.now) %>
     
@@ -90,10 +90,13 @@
           <br/></br/>  
       </div><div class="clear"></div>
     <% end %>
-   <% replies = Status.find(:all, :conditions => "to = '#{@user.username}'")
+
+      <% replies = Status.find(:all, :conditions => "to = '#{@user.username}'")
         replies.each do |reply| %>
-      <%= reply.title %>
-  <%end %>              <%end %>
+          <%= reply.author %>: <%= reply.title %>: <%= reply.updated_at %>
+      <%end %>
+
+  <%end %>
   </p>
 </div>
 
