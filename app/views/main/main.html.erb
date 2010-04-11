@@ -31,6 +31,7 @@
       width:500px;
       margin-left:auto;
       margin-right:auto;
+      text-align:center;
   }
   .padding {
       padding: 10px;
@@ -98,7 +99,7 @@
     <%  if @show_replies %>
       <% replies = Status.find(:all, :conditions => "recip = '#{@user.username}'")
         replies.each do |reply| %>
-          <%= reply.author %>: <%= reply.title %>: <%= reply.updated_at %>
+          <a href="<%= reply.url %>" target="_blank"><%= reply.author %></a>: <%= reply.title %>: <%= reply.updated_at %>
       <%end %>  <% end %>
 
 
