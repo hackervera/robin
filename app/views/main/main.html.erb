@@ -31,7 +31,9 @@
       width:500px;
       margin-left:auto;
       margin-right:auto;
-      padding-left:10px;
+  }
+  .padding {
+      padding: 10px;
   }
 </style>
     
@@ -59,7 +61,7 @@
 </div>
 
 <div id="nav">
-  <span><a href="/">Friends</a></span><span><a href="/?replies=1">Replies</a></span><span>Profile</span>
+  <span class="padding"><a href="/">Friends</a></span><span class="padding"><a href="/?replies=1">Replies</a></span><span class="padding"><a href="/users/<%= @user.username %>" target="_blank">Profile</a></span>
 </div>
 
 
