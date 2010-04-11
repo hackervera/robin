@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="7a29a0b7-60ed-4ca1-a7ba-13ce36c1347b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/main/main.html.erb" afterPath="$PROJECT_DIR$/app/views/main/main.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/salmon_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/salmon_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20100410200854_add_to_to_status.rb" afterPath="$PROJECT_DIR$/db/migrate/20100410200854_add_to_to_status.rb" />
     </list>
     <ignored path=".idea/workspace.xml" />
     <ignored path="rstatus.iws" />
@@ -37,10 +36,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="20100410200854_add_to_to_status.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="20100410200854_add_to_to_status.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/migrate/20100410200854_add_to_to_status.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="35" selection-start="158" selection-end="158" vertical-scroll-proportion="0.17894737">
+            <state line="6" column="35" selection-start="158" selection-end="158" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -82,10 +81,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/main/main.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="95" column="74" selection-start="2800" selection-end="2800" vertical-scroll-proportion="-14.166667">
+            <state line="93" column="58" selection-start="2669" selection-end="2669" vertical-scroll-proportion="0.5762712">
               <folding />
             </state>
           </provider>
@@ -143,9 +142,9 @@
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/vendor/gems/redfinger-0.0.3/lib/redfinger/client.rb" />
         <option value="$PROJECT_DIR$/app/controllers/main_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/main/main.html.erb" />
-        <option value="$PROJECT_DIR$/db/migrate/20100410200854_add_to_to_status.rb" />
         <option value="$PROJECT_DIR$/app/controllers/salmon_controller.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20100410200854_add_to_to_status.rb" />
+        <option value="$PROJECT_DIR$/app/views/main/main.html.erb" />
       </list>
     </option>
   </component>
@@ -683,13 +682,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/main/main.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="74" selection-start="2800" selection-end="2800" vertical-scroll-proportion="-14.166667">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="32" selection-start="2116" selection-end="2127" vertical-scroll-proportion="-8.16">
@@ -706,7 +698,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20100410200854_add_to_to_status.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="35" selection-start="158" selection-end="158" vertical-scroll-proportion="0.17894737">
+        <state line="6" column="35" selection-start="158" selection-end="158" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/main/main.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="93" column="58" selection-start="2669" selection-end="2669" vertical-scroll-proportion="0.5762712">
           <folding />
         </state>
       </provider>

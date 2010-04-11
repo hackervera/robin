@@ -91,7 +91,7 @@
       </div><div class="clear"></div>
     <% end %>
 
-      <% replies = Status.find(:all, :conditions => "to = '#{@user.username}'")
+      <% replies = Status.find(:all, :conditions => "recip = '#{@user.username}'")
         replies.each do |reply| %>
           <%= reply.author %>: <%= reply.title %>: <%= reply.updated_at %>
       <%end %>
