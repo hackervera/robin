@@ -79,6 +79,7 @@
 
 <div id="statuses">
   <p>
+    <%= @show_replies %>
     <%   unless @show_replies == 1
     @statuses.sort_by{ |status| status[:updated] }.reverse[0..10].each do |status| 
       time = distance_of_time_in_words(status[:updated], Time.now) %>
