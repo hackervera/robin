@@ -59,7 +59,7 @@
 </div>
 
 <div id="nav">
-  <span>Friends</span><span><a href="/?replies">Replies</a></span><span>Profile</span>
+  <span>Friends</span><span><a href="/?replies=1">Replies</a></span><span>Profile</span>
 </div>
 
 
@@ -79,7 +79,7 @@
 
 <div id="statuses">
   <p>
-    <%   unless @show_replies
+    <%   unless @show_replies == 1
     @statuses.sort_by{ |status| status[:updated] }.reverse[0..10].each do |status| 
       time = distance_of_time_in_words(status[:updated], Time.now) %>
     
